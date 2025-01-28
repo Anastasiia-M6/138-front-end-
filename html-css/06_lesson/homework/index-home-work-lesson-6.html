@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wapper">
+        <section class="Form">
+            <div class="container">
+
+                <form action="./process.php" method="post">
+                    <div class="form_imput">
+
+                        <div class="name">
+                            <b><label for="name">Повне ім'я</label></b>
+                            <input type="text" id="name" name="Повне ім'я" required><br>
+                        </div>
+
+                        <div class="email">
+                            <b><label for="email">Email</label></b>
+                            <input type="email" id="email" name="email" required><br>
+                        </div>
+
+                        <div class="password">
+                            <b><label for="password">Пароль</label></b>
+                            <input type="password" id="password" name="password" minlength="4" maxlength="8"
+                                required><br>
+                        </div>
+
+                        <div class="confirmPasswors">
+                            <b><label for="confirmPasswors">Пароль ще раз</label></b>
+                            <input type="password" id="confirmPasswors" name="confirmPasswors" minlength="4"
+                                maxlength="8" required><br>
+                        </div>
+
+                        <div class="radio-group">
+                            <p class="radio-group"><b>Стать</b>
+                                <input type="radio" name="gender" value="male" required>
+                                <label for="radio">чоловіча</label>
+
+                                <input type="radio" name="gender" value="female" required>
+                                <label for="radio">жіноча</label>
+
+                            </p>
+                        </div>
+
+                        <div class="age">
+                            <label for="age"><b>Вік</b></label>
+                            <input type="number" id="age" name="age" min="18" max="100" required>
+                        </div>
+
+                        <div class="course">
+                            <label for="course"><b>Курс</b></label>
+                            <select name="course" id="course" required>
+                                <option value="disabled selected">.=Виберіть курс=.</option>
+                                <option value="Front-End">Front-End</option>
+                                <option value="Back-End">Back-End</option>
+                                <option value="Project Management">Project Management</option>
+                                <option value="QA Manual">QA Manual</option>
+                            </select>
+                        </div>
+
+                        <div class="address">
+                            <label for="address">Повна адреса</label>
+                            <textarea name="address" id="address"
+                                placeholder="Країна, регіон, місто/селище, вулиця"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <h6><label><input type="checkbox" name="agreement" required> Я погоджуюсь з
+                                    обробкою персональних даних
+                                </label></h6>
+                        </div>
+                        <button type="reset">Очистити форму</button>
+                        <button type="submit">Зареєструватися</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
