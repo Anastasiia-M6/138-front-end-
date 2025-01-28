@@ -4,73 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson_6</title>
+    <title>Document</title>
 </head>
 
-<body>
+<body style="zoom: 3;">
+
     <div class="wrapper">
         <section class="contact">
             <div class="container">
-                <div>
-                    <button>-</button>
-                    <input type="text">
-                    <button> +</button>
-                </div>
 
-                <form action="" class="form">
-                    <h2>ragistration</h2>
+                <form class="form">
+                    <h2>Registration</h2>
                     <div class="form__item">
-                        <input type="text">
-                        <span>error</span>
+                        <label for="inp01">Name</label>
+                        <br>
+                        <input id="inp01" type="text" placeholder="Sasha" required>
                     </div>
 
                     <div class="form__item">
-                        <label for="inp01">Name</label><br>
-                        <input id="inp01" type="text" placeholder=" First name" required>
-                    </div>
-
-
-
-
-                    <div class="form__item">
-                        <label for="inp02">Name</label><br>
-                        <input id="inp02" type="text" placeholder=" Last name" required>
-                    </div>
-                    <div class="form__item">
-                        <label for="inp03">email</label><br>
-                        <input id="inp03" type="email" placeholder=" exemple@google.com" required>
+                        <label for="inp02">Last Name</label>
+                        <br>
+                        <input id="inp02" type="text" placeholder="Kolesnyk" required>
                     </div>
 
                     <div class="form__item">
-                        <label for="inp04">Age</label><br>
-                        <input id="inp04" type="number" placeholder=" 22" required>
+                        <label for="inp03">Email</label>
+                        <br>
+                        <input id="inp03" type="email" placeholder="exemple@google.com" required>
                     </div>
 
                     <div class="form__item">
-                        <label>country</label> <br>
+                        <label for="inp04">Age</label>
+                        <br>
+                        <input id="inp04" type="number" placeholder="22" required>
+                    </div>
+
+                    <div class="form__item">
+                        <label>Country</label>
+                        <br>
                         <select>
-                            <option value=""></option>
+                            <option value="--">--</option>
                             <option value="ua">Ukraine</option>
                             <option value="usa">USA</option>
                         </select>
                     </div>
                     <div class="form__item">
-                        <label>country</label> <br>
+                        <label>Country</label>
+                        <br>
                         <textarea name="" id="">
 
                         </textarea>
                     </div>
-
-
-                    <button type="submit"> start</button>
-                    <a href="./login.html">login</a>
-
+                    <button type="submit">Submit</button>
                 </form>
 
+                <a href="./login.html">Login</a> / <a href="./">Registration</a>
             </div>
         </section>
     </div>
-
 
 </body>
 

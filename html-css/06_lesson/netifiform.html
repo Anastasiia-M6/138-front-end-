@@ -6,32 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<div class="wrapper">
-    <section class="contact">
-        <div class="container">
-
-
-            <form action="form" class="contact" netlify>
-                <h2>login</h2>
-
-
-                <div class="form__item">
-                    <label for="inp01">Name</label><br>
-                    <input id="inp01" type="text" placeholder=" First name" required>
-                </div>
-
-
-                <button type="submit"> start</button>
-
-
-            </form>
-
-        </div>
-    </section>
-</div>
 
 <body>
+    <div class="wrapper">
+        <section class="contact">
+            <div class="container">
 
+                <form class="form" name="contact" netlify>
+                    <h2>Login</h2>
+                    <div class="form__item">
+                        <label for="inp01">User name</label>
+                        <br>
+                        <input name="name" id="inp01" type="text" placeholder="Login" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="inp02">User password</label>
+                        <br>
+                        <input name="password" id="inp02" type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+
+                <a href="./login.html">Login</a> / <a href="./">Registration</a>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
