@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="">
+            <div class="container">
+                <h2>Registration from</h2>
+                <!--form action указівает куда будут отправлены данные формы ,
+        файл php обрабатывает данные и вводит их обратно в браузер 
+        (как дальше работает нужно разобраться :) -->
+                <form action="./process.php" method="post">
+                    <div class="form_imput"> <!-- если добавить нетлфай работть бцдкт-->
+                        <!--Поле для имени-->
+                        <div class="name">
+                            <label for="Name">Name</label><br>
+                            <input type="text" id="Name" name="Name" placeholder="Enter yout name" required><br><br>
+                        </div> <!--Поле для емейл-->
+                        <div class="email">
+                            <label for="Email">Email</label><br>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+                        </div>
+                        <!--Поле для пароля-->
+                        <div class="password">
+                            <label for="Password">password</label><br>
+                            <input type="password" id="password" name="password" placeholder="Enter your password"
+                                required><br>
+                        </div>
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
