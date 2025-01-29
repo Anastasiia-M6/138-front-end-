@@ -1,0 +1,81 @@
+/*reset css SRART*/
+/* звернення до всех елементов (писать всегда перед написанием сайта 3 пункта*/
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* картинка по ширине страницы*/
+img {
+    width: 100%;
+}
+
+/*reset css END*/
+body {
+    /*шрифт из фигмы*/
+    font-family: "open sans";
+}
+
+.container {
+    max-width: 970px;
+    /*высоту мы не пишем для контейнеров - ЭТО ЗАПОМНИТЬ
+    если писать макс хидс то она адаптивная и не может быть больше 970
+    если просто хидс оставить то картинка будет фиктованая*/
+    margin: 0% auto;
+    /*что бы контейнер выровнять по центру - маржин-0 авото*/
+
+
+    margin-top: 0%;
+    margin-bottom: 0;
+    /*сверху снизу*/
+
+    margin-left: auto;
+    margin-right: auto;
+    /*слева справа*/
+    /*эта надпись едет вместо маржин 0 авто ( 4 строки) '*/
+}
+
+/*header start*/
+.header__nav {
+    border-bottom: 1px solid #828282;
+}
+
+.header__list {
+    display: flex;
+    /*выровнять по горизонтали жаст контент*/
+    justify-content: center;
+
+    /*отсутпы между елементами гэп*/
+    gap: 40px;
+
+    /*верху снизу падинг*/
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    list-style: none;
+
+}
+
+.header__link {
+    font-size: 18px;
+    font-weight: 400;
+    /*если дробь  то округляем 25*/
+    line-height: 25;
+    /*лучше  не делать потому что не читатет процент letter-spacing: 2%;*/
+
+
+    text-decoration: none;
+    color: #828282;
+
+}
+
+/*header end*/
+/*важно последовательность*/
+
+/*hero srart*/
+
+/*hero end*/
+/*about srart*/
+
+/*about end*/
