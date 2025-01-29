@@ -1,0 +1,74 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    header .logo {
+        position: absolute;
+        width: 185.34px;
+        height: 31.97px;
+        left: 143.92px;
+        top: 22px;
+    }
+
+    header {
+        position: absolute;
+        width: 1400px;
+        height: 78px;
+        left: 0px;
+        top: 20px;
+
+    }
+
+    header .nav a {
+
+        position: absolute;
+        width: 350px;
+        height: 28px;
+        left: 650px;
+        top: 24px;
+        position: absolute;
+        height: 28px;
+        left: 46.43%;
+        right: 28.57%;
+        top: calc (50% - 28px/2 - 1px);
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        color: #2F281E;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .buttons a {
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .buttons .sign-in {
+        border: 1px solid #2b2d42;
+        color: #2b2d42;
+        background-color: transparent;
+    }
+
+    .buttons .sign-up {
+        background-color: #f9a826;
+        color: white;
+        border: none;
+    }
+
+}
+
+.no-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
