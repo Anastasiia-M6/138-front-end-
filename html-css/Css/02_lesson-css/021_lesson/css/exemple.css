@@ -1,0 +1,35 @@
+.title-2::after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 30px;
+    background-color: brown;
+    transition: widht 0.5s;
+}
+
+.title-2:hover::after {
+    width: 130px;
+}
+
+.box__btn::after {
+    content: "👉";
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.box__content {
+    /*ты не можешь быть больше 0 */
+    max-height: 100px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.box:hover .box__btn::after {
+    content: "🫸";
+}
+
+.box:hover.box__content {
+    display: block;
+    max-width: 1000px;
+
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* звернення до єлементу в середині .hero*/
+
+        .hero .hero__title {
+            color: blue;
+        }
+
+        /* Звернення до єлементу*/
+        .hero__title {
+            color: brown;
+        }
+
+        /* Звернення до єлементу на одному рівні*/
+        .hero.hero--dark {
+            color: blueviolet;
+        }
+
+        /* Звернення до єлементу першого нащадка*/
+        .hero>.container {
+            background-color: blanchedalmond;
+        }
+
+        /* Звернення  тільки до першого єлементу під */
+        .hero__title+.hero__text {
+            color: aquamarine;
+        }
+
+        /* Звернення  до всых єлементу під */
+        .hero__title~.hero__text {
+            color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero hero--dark">
+        <div class="container">
+
+            <h1 class="hero__title">Title</h1>
+            <p class="hero__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto pariatur tenetur
+                repellat quod dignissimos, atque itaque consequuntur omnis fugit laudantium voluptas aliquid
+                necessitatibus fuga veniam molestias, illum quia quam facilis?</p>
+        </div>
+    </section>
+
+    <div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rem, voluptas nulla maiores, cupiditate
+                voluptatem ratione asperiores fuga, ducimus voluptatibus at suscipit expedita aperiam? Deleniti
+                distinctio quia culpa mollitia ipsa?</p>
+        </div>
+    </div>
+</body>
+
+</html>

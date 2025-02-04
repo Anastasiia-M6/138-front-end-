@@ -14,6 +14,8 @@ body {
     font-family: 'Open Sans';
 }
 
+.sub-title .about__text .button
+
 /* Header start*/
 .header.header {
     max-width: 1440px;
@@ -214,3 +216,18 @@ body {
 }
 
 /*about end*/
+
+/* skills start*/
+.skills {
+    padding-top: 160px;
+    padding-bottom: 100px;
+}
+
+.skills__title {}
+
+
+/* skills end*/
+.portfolio {
+    padding: 100px 0px;
+    background-color: #F6f6f6;
+}

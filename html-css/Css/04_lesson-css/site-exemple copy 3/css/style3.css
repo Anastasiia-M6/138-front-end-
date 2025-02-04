@@ -1,0 +1,339 @@
+/* reset css */
+:root {
+    --font-family: 'Open Sans', sans-serif;
+    --color-primary: #070707;
+    --color-secondary: #828282;
+    --color-background: #F6F6F6;
+    --color-white: #ffffff;
+    --color-dark: #333;
+    --transition-speed: 0.3s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+/*.sub-title .about__text .button*/
+
+
+/* Header start*/
+.header {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.header__nav {
+
+    border-bottom: 1px solid var(--color-secondary);
+
+}
+
+.header__list {
+
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    list-style: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 237px;
+    padding-right: 237px;
+
+}
+
+.header__link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+
+    color: var(--color-secondary);
+
+    /* убирает подчеркивание текста*/
+    text-decoration: none;
+
+    /* идентично высоте коробки */
+    letter-spacing: 0.02em;
+}
+
+.header__item:nth-child(1) .header__link {
+
+    color: var(--color-primary);
+}
+
+/* завдання додати еффект зміни жирності тексту при наведенні на елементи меню в макеті Denis Novik*/
+.header__link:hover {
+    font-weight: bold;
+    /*робить зміну плавною*/
+    transition: font-weight var(--transition-speed) ease;
+}
+
+/*Header end*/
+
+/*hero srart*/
+.hero {
+    padding-top: 12px;
+}
+
+.hero__title {
+    font-family: var(--font-family);
+    max-width: 300px;
+    max-height: 60px;
+    font-size: 48px;
+
+    font-weight: 700;
+    line-height: 66px;
+    color: var(--color-primary);
+
+    margin-top: 0;
+    margin-bottom: 50px;
+    margin-left: 0;
+    margin-right: 670px;
+
+    display: grid;
+    gap: 50px;
+}
+
+.hero__img {
+    max-width: 970px;
+    width: 100%;
+    max-height: 387px;
+
+}
+
+/*hero end*/
+
+/*about srart*/
+.about__section {
+    max-width: 1440px;
+    width: 100%;
+
+    background-color: var(--color-background);
+}
+
+.sub-title {
+    max-width: 200px;
+    width: 100%;
+
+    font-weight: 700;
+
+    font-size: 34px;
+
+    line-height: 47px;
+
+    color: var(--color-primary);
+
+    text-align: center;
+    margin-left: 385px;
+    margin-right: 385px;
+    padding-top: 100px;
+
+}
+
+h3.about__text {
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--color-primary);
+
+    display: grid;
+    gap: 30px;
+
+    text-align: center;
+
+}
+
+p.text.about__text:nth-child(1).about__text {
+    padding-top: 50px;
+    margin-left: 245px;
+    margin-right: 245px;
+}
+
+p.text.about__text:nth-child(2).about__text {
+    padding-top: 30px;
+    margin-left: 245px;
+    margin-right: 245px;
+}
+
+p.text.about__text:nth-child(3).about__text {
+    padding-top: 30px;
+
+    margin-left: 245px;
+    margin-right: 245px;
+    padding-bottom: 100px;
+}
+
+/*about end*/
+
+
+/* skills start*/
+
+h3.skills__text {
+    max-width: 250px;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+
+    padding-top: 20px;
+
+    margin-left: 360px;
+    margin-right: 360px;
+    color: var(--color-primary);
+}
+
+/* skills end*/
+
+
+
+/* portfolio srart*/
+
+.portfolio {
+    background-color: var(--color-background);
+}
+
+.portfolio__img:nth-of-type(1) {
+
+    margin-top: 50px;
+}
+
+.portfolio__img:nth-of-type(2) {
+
+    margin-top: 70px;
+}
+
+.portfolio__img:nth-of-type(3) {
+    margin-top: 70px;
+}
+
+figcaption.figcaption__title {
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    margin-top: 40px;
+
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: var(--color-primary);
+}
+
+/* portfolio end*/
+
+
+/*contacts start*/
+h3.contacts__text {
+    max-width: 280px;
+    width: 100%;
+
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--color-primary);
+
+    padding-top: 20px;
+    margin-left: 345px;
+    margin-right: 345px;
+
+}
+
+button.contacts__container {
+    max-width: 180px;
+    width: 100%;
+    max-height: 44px;
+
+
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 10%;
+    border-radius: 22px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: 'Open Sans';
+
+    margin-top: 60px;
+    margin-left: 395px;
+    margin-right: 395px;
+
+}
+
+/*застосуємо зміну кольору фону та масштабування*/
+.button:hover {
+    background-color: var(--color-dark);
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    padding-top: 30px;
+    margin-left: 330px;
+    margin-right: 330px;
+    margin-bottom: 60px;
+}
+
+.social-icons a:nth-child(1) {
+
+    margin-right: 50px;
+}
+
+.social-icons a:nth-child(2) {
+
+    margin-right: 50px;
+}
+
+.social-icons a:nth-child(3) {
+
+    margin-right: 50px;
+}
+
+/* Зменшення прозорості соціальних посилань до 0.5 при наведенні */
+.social-icons a:hover {
+    /*opacity: 0.5; — зменшує прозорість до 50%.*/
+    opacity: 0.5;
+    transition: opacity var(--transition-speed) ease;
+}
+
+footer.contacts__container p {
+    max-width: 200px;
+    width: 100%;
+    height: 60px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    color: var(--color-secondary);
+    display: grid;
+    padding-bottom: 100px;
+
+    margin-left: 385px;
+    margin-left: 385px;
+}
+
+/*contacts end*/
