@@ -66,7 +66,7 @@
     flex-wrap: wrap;
     font-size: 0;
     transition: opacity 0.3s ease-in-out, border 0.3s ease-in-out;
-
+    box-sizing: border-box;
 
     /* border: var(--border-group); */
 }
@@ -74,11 +74,14 @@
 .container__weater-table li:hover {
     opacity: 0.7;
     cursor: pointer;
-    border: 2px solid red;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
+
 .container__weater-table li:active {
-    border: 2px solid blue;
+    border: 1px solid blue;
+    box-sizing: border-box;
 }
 
 
@@ -101,6 +104,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    border: var(--border-group);
 }
 
 .name-city,
@@ -196,10 +201,4 @@ text {
     line-height: 19px;
 
     margin: 35px 619px 0 2px;
-}
-
-/* і opacity */
-container__weater-table:hover {
-    border: 1px solid #2B81AC;
-    border-radius: 2px;
 }
