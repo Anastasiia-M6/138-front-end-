@@ -2,7 +2,7 @@
     /* Reset CSS */
     padding: 0;
     margin: 0;
-    font-family: var(--main-font);
+    transition: all .1s ease-in;
 
 }
 
@@ -16,20 +16,23 @@
 
 
 .main {
-    max-width: 1440px;
-    /* width: 100%; */
+    max-width: 1442px;
+    width: 100%;
+
     border: 25px solid #0e70a1;
     background-color: #2B81AC;
+
 }
 
 .section {
     padding: 60px 110px 94px 110px;
 
+
 }
 
 /* title__section STERT */
 .title__section {
-
+    display: inline-block;
     margin-right: 4px;
 
 }
@@ -52,14 +55,32 @@
 
 .container__weater-table {
     max-width: 1170px;
-    /* width: 100%; */
+    width: 100%;
     max-height: 592px;
     border: var(--border-group);
     margin-top: 35px;
 
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0;
+    transition: opacity 0.3s ease-in-out, border 0.3s ease-in-out;
+
 
     /* border: var(--border-group); */
 }
+
+.container__weater-table li:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+.container__weater-table li:active {
+    border: 2px solid blue;
+}
+
 
 .group__lisbon,
 .group__paris,
@@ -72,28 +93,37 @@
 .group__san-francisco,
 .group__tokyo,
 .group__sydney {
-    display: inline-block;
+
     color: var(--color-text);
     align-items: center;
     line-height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.name-sity,
-.text {
-    display: inline-block;
+.name-city,
+text {
+    color: var(--color-text);
     font-size: var(--font-size-text);
 }
 
 
+
 .img {
-    display: inline-block;
     max-width: 47px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.img:hover {
+    opacity: 0.8;
 }
 
 .group__lisbon,
 .group__san-francisco {
     width: 50%;
-    height: 25%;
+
 }
 
 .group__paris,
@@ -105,31 +135,23 @@
 .group__new-delhi,
 .group__tokyo {
     width: 25%;
-    height: 25%;
+
 }
 
 .group__sydney {
     width: 100%;
-    height: 25%;
-    /* border-top: var(--border-group);
-    border-right: var(--border-group);
-    border-bottom: var(--border-group);
-    border-left: var(--border-group); */
+
 
 }
 
 .group__lisbon {
     background-color: #3399cc;
 
-    /* width: 108px;
-    height: 94px;
-    padding: 26px 238px 27px 237px; */
-
 }
 
 .group__paris {
     background-color: #33cccc;
-    border: var(--border-group);
+
 }
 
 .group__belgrade {
@@ -174,4 +196,10 @@
     line-height: 19px;
 
     margin: 35px 619px 0 2px;
+}
+
+/* і opacity */
+container__weater-table:hover {
+    border: 1px solid #2B81AC;
+    border-radius: 2px;
 }
