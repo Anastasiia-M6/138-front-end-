@@ -21,13 +21,13 @@
 
 .container {
     max-width: 1200px;
+    width: 100%;
 }
 
 /* header start */
 .header {
     max-width: 1440px;
-    max-height: 80px;
-
+    width: 100%;
     background-color: var(--color-white);
     padding: 17px 120px 17px 120px;
 }
@@ -35,7 +35,7 @@
 .header__container {
     max-width: 1200px;
     width: 100%;
-    max-height: 46px;
+
 
     display: flex;
     flex-direction: row;
@@ -46,7 +46,6 @@
 .logo__header {
     max-width: 200px;
     width: 100%;
-    max-height: 32px;
 
     margin: 7px 198px 7px 0px;
 }
@@ -55,7 +54,7 @@
 .nav {
     max-width: 352px;
     width: 100%;
-    max-height: 28px;
+
 
 
     margin: 9px 198px 9px 0;
@@ -173,7 +172,7 @@
 .features {
     max-width: 1440px;
     width: 100%;
-    max-height: 510px;
+
 
     background-image: url(../homework-lesson_5/img-homework-lessom_5/bg.svg);
     background-position: bottom center;
@@ -200,7 +199,7 @@
 .features__row {
     display: flex;
     max-width: 1200px;
-    max-height: 175px;
+
 
     justify-content: space-between;
     margin: 100px 120px 70px 120px;
@@ -209,7 +208,6 @@
 
 .features__item {
     max-width: 270px;
-    max-height: 175px;
     text-align: left;
 }
 
@@ -220,10 +218,7 @@
 
 
 .h3-title.features__item {
-    /* max-width: 170px;
-    width: 100%;
-    max-height: 27px;
- */
+
     font-family: var(--main-font);
     font-size: 22px;
     font-weight: 600;
@@ -256,8 +251,6 @@
     max-width: 1440px;
     max-height: 510px;
     padding: 100px 120px 0 120px;
-
-
 
 }
 
