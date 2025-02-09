@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
 
+    list-style-type: none;
 }
 
 :root {
@@ -21,13 +22,12 @@
 
 .container {
     max-width: 1200px;
-    width: 100%;
 }
 
 /* header start */
 .header {
     max-width: 1440px;
-    width: 100%;
+
     background-color: var(--color-white);
     padding: 17px 120px 17px 120px;
 }
@@ -113,8 +113,10 @@
 
 }
 
-/*  headerb button end*/
+/*  header button end*/
 /* header end*/
+
+
 
 /* first-screen START */
 .first-screen {
@@ -170,9 +172,8 @@
 /* features START*/
 
 .features {
-    max-width: 1440px;
-    width: 100%;
 
+    max-width: 1440px;
 
     background-image: url(../homework-lesson_5/img-homework-lessom_5/bg.svg);
     background-position: bottom center;
@@ -181,11 +182,11 @@
 }
 
 .h2-title.features__title {
-    text-align: center;
+
     max-width: 539px;
     width: 100%;
-    max-height: 88px;
-
+    text-align: center;
+    /* max-height: 88px; */
     margin: 100px 450px 0 451px;
 
     font-family: var(--main-font);
@@ -200,8 +201,6 @@
     display: flex;
     max-width: 1200px;
 
-
-    justify-content: space-between;
     margin: 100px 120px 70px 120px;
 
 }
@@ -209,6 +208,8 @@
 .features__item {
     max-width: 270px;
     text-align: left;
+    justify-content: space-between;
+
 }
 
 .features-icon.features__item {
@@ -248,54 +249,55 @@
 
 /* effortless-validation START */
 .effortless-validation {
+
     max-width: 1440px;
-    max-height: 510px;
     padding: 100px 120px 0 120px;
 
 }
 
-.container .effortless-validation__container {
+.container.effortless-validation__container {
 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+
+    max-width: 1200px;
 
 }
-
-
 
 .title__container {
 
     max-width: 525px;
-    max-height: 532px;
-
     padding-top: 20px;
     padding-bottom: 20px;
 
-    margin-right: 113px;
 }
 
 .effortless-validation__img {
+
     max-width: 562px;
     max-height: 573px;
+    margin-left: 113px;
 }
 
-.h5-title {
+.h5-title,
+.p.sub-title__text {
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
     color: var(--color-text);
+}
 
+.p.sub-title__text {
 
+    margin: 20px 130px 40px 0;
 }
 
 .effortless-validation .title__container h5:nth-of-type(1) {
     margin: 0 324px 0 0;
 }
 
-.h5-title .h3-title {
+.h2-title.title__container {
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 36px;
@@ -304,11 +306,96 @@
     margin-right: 130px;
 }
 
-.p.effortless-validation-text {
-    font-family: var(--main-font);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    color: var(--color-text);
-    margin: 20px 130px 40px 0;
+effortless-validation__img {
+    max-width: 563px;
+    max-height: 573px;
+    margin: 21px 0 21px 113px;
+}
+
+/* effortless-validation END */
+
+/* product-managers START */
+
+.product-managers {
+    max-width: 1440px;
+    padding: 100px 120px 0 120px
+}
+
+.container.product-managers__container {
+
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1200px;
+
+}
+
+.product-managers__img {
+    max-width: 570px;
+    max-height: 520px;
+
+    margin-right: 125px;
+}
+
+.title__container {
+
+    max-width: 525px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+}
+
+.managers__img {
+    max-width: 35px;
+    max-height: 35px;
+    /* margin: 9px 30px 9px 0; */
+
+}
+
+.no-bullets {
+    max-width: 505px;
+
+    margin: 40px 0 48px 0px;
+
+}
+
+.title__container ul.no-bullets li {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 30px;
+
+}
+
+/* product-managers END */
+
+/* marketers srart */
+.marketers {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 100px 120px 0 120px
+}
+
+.container.marketers__container {
+
+    max-width: 1200px;
+
+}
+
+.marketers__img {
+    max-width: 540px;
+    max-height: 610px;
+
+    margin-left: 174px;
+}
+
+.title__container {
+
+    max-width: 486px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+
 }
