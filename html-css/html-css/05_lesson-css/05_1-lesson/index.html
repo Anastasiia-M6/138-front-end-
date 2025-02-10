@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            background-color: beige;
+            display: flex;
+
+            /** command + /  сделать комент**/
+            /*
+            сделать колоку flex-direction: column;*/
+
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            color: white;
+            /**height: 100vh;**/
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .box {
+            /**елемент по центру делаем при помощи єтих 3 пунктов
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            **/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            order: 1;
+
+        }
+
+        .box-2 {
+            width: 80px;
+            height: 80px;
+            order: 5;
+        }
+
+        .box-3 {
+            width: 30px;
+            height: 30px;
+            order: 3;
+        }
+
+        .box-4 {
+            order: 4;
+        }
+
+        .box-5 {
+            order: 2;
+        }
+
+        /* 
+        
+        .box-5 {
+        order:-1 ;} */
+
+        /* если дать ордер 0 тот последний
+        если минус то он пойдет первым */
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+    </div>
+</body>
+
+</html>

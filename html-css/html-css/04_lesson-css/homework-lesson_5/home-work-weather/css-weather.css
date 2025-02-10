@@ -1,0 +1,204 @@
+* {
+    /* Reset CSS */
+    padding: 0;
+    margin: 0;
+    transition: all .1s ease-in;
+
+}
+
+:root {
+    --main-font: "Lucida Sans Unicode";
+    --color-text: #FFFFFF;
+    --font-size-text: 22px;
+    --border-group: 2px solid #FFFFFF;
+
+}
+
+
+.main {
+    max-width: 1442px;
+    width: 100%;
+
+    border: 25px solid #0e70a1;
+    background-color: #2B81AC;
+
+}
+
+.section {
+    padding: 60px 110px 94px 110px;
+
+
+}
+
+/* title__section STERT */
+.title__section {
+    display: inline-block;
+    margin-right: 4px;
+
+}
+
+.title {
+    font-family: var(--main-font);
+    font-size: 21px;
+    line-height: 25px;
+    color: var(--color-text);
+}
+
+.title__icone {
+    max-width: 35px;
+    width: 100%;
+    max-height: 34px;
+    padding-right: 904px;
+}
+
+/* title__section END */
+
+.container__weater-table {
+    max-width: 1170px;
+    width: 100%;
+    max-height: 592px;
+    border: var(--border-group);
+    margin-top: 35px;
+
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0;
+    transition: opacity 0.3s ease-in-out, border 0.3s ease-in-out;
+    box-sizing: border-box;
+
+    /* border: var(--border-group); */
+}
+
+.container__weater-table li:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+
+.container__weater-table li:active {
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+
+.group__lisbon,
+.group__paris,
+.group__belgrade,
+.group__venice,
+.group__tel-avive,
+.group__cair,
+.group__new-york,
+.group__new-delhi,
+.group__san-francisco,
+.group__tokyo,
+.group__sydney {
+
+    color: var(--color-text);
+    align-items: center;
+    line-height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: var(--border-group);
+}
+
+.name-city,
+text {
+    color: var(--color-text);
+    font-size: var(--font-size-text);
+}
+
+
+
+.img {
+    max-width: 47px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.img:hover {
+    opacity: 0.8;
+}
+
+.group__lisbon,
+.group__san-francisco {
+    width: 50%;
+
+}
+
+.group__paris,
+.group__belgrade,
+.group__venice,
+.group__tel-avive,
+.group__cair,
+.group__new-york,
+.group__new-delhi,
+.group__tokyo {
+    width: 25%;
+
+}
+
+.group__sydney {
+    width: 100%;
+
+
+}
+
+.group__lisbon {
+    background-color: #3399cc;
+
+}
+
+.group__paris {
+    background-color: #33cccc;
+
+}
+
+.group__belgrade {
+    background-color: #996699;
+
+}
+
+.group__venice {
+    background-color: #c24747;
+}
+
+.group__tel-avive {
+    background-color: #e2674a;
+}
+
+.group__cair {
+    background-color: #ffcc66;
+}
+
+.group__new-york {
+    background-color: #aed581;
+}
+
+.group__new-delhi {
+    background-color: #669999;
+}
+
+.group__san-francisco {
+    background-color: #cc6699;
+}
+
+.group__tokyo {
+    background-color: #339966;
+}
+
+.group__sydney {
+    background-color: #666699;
+}
+
+.sub-title {
+    font-size: 16px;
+    line-height: 19px;
+
+    margin: 35px 619px 0 2px;
+}

@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*псевдо єлементі  - работают только в парніх тегах 
+
+их два- бефор и автер
+
+бефор не может работаь без контента*/
+
+.title::before {
+    content: "😀";
+}
+
+.title::after {
+    content: "😀";
+}
+
+.title-2::after {
+    display: block;
+    content: "";
+    width: 40px;
+    height: 30px;
+    background-color: brown;
+}

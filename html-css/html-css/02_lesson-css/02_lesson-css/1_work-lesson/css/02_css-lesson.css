@@ -1,0 +1,16 @@
+.section_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border-color: rgb(208, 31, 31);
+    height: 800px;
+    margin: 0;
+}
+
+
+.container_1 {
+    width: 200px;
+    height: 200px;
+    background: blueviolet;
+}
