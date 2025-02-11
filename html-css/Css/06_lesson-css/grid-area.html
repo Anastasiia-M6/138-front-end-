@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: aqua;
+            border: 1px solid;
+            height: 100px;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+            grid-template-areas:
+                /* можем так рисовать */
+                "header header header"
+                "aside main main"
+                "footer footer footer";
+        }
+
+        .header {
+            background-color: red;
+            height: 100px;
+            grid-area: header;
+        }
+
+        .aside {
+            background-color: blueviolet;
+            height: 100px;
+            grid-area: aside;
+        }
+
+        .main {
+            background-color: beige;
+            height: 100px;
+            grid-area: main;
+        }
+
+        .footer {
+            background-color: brown;
+            height: 100px;
+            grid-area: foooter;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">header</header>
+        <aside class="aside">aside</aside>
+        <main class="main"> main</main>
+        <footer class="footer">footer</footer>
+    </div>
+    <div class="grid">
+        <div class="box box--1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

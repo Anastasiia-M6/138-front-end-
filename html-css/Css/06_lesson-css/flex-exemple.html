@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=.wrPPER, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            height: 80px;
+            background-color: aquamarine;
+        }
+
+        .footer {
+            height: 80px;
+            background-color: red;
+        }
+
+        .main {
+            background-color: bisque;
+            /* прибить футер к низу  - флекс гроу*/
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrapper">
+
+        <header class="header"></header>
+        <div class="main">
+            <h4>commmmmmmmm</h4>
+        </div>
+        <footer class="footer">
+            <h3>footer</h3>
+        </footer>
+    </div>
+</body>
+
+</html>
