@@ -1,0 +1,160 @@
+/*reset css START*/
+/* звернення до всех елементов (писать всегда перед написанием сайта 3 пункта*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    left: 235px;
+}
+
+/* картинка по ширине страницы
+img {
+    width: 100%;
+}*/
+
+/*reset css END*/
+body {
+    /*шрифт из фигмы*/
+    font-family: "open sans";
+}
+
+.header__container {
+    max-width: 1440px;
+    width: 100%;
+    /*высоту мы не пишем для контейнеров - ЭТО ЗАПОМНИТЬ
+    если писать макс хидс то она адаптивная и не может быть больше 970
+    если просто хидс оставить то картинка будет фиктованая*/
+
+    padding: 0 120px;
+    /* Чтобы контент не прижимался к краям на маленьких экранах */
+
+    /*
+    margin: 0% auto;
+    /*что бы контейнер выровнять по центру - маржин-0 авото*/
+
+    /*
+    margin-top: 0%;
+    margin-bottom: 0;
+    /*сверху снизу*/
+
+    /* margin-left: auto;
+    margin-right: auto;
+    /*слева справа*/
+    /*эта надпись едет вместо маржин 0 авто ( 4 строки) '*/
+    /*выровнять по горизонтали жаст контент*/
+
+}
+
+/*header start*/
+.header__nav {
+
+    border-bottom: 1px solid #828282;
+    align-items: center;
+
+
+}
+
+.header__list {
+    width: 480px;
+    max-height: 210px;
+    display: flex;
+    /* выравнивает flex-элементы текущей flex-линии таким же образом, как и justify-content, но в перпендикулярном направлении.*/
+    align-items: center;
+
+    /*выровнять по горизонтали жаст контент
+     justify-content: center;
+    */
+
+    /*отсутпы между елементами гэп*/
+    gap: 40px;
+
+    /*верху снизу падинг*/
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    margin-left: 472px;
+    margin-right: 472px;
+
+    list-style: none;
+
+}
+
+.header__link {
+
+    flex-direction: row;
+
+    /*если дробь  то округляем 25*/
+    line-height: 25;
+    font-size: 18px;
+    font-weight: 400;
+    /*лучше  не делать потому что не читатет процент letter-spacing: 2%;*/
+    align-items: center;
+
+    text-decoration: none;
+    color: #828282;
+}
+
+/* header-menu */
+
+
+
+.header__link__home {
+
+    width: 53px;
+    height: 25px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+
+    /* Black */
+    color: #070707;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+/*header end*/
+
+/*важно последовательность*/
+
+
+/*hero srart*/
+.hero {
+    width: 970px;
+    height: 497px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    width: 300px;
+    height: 60px;
+}
+
+/*.hero__img {
+    width: 970px;
+    height: 487px;
+}*/
+
+/*hero end*/
+
+/*about srart*/
+.about {
+    max-width: 970px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+    background-color: #F6f6f6;
+}
+
+/*about end*/

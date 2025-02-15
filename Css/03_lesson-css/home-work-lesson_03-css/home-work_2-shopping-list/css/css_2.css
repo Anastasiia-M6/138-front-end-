@@ -1,0 +1,240 @@
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;
+    transition: all .1s ease-in;
+}
+
+body {
+    max-width: 793px;
+    width: 100%;
+    background-color: #3B3F45;
+
+    border: 1px solid white;
+
+}
+
+/* Header start*/
+.header {
+    max-width: 793px;
+    width: 100%;
+    max-height: 92px;
+    background-color: #4A4F56;
+
+}
+
+/**звернення за елементом**/
+h1.title {
+    font-family: "Roboto";
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FF8984;
+
+    max-width: 276px;
+    width: 100%;
+
+    padding-top: 19px;
+    padding-bottom: 4px;
+
+    margin-right: 270px;
+    margin-left: 247px;
+
+}
+
+h3.sub-title {
+    max-width: 139px;
+    width: 100%;
+    max-height: 19px;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    line-height: 19px;
+    font-size: 16px;
+
+    color: #FF8984;
+
+    padding-top: 0;
+    padding-bottom: 12px;
+    margin-left: 338px;
+    margin-right: 316px;
+
+}
+
+/* Header End*/
+
+
+/** section Menu start**/
+.container.menu__section {
+    max-width: 534px;
+    width: 100%;
+    max-height: 45px;
+
+    padding-top: 0px;
+    margin-left: 129px;
+    margin-right: 130px;
+    color: #ffffff
+}
+
+/**:nth-child(n)вибір конкретних елементів у батьківському контейнері)**/
+.container.menu__section:nth-child(1) {
+    margin-top: 20px;
+    background-color: #88839E;
+
+}
+
+
+/**группировка**/
+.container.menu__section:nth-child(3),
+.container.menu__section:nth-child(5) {
+    background-color: #88839E;
+
+}
+
+
+.container.menu__section:nth-child(2),
+.container.menu__section:nth-child(4),
+.container.menu__section:nth-child(6) {
+    background-color: #7A7593;
+
+}
+
+
+/**hover для контейнеров меню START**/
+.container.menu__section:nth-child(1):hover,
+.container.menu__section:nth-child(2):hover,
+.container.menu__section:nth-child(3):hover,
+.container.menu__section:nth-child(4):hover,
+.container.menu__section:nth-child(5):hover,
+.container.menu__section:nth-child(6):hover {
+    background-color: #625E77;
+    border-top: 3px solid #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+
+}
+
+/**hover для контейнеров меню END**/
+
+
+/**ACTIVE для контейнеров меню START**/
+.container.menu__section:nth-child(1):active,
+.container.menu__section:nth-child(2):active,
+.container.menu__section:nth-child(3):active,
+.container.menu__section:nth-child(4):active,
+.container.menu__section:nth-child(5):active,
+.container.menu__section:nth-child(6):active {
+    background-color: red;
+}
+
+/**ACTIVE для контейнеров меню END**/
+
+/**закреслюємо текст в елементі, робимо його блідо-сірим кольором**/
+.menu__input:checked+.menu__label .menu__text {
+    text-decoration: line-through;
+    /* Закреслений текст */
+    color: lightgray;
+}
+
+.menu__input:checked+.menu__label .menu__sub-text {
+    text-decoration: line-through;
+    /* Закреслений текст */
+    color: lightgray;
+}
+
+.menu__sub-text:checked {
+    text-decoration: line-through;
+}
+
+
+
+/**звернення за атрибутом**/
+input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+    color: #ffffff;
+
+    margin-top: 12px;
+    margin-bottom: 14px;
+    margin-left: 12px;
+    margin-right: 16px;
+
+}
+
+/**звернення за класом**/
+.menu__text {
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding-right: 3px;
+    margin-top: 11px;
+    margin-bottom: 13px;
+}
+
+.menu__sub-text {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+
+}
+
+/**В кожному пункті є опис продуктів чи певні нотатки до них, що знаходяться в дужках. 
+Дужки на зразку реалізовані за допомогою псевдоелементів before і after.**/
+
+.menu__sub-text::before {
+    content: "(";
+    /* Додає відкриту дужку */
+    color: gray;
+
+}
+
+.menu__sub-text::after {
+    content: ")";
+    /* Додає закриту дужку */
+    color: gray;
+
+}
+
+
+/**Footer start**/
+.footer {
+    max-width: 534px;
+    width: 100%;
+    max-height: 45px;
+
+    margin-top: 45px;
+    margin-bottom: 45px;
+    margin-left: 129px;
+    margin-right: 130px;
+
+}
+
+.footer button {
+
+    max-width: 534px;
+    width: 100%;
+    max-height: 45px;
+
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    background-color: #4A4F56;
+    color: #FF8984;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+
+/**Footer end*/
+
+
+/** section Menu End**/
