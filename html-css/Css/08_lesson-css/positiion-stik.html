@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aside {
+            background-color: aquamarine;
+        }
+
+        .main {
+            background-color: antiquewhite;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+        }
+
+        ul {
+            position: sticky;
+            top: 20px;
+            background-color: blue;
+            padding: 10px 20px;
+        }
+
+        .box {
+            height: 900px;
+            background-color: brown;
+            padding: 10px;
+            display: flex;
+            margin-top: auto;
+
+        }
+
+        /*  позишиг стики не нужно задать родителя и он не будет работать если не будет топ*/
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <aside>
+            <form action=""><input type="">
+            </form>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="/">home</a></li>
+                <li><a href="/">home</a></li>
+            </ul>
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, consectetur
+                dolores.
+                Hic vel, consequatur ullam nihil voluptates sint itaque, repellat id dicta sequi harum! Suscipit
+                eius
+                harum temporibus quas provident!</div>
+        </aside>
+
+        <main>
+            <h2>position</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus pariatur quod placeat repudiandae
+                numquam ratione architecto cumque, ipsam animi, molestiae eius sunt aspernatur fugit provident? Magnam
+                perferendis nobis veniam perspiciatis.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum saepe magni iure delectus quas nesciunt
+                accusamus! Praesentium, numquam porro. Quis quam esse quia molestias totam dicta quasi culpa distinctio
+                inventore?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus pariatur quod placeat repudiandae
+                numquam ratione architecto cumque, ipsam animi, molestiae eius sunt aspernatur fugit provident? Magnam
+                perferendis nobis veniam perspiciatis.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum saepe magni iure delectus quas nesciunt
+                accusamus! Praesentium, numquam porro. Quis quam esse quia molestias totam dicta quasi culpa distinctio
+                inventore?</p>
+        </main>
+    </div>
+</body>
+
+</html>

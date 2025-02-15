@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=.bo, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* всегда в начале пишут
+            от первого пикселя идет расположение поэтому добвляют трансформ */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+
+            /* допомыжний ынструмент как делать эелемент по ценру
+            независимо какого размера юудет элмент */
+            transform: perspective(-50%, -50%);
+
+            width: 300px;
+            height: 300px;
+            background: red;
+
+        }
+
+        .box--2 {
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: perspective(-50%, -50%);
+
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+
+        .row {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <div class="row">
+        <div class="box--2"></div>
+    </div>
+</body>
+
+</html>
