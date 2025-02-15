@@ -1,0 +1,362 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Font */
+    --title-font: "Delius Unicase",
+        sans-serif;
+    --font-family: "Roboto",
+        sans-serif;
+    /* Color  */
+    --color-title: #000000;
+    --color-text: #FFFFFF;
+    --color-icon: #E0E0E0;
+
+}
+
+
+/*  section__cities-works START */
+
+.section {
+    padding: 120px 135px 0px 135px;
+}
+
+.container {
+
+    display: grid;
+    max-width: 1170px;
+    margin: 0;
+
+    gap: 30px;
+
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+
+    margin: 0px auto 80px auto;
+    font-family: var(--title-font);
+    color: var(--color-title);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+.container.section__cities-works {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 370px);
+}
+
+
+.item-square__content_1,
+.item-landscape__content_2,
+.item-landscape__content_3,
+.item-square__content_4,
+.item-square__content_5,
+.item-landscape__content_6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    cursor: pointer;
+    border-radius: 20px;
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+
+.item-square__content_1 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image-1.png) center center / cover;
+}
+
+
+.item-landscape__content_2 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_1.1.png), center center / cover;
+    grid-column: span 2;
+}
+
+.item-landscape__content_3 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_1.2.png), center center / cover;
+    grid-column: span 2;
+}
+
+.item-square__content_4 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_1.3.png), center center / cover;
+}
+
+.item-square__content_5 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_1.4.png), center center / cover;
+}
+
+.item-landscape__content_6 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_1.5.png), center center / cover;
+    grid-column: span 2;
+}
+
+.item-square__content_1:hover,
+.item-square__content_4:hover,
+.item-square__content_5:hover {
+
+    --item-gradient: linear-gradient(360deg, #241F24 1%, rgba(91, 91, 91, 0.26) 7%, rgba(187, 186, 192, 0) 13%);
+    box-shadow: 0 0 30px 0 #00000080;
+    transform: scale(1.05);
+
+}
+
+.item-landscape__content_2:hover,
+.item-landscape__content_3:hover,
+.item-landscape__content_6:hover {
+
+    --item-gradient: linear-gradient(360deg, #241F24 1%, rgba(91, 91, 91, 0.26) 7%, rgba(187, 186, 192, 0) 13%);
+    box-shadow: 0 0 30px 0 #00000080;
+    transform: scale(1.05);
+}
+
+
+.item-landscape__content_2:hover .item__icons,
+.item-landscape__content_3:hover .item__icons,
+.item-landscape__content_6:hover .item__icons,
+.item-square__content_1:hover .item__icons,
+.item-square__content_4:hover .item__icons,
+.item-square__content_5:hover .item__icons {
+    opacity: 1;
+
+}
+
+
+.item__content,
+.item__icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.item__text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: var(--color-text);
+}
+
+.item__text:last-child {
+    font-weight: 200;
+}
+
+.item__icons {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.item__icon {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--color-icon);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.item__icon:hover {
+    opacity: 1;
+}
+
+/* section__cities-works END */
+
+/* section nature works start --> */
+
+.container.section__nature-works {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 370px);
+}
+
+.item-square__content_7,
+.item-landscape__content_8,
+.item-square-big__content_9,
+.item-portrait__content_10,
+.item-landscape__content_11,
+.item-square__content_12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    cursor: pointer;
+    border-radius: 20px;
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+
+.item-square__content_7 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_2.png) center center / cover;
+}
+
+
+.item-landscape__content_8 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_2.1.png), center center / cover;
+    grid-column: span 2;
+}
+
+.item-square-big__content_9 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_2.2.jpg), center center / cover;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item-portrait__content_10 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_2.3.png), center center / cover;
+    grid-row: span 2;
+}
+
+
+.item-landscape__content_11 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_2.4.png), center center / cover;
+    grid-column: span 2;
+}
+
+
+.item-square__content_12 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_2.5.png) center center / cover;
+
+}
+
+.item-square__content_7:hover,
+.item-landscape__content_8:hover,
+.item-square-big__content_9:hover,
+.item-portrait__content_10:hover,
+.item-landscape__content_11:hover,
+.item-square__content_12:hover {
+
+    --item-gradient: linear-gradient(360deg, #241F24 1%, rgba(91, 91, 91, 0.26) 7%, rgba(187, 186, 192, 0) 13%);
+    box-shadow: 0 0 30px 0 #00000080;
+    transform: scale(1.05);
+
+}
+
+
+/* ховер при итем икон */
+.item-square__content_7:hover .item__icons,
+.item-landscape__content_8:hover .item__icons,
+.item-square-big__content_9:hover .item__icons,
+.item-portrait__content_10:hover .item__icons,
+.item-landscape__content_11:hover .item__icons,
+.item-square__content_12:hover .item__icons {
+
+    opacity: 1;
+
+}
+
+/* section nature works END--> */
+
+
+/* section pepole start*/
+.container.section__pepole {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 370px);
+}
+
+.item-square__content_13,
+.item-portrait__content_14,
+.item-square__content_15,
+.item-square__content_16,
+.item-portrait__content_17,
+.item-portrait__content_18,
+.item-square__content_19,
+.item-landscape__content_20,
+.item-landscape__content_21,
+.item-square__content_22 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    cursor: pointer;
+    border-radius: 20px;
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+
+.item-square__content_13 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.1.png)center center / cover;
+}
+
+.item-portrait__content_14 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.2.png)center center / cover;
+    grid-row: span 2;
+}
+
+.item-square__content_15 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.3.png)center center / cover;
+}
+
+.item-square__content_16 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.4.png)center center / cover;
+
+}
+
+.item-portrait__content_17 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image-3.5.png)center center / cover;
+    grid-row: span 2;
+}
+
+.item-portrait__content_18 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.6.png)center center / cover;
+    grid-row: span 2;
+}
+
+.item-square__content_19 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.7.png)center center / cover;
+}
+
+.item-landscape__content_20 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.8.png)center center / cover;
+    grid-column: span 2;
+}
+
+.item-landscape__content_21 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.9.png)center center / cover;
+    grid-column: span 2;
+}
+
+.item-square__content_22 {
+    background: var(--item-gradient, linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.4) 34%, rgba(187, 186, 192, 0.26) 62%)), url(../imege-home-work-less_06/image_3.10.png)center center / cover;
+}
+
+.item-square__content_13:hover,
+.item-portrait__content_14:hover,
+.item-square__content_15:hover,
+.item-square__content_16:hover,
+.item-portrait__content_17:hover,
+.item-portrait__content_18:hover,
+.item-square__content_19:hover,
+.item-landscape__content_20:hover,
+.item-landscape__content_21:hover,
+.item-square__content_22:hover {
+
+    --item-gradient: linear-gradient(360deg, #241F24 1%, rgba(91, 91, 91, 0.26) 7%, rgba(187, 186, 192, 0) 13%);
+    box-shadow: 0 0 30px 0 #00000080;
+    transform: scale(1.05);
+
+}
+
+.item-square__content_13:hover .item__icons,
+.item-portrait__content_14:hover .item__icons,
+.item-square__content_15:hover .item__icons,
+.item-square__content_16:hover .item__icons,
+.item-portrait__content_17:hover .item__icons,
+.item-portrait__content_18:hover .item__icons,
+.item-square__content_19:hover .item__icons,
+.item-landscape__content_20:hover .item__icons,
+.item-landscape__content_21:hover .item__icons,
+.item-square__content_22:hover .item__icons {
+
+    opacity: 1;
+
+}
+
+/* section nature works END--> */
