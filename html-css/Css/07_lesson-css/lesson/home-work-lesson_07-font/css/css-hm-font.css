@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0 120px 0 120px;
+    margin: auto;
+}
+
+/* HEADER START */
+.header {
+    max-width: 1440px;
+    padding: 13px 120px 13px 120px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.ENG {
+    font-family: "Tourney", serif;
+
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: 4%;
+
+    margin-right: 50px;
+
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    margin-right: 601px;
+}
+
+.nav a {
+    font-family: "Staatliches", serif;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 3%;
+
+    color: #000000;
+    text-decoration: none;
+
+}
+
+.logo__img {
+    max-width: 238px;
+
+}
+
+/* HEADER END */
+
+
+.section {
+    margin-top: 70px;
+
+}
+
+.title {
+    font-family: "Francois One", serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    color: #000000;
+    letter-spacing: 4%;
+    margin-bottom: 40px;
+
+}
+
+.chapter-title {
+
+    font-family: "Farro", serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 4%;
+    color: #000000;
+    position: relative;
+    top: -19px;
+    right: 0;
+
+
+}
+
+.text {
+    font-family: "PT Sans", serif;
+
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: 0;
+    color: #000000;
+
+
+    text-decoration-style: solid;
+    text-decoration-thickness: Auto;
+
+}
+
+
+.list-text.section--chapter-3 {
+    list-style-type: none;
+    font-family: "PT Sans", serif;
+    /* font-weight: 700; */
+    font-size: 28px;
+    line-height: 48px;
+    margin: 40px 0 40px 0;
+
+
+}
+
+.text-code.section--chapter-3 {
+    background-color: gray;
+}
+
+.text.text--title,
+.text.section--chapter-3,
+.text.section--chapter-4 {
+    margin: 40px 0 40px 0;
+
+}
