@@ -15,17 +15,8 @@
     box-sizing: border-box;
 }
 
-img {
-    width: 100%;
-}
-
-body {
-    font-family: var(--font-family);
-}
-
 .container {
     max-width: 970px;
-    width: 100%;
     margin: 0 auto;
 
 }
