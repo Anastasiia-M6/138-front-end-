@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-text-logo: "Quicksand", serif;
+    --font-text-title: "Nunito Sans", serif;
+    --font-text-sub-title: "Roboto", serif;
+}
+
+.container {
+
+    margin: auto;
+    padding: 0 135px 0 135px;
+}
+
+/* header START */
+.header {
+    border: 1px solid #EFEEF3
+}
+
+.item__logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding: 0 135px 0 135px; */
+    margin-top: 23px;
+    margin-bottom: 23px;
+
+}
+
+/* header END */
+
+/* SERVICE START */
+
+.service {
+    /* display: block;
+    align-items: center;
+    justify-content: center; */
+    padding: 100px 135px 100px 135px;
+}
+
+.service__content {
+    margin-bottom: 40px;
+}
+
+.sub-title--service {
+    font-family: var(--font-text-sub-title);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    color: #7690A8;
+}
+
+.title--service {
+    font-family: var(--font-text-title);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+    color: #16133D;
+
+
+}
+
+.item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(1, 1fr); */
+    gap: 30px;
+
+}
+
+.item__content {
+    border: 1px solid #E5EAF4;
+    border-radius: 8px;
+    padding: 40px 40px 40px 40px;
+}
+
+.item__content:hover {
+    border: 1px solid #3DB370
+}
+
+.title {
+    font-family: var(--font-text-sub-title);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    color: #16133D;
+    margin-bottom: 15px;
+
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #1565D81A;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.icons:hover {
+    border: 1px solid #3DB3701A
+}
+
+.icons:hover .megaphone-icon {
+    visibility: visible;
+}
+
+
+
+/* hover icon 1 START */
+.megaphone-icon:hover path:nth-child(1),
+.megaphone-icon:hover path:nth-child(2),
+.megaphone-icon:hover path:nth-child(5) {
+    fill: #E1F4F5;
+}
+
+.megaphone-icon:hover path:nth-child(3) {
+    fill: #F4FEFF;
+}
+
+.megaphone-icon:hover path:nth-child(4),
+.megaphone-icon:hover path:nth-child(6),
+.megaphone-icon:hover path:nth-child(7) {
+    fill: #CAEFF2;
+}
+
+.megaphone-icon:hover path:nth-child(8) {
+    fill: #52C29D;
+}
+
+/* hover icon 1 END*/
+
+/* hover icon 2 START */
+.building-icon:hover path:nth-child(1) {
+    fill: #E1F4F5;
+}
+
+.building-icon:hover path:nth-child(2),
+.building-icon:hover path:nth-child(4),
+.building-icon:hover path:nth-child(5) {
+    fill: #CAEFF2;
+}
+
+.building-icon:hover path:nth-child(3) {
+    fill: #F4FEFF;
+}
+
+.building-icon:hover path:nth-child(6) {
+    fill: white;
+}
+
+.building-icon:hover path:nth-child(7) {
+    fill: #52C29D;
+}
+
+/* hover icon 2 END */
+
+/* hover icon 3 START */
+.phone-green:hover path:nth-child(1),
+.phone-green:hover path:nth-child(5),
+.phone-green:hover path:nth-child(6) {
+    fill: #E1F4F5;
+}
+
+.phone-green:hover path:nth-child(2),
+.phone-green:hover path:nth-child(4) {
+    fill: #CAEFF2;
+}
+
+.phone-green:hover path:nth-child(3) {
+    fill: #F4FEFF;
+}
+
+.phone-green:hover path:nth-child(7) {
+    fill: #52C29D;
+}
+
+/* hover icon 3 END */
+
+.title-text--icons {
+    margin-bottom: 30px;
+}
+
+
+.text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #16133D;
+
+}
+
+.sub-text {
+    font-family: var(--font-text-sub-title);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 0%;
+    color: #3DB370;
+}
+
+/* FOOTER START */
+.footer {
+    background-color: #16133D;
+    padding-top: 17px;
+}
+
+.icons__footer {
+    display: flex;
+    gap: 10px;
+
+}
+
+.icon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+    background: #EFEEF3;
+}
+
+
+
+/* .megaphone,
+.building,
+.phone-green {
+    
+} */
