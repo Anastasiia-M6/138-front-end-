@@ -109,7 +109,7 @@
     border: 1px solid #3DB3701A
 }
 
-.icons:hover .megaphone-icon {
+.item__content:hover .icons {
     visibility: visible;
 }
 
