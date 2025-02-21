@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        svg {
+            width: 150px;
+            height: auto;
+        }
+
+        rect {
+            fill: #FF0000;
+            transition: fill 0.3s;
+        }
+
+        rect:hover {
+            fill: #CC0000;
+            /* Темнее при наведении */
+        }
+
+        polygon {
+            fill: white;
+        }
+
+        path {
+            stroke: black;
+            stroke-width: 5;
+            fill: none;
+        }
+
+        circle {
+            fill: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="container">
+                <div class="content">
+                    <!-- всегда добавлять в начале: высота-70;длина 100; viebox: 0 0 длина высота; xmlns="http://www.w3.org/2000/svg -->
+                    <svg width="100" height="70" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+                        <!-- <rect> создаёт прямоугольник с закруглёнными углами (rx="15") и заливает его красным (fill="red"). -->
+                        <rect width="100" height="70" rx="15" fill="red" />
+                        <!-- <polygon> создаёт белый треугольник (кнопку "Play"), указывая три точки points="40,20 40,50 70,35". -->
+                        <!-- 
+                         Первая точка (40,20) – верхний угол треугольника.
+                         Вторая точка (40,50) – нижний левый угол.
+                         Третья точка (70,35) – правый угол (направление указывает вправо, создавая форму кнопки Play) 
+                        40,20 и 40,50 формируют левую вертикальную сторону треугольника.
+                         70,35 — это вершина, смещённая вправо, формирующая наклонные стороны. -->
+
+                        <polygon points="40,20 40,50 70,35" fill="white" />
+                    </svg>
+                </div>
+
+                <div class="content">
+                    <img src="./lv2/credit-card.png" alt="">
+                    <!-- 
+                    
+<path> – создаёт контур короны:
+
+"M20,100" — начало линии в точке (20,100).
+"L60,40" — линия к первой вершине короны.
+"L100,100" — линия вниз (середина).
+"L140,40" — следующая вершина.
+"L180,100" — конец короны.
+"Z" — замыкает контур.
+stroke="black" — чёрная обводка.
+fill="none" — без заливки.
+stroke-width="5" — толщина линии 5px.
+Три <circle> — круглые элементы сверху:
+
+"cx="60" cy="40" r="8"" — первый круг (левая вершина).
+"cx="140" cy="40" r="8"" — второй круг (правая вершина).
+"cx="100" cy="20" r="8"" — центральный круг (самая высокая точка). -->
+                    <svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20,100 L60,40 L100,100 L140,40 L180,100 L20,100 Z" stroke="black" fill="none"
+                            stroke-width="5" />
+                        <circle cx="60" cy="40" r="8" fill="black" />
+                        <circle cx="140" cy="40" r="8" fill="black" />
+                        <circle cx="100" cy="20" r="8" fill="black" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
