@@ -1,0 +1,39 @@
+//variable
+@use "./global/main.scss";
+@use "./global/buttond.scss";
+//global
+@use "./variables/color-variables";
+@use "./variables/media" as *;
+
+//page
+@use "./mixin/decoration-bg.scss" as bg;
+
+
+.hero {
+
+
+    &__title {
+        color: red;
+
+        &:hover {
+            color: bisques;
+        }
+
+        &::before {
+            content: "123";
+        }
+    }
+
+    @media (max-width: $tablet) {
+        color: green;
+    }
+
+    &__text {
+        background-color: aqua;
+    }
+
+}
+
+.container {
+    @include bg.main(50px);
+}

@@ -1,0 +1,32 @@
+.button {
+    padding: 24px 40px 24px 40px;
+    color: #FFFFFF;
+    background-color: #F78D2E;
+    border-radius: 8px;
+    font-family: "monserat, serif";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+
+
+    &:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+        color: #F78D2E;
+        background-color: black;
+        border: 1px solid #F78D2E
+    }
+
+    &:active {
+        // background-color: greenyellow;
+        color: black;
+        transition: 0.3;
+
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: #f78d2e;
+        border-color: #f78d2e;
+    }
+}

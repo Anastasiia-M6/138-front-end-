@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: aquamarine;
+}
+.button:hover {
+  color: red;
+}
+.button--secondary {
+  background-color: transparent;
+}
+
+:root {
+  --color-red: redrgb(0, 255, 195);
+}
+
+.hero__title {
+  color: red;
+}
+.hero__title:hover {
+  color: bisques;
+}
+.hero__title::before {
+  content: "123";
+}
+@media (max-width: 1200px) {
+  .hero {
+    color: green;
+  }
+}
+.hero__text {
+  background-color: aqua;
+}
+
+.container {
+  border-radius: 50px;
+  border: 1px solid red;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgba(0, 212, 255, 0.6773964443) 100%);
+}
+
+/*# sourceMappingURL=style.css.map */

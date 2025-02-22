@@ -1,0 +1,5 @@
+@mixin main ($radius: 15px) {
+    border-radius: $radius ;
+    border: 1px solid red;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 0.6773964442815249) 100%);
+}
