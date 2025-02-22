@@ -1,3 +1,118 @@
+:root {
+  --color-yellow: #FFCC00;
+  --font-title: "Roboto", serif;
+  --font-text: "Raleway", serif;
+  --color-sub-title: #898F8F;
+}
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  padding: 121px 135px 122px 135px;
+}
+
+.section-head {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-head .sub-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-sub-title);
+  margin-bottom: 15px;
+}
+.section-head .title {
+  font-family: var(--font-title);
+  color: var(--color-yellow);
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 66px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.section-head .divider {
+  margin-bottom: 40px;
+}
+
+.content__section-slider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 85px;
+}
+.left .image {
+  display: flex;
+  align-self: center;
+}
+
+.right {
+  display: block;
+  align-content: center;
+  text-align: center;
+  margin-left: 85px;
+}
+.right .info .text {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0%;
+  color: #666666;
+  margin-bottom: 30px;
+}
+.right .info .text-2 {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  color: #666666;
+  margin: 30px 0 30px 0;
+}
+.right .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 49px;
+}
+.right .text-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.button {
+  border: 1px solid #FFCC00;
+  color: #666666;
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 25px;
+}
 
 /*# sourceMappingURL=style.css.map */

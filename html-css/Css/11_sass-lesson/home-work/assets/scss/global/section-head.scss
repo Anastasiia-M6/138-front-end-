@@ -1,0 +1,30 @@
+.section-head {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+
+    .sub-title {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--color-sub-title);
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-family: var(--font-title);
+        color: var(--color-yellow);
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 66px;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .divider {
+        margin-bottom: 40px;
+    }
+}

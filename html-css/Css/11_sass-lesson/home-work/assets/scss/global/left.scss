@@ -1,0 +1,13 @@
+.left {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 85px;
+
+    .image {
+        display: flex;
+        align-self: center;
+        // margin: 65px 0 65px 0;
+    }
+
+}

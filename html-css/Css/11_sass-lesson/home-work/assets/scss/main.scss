@@ -1,0 +1,11 @@
+//Важно: Файл _variables.scss должен подключаться первым, чтобы все переменные были доступны в других файлах!
+@use "./variables/variable";
+
+//global
+@use "./global/main.scss";
+@use "./global/container.scss";
+@use "./global/section-head.scss";
+@use "./global/section-slider.scss";
+@use "./global/left.scss";
+@use "./global/right.scss";
+@use "./global/button.scss";
