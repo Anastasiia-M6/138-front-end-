@@ -1,0 +1,22 @@
+/* container First--Screen START */
+.container.first__screen {
+    background: url(/hw-adapt-less_10/assets/img/bg-image.svg), center center / cover;
+}
+
+.title.first__screen {
+    padding-bottom: 380px;
+    padding-top: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 5%;
+    color: var(--color-black);
+
+}
+
+/* container First--Screen END */

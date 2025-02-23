@@ -1,0 +1,10 @@
+//variable
+@use "./global/main.scss";
+
+//global
+@use "./_variables/font-color-variable";
+@use "./_variables/media" as *;
+@use "./global/header.scss";
+@use "./global/search.scss";
+@use "./global/First-Screen.scss";
+@use "./global/article.scss";

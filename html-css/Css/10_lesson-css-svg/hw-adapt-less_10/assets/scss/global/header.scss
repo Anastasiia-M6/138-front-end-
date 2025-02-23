@@ -1,0 +1,39 @@
+/* HEADER START */
+.header {
+    padding: 40px 0;
+
+    .menu__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .logo {
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            gap: 428px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 42px;
+
+
+        }
+
+        .nav a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--font-text);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 30%;
+            color: var(--color-black);
+        }
+
+    }
+}

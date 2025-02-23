@@ -1,0 +1,45 @@
+/*  стилизация search START */
+.search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    background: white;
+    transition: width 1s ease-in-out;
+
+    overflow: hidden;
+}
+
+/* Когда внутри формы что-то в фокусе, расширяем */
+.search-form:focus-within {
+    max-width: 120px;
+}
+
+.search-input {
+    opacity: 0;
+    /* Изначально скрыто */
+    transition: opacity 1s ease-in-out;
+    max-width: 84px;
+}
+
+/* Когда форма активна, делаем поле видимым */
+.search-form:hover .search-input {
+    opacity: 1;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-icon svg {
+    stroke: #333;
+    transition: stroke 1s;
+}
+
+.search-icon:hover svg {
+    stroke: #000;
+}
+
+/*  стилизация search END*/

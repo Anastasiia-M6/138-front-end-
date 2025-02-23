@@ -1,0 +1,109 @@
+/*  article START */
+.section__blog {
+    margin-top: 90px;
+
+
+    .title.blog {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        font-family: var(--font-title);
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 64px;
+        letter-spacing: 5%;
+        color: var(--color-black);
+
+    }
+
+    .content {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 50px;
+
+
+        .article {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+
+            .img {
+                max-width: 570px;
+                max-height: 470px;
+            }
+
+            .content__info {
+                display: block;
+                align-content: center;
+                margin: 85px 0 85px 0px;
+
+
+                .tag {
+                    font-family: var(--font-text);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 27px;
+                    letter-spacing: 10%;
+                    color: var(--color-data-tag);
+                    margin-bottom: 30px;
+                }
+
+                .title {
+                    font-family: var(--font-title);
+                    font-weight: 500;
+                    font-size: 23px;
+                    line-height: 38px;
+                    letter-spacing: 10%;
+                    color: var(--color-black);
+                    margin-bottom: 15px;
+                }
+
+                .data {
+                    font-family: var(--font-text);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 27px;
+                    letter-spacing: 10%;
+                    color: var(--color-data-tag);
+                    margin-bottom: 50px;
+                }
+
+                .description {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+
+                    .text {
+
+                        font-family: var(--font-text);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 27px;
+                        letter-spacing: 5%;
+                        color: var(--color-text);
+                    }
+
+                    .arrow {
+                        font-size: 23px;
+                        color: var(--color-data-tag);
+                    }
+                }
+            }
+        }
+    }
+
+    .content__info:nth-child(1) {
+        margin-right: 120px;
+    }
+
+    .content__info:nth-child(2) {
+        margin-left: 120px;
+    }
+}
+
+
+
+/* container article END */
