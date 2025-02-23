@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="container">
+            <div class="container header__header">
                 <div class="menu__header">
                     <div class="logo">
                         <img src="./img/logo.svg" alt="llogo">
@@ -25,8 +25,9 @@
                     </nav>
                     <div class="search">
                         <form action="https://www.google.com/search" method="GET" class="search-form">
-                            <input type="text" name="q" placeholder="Enter your request" class="search-input"><button
-                                type="submit" class="search-icon">
+                            <input type="text" name="q" placeholder="Enter your request" class="search-input"
+                                width="80">
+                            <button type="submit" class="search-icon">
                                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -43,10 +44,58 @@
         </header>
 
         <div class="section">
-            <div class="container First--Screen">
-                <div class="contetnt">
-                    <h1 class="title">Manifest is a newborn theme. <br>Clean, simple and fast.</h1>
+            <div class="container first__screen">
+                <div class="content__first__screen">
+                    <h1 class="title first__screen">Manifest is a newborn theme. <br>Clean, simple and fast.</h1>
                 </div>
+            </div>
+        </div>
+
+        <div class="section__blog">
+
+            <div class="container blog">
+                <h3 class="title blog">Blog</h3>
+                <div class="content">
+
+                    <div class="article">
+
+                        <div class="image-article">
+                            <img class="img" src="./img/image_1.png" alt="image">
+                        </div>
+
+                        <div class="content__info">
+                            <p class="tag">Technology, Interface Design</p>
+                            <h4 class="title">Using UX Design to Build a <br>Sustainable Future</h4>
+                            <p class="data"> 6 May, 2020</p>
+                            <div class="description">
+                                <p class="text">
+                                    Transformation has to be driven by everybody, not just by climate groups, and we
+                                    have a responsibility to use our influence to drive this. &nbsp; <span
+                                        class="arrow">&#8594;</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article">
+                        <div class="content__info">
+                            <p class="tag">Technology, Interface Design</p>
+                            <h4 class="title">Using UX Design to Build a <br>Sustainable Future</h4>
+                            <p class="data"> 6 May, 2020</p>
+                            <div class="description">
+                                <p class="text">
+                                    Transformation has to be driven by everybody, not just by climate groups, and we
+                                    have a responsibility to use our influence to drive this. &nbsp; <span
+                                        class="arrow">&#8594;</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="image-article">
+                            <img class="img" src="./img/blog-image_2.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
