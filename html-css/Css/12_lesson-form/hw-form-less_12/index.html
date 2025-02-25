@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="blog">
+
+            <div class="container">
+                <div class="content">
+                    <h2 class="title">Create an Account</h2>
+                    <form action="./pages/profile.html" method="GET">
+
+                        <div class="forms__1">
+                            <div class="content_form_1">
+                                <label class="label" for="first-name">First Name</label>
+                                <input class="input" type="text" id="first-name" name="first-name"
+                                    placeholder="Enter your first name" required autocomplete="given-name">
+                            </div>
+                            <div class="content_form_1">
+                                <label class="label" for="last-name">Last Name</label>
+                                <input class="input" type="text" id="last-name" name="last-name"
+                                    placeholder="Enter your last name" required autocomplete="family-name">
+                            </div>
+                        </div>
+                        <div class="forms__3">
+                            <label class="label" for="email">E-mail</label>
+                            <input class="input forms__3" type="email" id="email" name="email"
+                                placeholder="example@email.com" required autocomplete="email">
+                        </div>
+                        <p>We'll never share your email with anyone else.</p>
+
+                        <div class="gender">
+                            <div class="content__gender">
+                                <input type="radio" id="male" name="gender" value="male" checked>
+                                <label class="label" for="male">Male</label>
+                            </div>
+                            <div class="content__gender">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label class="label" for="female">Female</label>
+                            </div>
+                        </div>
+                        <div class="forms__1">
+                            <div class="content_form_1">
+                                <label class="label" for="country">Country</label>
+                                <select class="input" id="country" name="country" required>
+                                    <option value="">Select</option>
+                                    <option value="ukr">Ukraine</option>
+                                    <option value="usa">USA</option>
+                                    <option value="ca">Canada</option>
+                                </select>
+                            </div>
+                            <div class="content_form_1">
+                                <label class="label" for="city">City</label>
+                                <input class="input" type="text" id="city" name="city" placeholder="Enter your city"
+                                    required autocomplete="address-level2">
+                            </div>
+                        </div>
+                        <button class="button__sing_up" type="submit">Sign Up</button>
+                    </form>
+
+
+                    <p class="sub-title">By clicking the 'Sign Up' button, you confirm that you accept our
+                        <br>
+                        <a href="./pages/termsofuse.html">Terms of Use</a> and <a
+                            href="./pages/privacypolicy.html">Privacy
+                            Policy</a>
+                    </p>
+
+                    <div class="line">
+                        <svg width="500" height="1" viewBox="0 0 500 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="1" fill="#E4E4E4" />
+                        </svg>
+                    </div>
+                    <p class="sub-title">Have an account? <a href="./pages/login.html">Log In</a></p>
+                </div>
+            </div>
+
+
+        </section>
+
+    </div>
+</body>
+
+</html>

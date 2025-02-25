@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="blog">
+            <div class="container">
+                <div class="content">
+                    <h2 class="title">Profile</h2>
+
+                    <form class="form__img" action="upload.php" method="POST" enctype="multipart/form-data">
+                        <!-- Фото профиля -->
+                        <label for="profile-pic" class="file-upload">
+                            <img id="profile-img" src="../assets/image/Image.png" alt="Profile Picture">
+                            <span class="span__span">
+                                <svg class="profile-pic" width="16" height="16" viewBox="0 0 14 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.78001 1.33333L5.00001 0H9.00001L10.22 1.33333H12.3333C13.0667 1.33333 13.6667 1.93333 13.6667 2.66667V10.6667C13.6667 11.4 13.0667 12 12.3333 12H1.66668C0.933344 12 0.333344 11.4 0.333344 10.6667V2.66667C0.333344 1.93333 0.933344 1.33333 1.66668 1.33333H3.78001ZM3.66668 6.66667C3.66668 8.50667 5.16001 10 7.00001 10C8.84001 10 10.3333 8.50667 10.3333 6.66667C10.3333 4.82667 8.84001 3.33333 7.00001 3.33333C5.16001 3.33333 3.66668 4.82667 3.66668 6.66667ZM7.00001 8.8C8.17822 8.8 9.13334 7.84487 9.13334 6.66667C9.13334 5.48846 8.17822 4.53333 7.00001 4.53333C5.8218 4.53333 4.86668 5.48846 4.86668 6.66667C4.86668 7.84487 5.8218 8.8 7.00001 8.8Z"
+                                        fill="#969696" />
+                                </svg>
+                            </span>
+                        </label>
+
+                        <input class="file__input" type="file" id="profile-pic" accept="image/*" required>
+
+                        <!-- Кнопка удаления фото  -->
+                        <button type="reset" class="delete-btn">
+                            <svg width="16" height="16" viewBox="0 0 10 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.00001 10.6667C1.00001 11.4 1.60001 12 2.33334 12H7.66668C8.40001 12 9.00001 11.4 9.00001 10.6667V2.66667H1.00001V10.6667ZM9.66668 0.666667H7.33334L6.66668 0H3.33334L2.66668 0.666667H0.333344V2H9.66668V0.666667Z"
+                                    fill="#969696" />
+                            </svg>
+                        </button>
+                        <div class="file__info">
+                            <p class=" file-info">Up to 1 MB (300x300 px)</p>
+                        </div>
+                    </form>
+
+                    <!-- Форма профиля -->
+                    <form action="save-profile.php" method="POST">
+                        <div class="forms__1 ">
+                            <div class="content_form_1">
+                                <label class="label" for="name">Name</label>
+                                <input class="input" type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="content_form_1">
+                                <label class="label" for="email">E-mail</label>
+                                <input class="input" type="email" id="email" name="email" placeholder="Your e-mail"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="forms__1 ">
+                            <div class="content_form_1">
+                                <label class="label" for="country">Country</label>
+                                <select class="input" id="country" name="country" required>
+                                    <option value="">Select a country</option>
+                                    <option value="ukr">Ukraine</option>
+                                    <option value="usa">USA</option>
+                                    <option value="ca">Canada</option>
+                                </select>
+                            </div>
+                            <div class="content_form_1">
+                                <label class="label" for="city">City</label>
+                                <input class="input" type="text" id="city" name="city" placeholder="Your city" required>
+                            </div>
+                        </div>
+
+                        <div class="forms__1">
+                            <div class="content_form_1">
+                                <label class="label" for="zip">Zip Code</label>
+                                <input class="input" type="text" id="zip" name="zip" placeholder="12345" pattern="\d{5}"
+                                    required title="Enter a 5-digit zip code">
+                            </div>
+                            <div class="content_form_1">
+                                <label class="label" for="phone">Phone Number</label>
+                                <input class="input" type="tel" id="phone" name="phone" placeholder="+1234567890"
+                                    pattern="^\+?\d{10,15}$" required title="Enter a valid phone number">
+                            </div>
+                        </div>
+
+                        <button class="button__up_date" type="submit">Update</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

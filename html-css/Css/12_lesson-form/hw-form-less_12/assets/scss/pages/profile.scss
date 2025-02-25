@@ -1,0 +1,33 @@
+.span__span {
+    position: relative;
+    top: -42px;
+    right: -17.7px;
+
+    padding: 7px 8px 7px 160px;
+
+    border: 1px solid #E4E4E4;
+
+    border-radius: 6px;
+    background-color: rgda(0, 0, 0, 0.5);
+
+}
+
+.file__input {
+
+    font-size: 10px;
+    position: relative;
+    top: -46px;
+    left: -168px;
+}
+
+.file__info {
+    position: relative;
+    top: -65px;
+    right: -101px;
+
+}
+
+.form.form__img {
+    max-width: 500px;
+    height: 0;
+}

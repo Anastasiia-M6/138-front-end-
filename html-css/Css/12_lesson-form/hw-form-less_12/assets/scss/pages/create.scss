@@ -1,0 +1,45 @@
+.forms__1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+}
+
+.content_form_1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 7px;
+}
+
+.input {
+    min-width: 245px;
+    min-height: 38px;
+    border: 1px solid #969696;
+    border-radius: 6px;
+}
+
+.input:hover {
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+}
+
+.input.forms__3 {
+    min-width: 500px;
+    min-height: 38px;
+    margin-bottom: 7px;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 21px;
+    margin-top: 20px;
+}
+
+
+p.sub-title {
+    margin: 22px 45px 22px 45px;
+    text-align: center;
+
+}

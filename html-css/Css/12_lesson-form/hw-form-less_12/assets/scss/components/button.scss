@@ -1,0 +1,37 @@
+.button__sing_up {
+    min-width: 500px;
+    min-height: 38px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid #E4E4E4;
+    cursor: pointer;
+}
+
+
+.button__up_date {
+    min-width: 150px;
+    min-height: 38px;
+    margin-top: 20px;
+    margin-bottom: 104px;
+    background-color: #007BFF;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid #E4E4E4;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.delete-btn {
+    position: relative;
+    top: -71px;
+    left: 304px;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+}
