@@ -3,18 +3,17 @@
 @use "./_variables/font";
 @use "./_variables/media" as *;
 
-
-
 //global
 @use "./global/resets.scss";
 @use "./global/global.scss";
-@use "./global/search.scss";
-@use "./global/article.scss";
 @use "./global/First-Screen.scss";
+@use "./global/blog.scss";
+@use "./global/latest-posts.scss";
+
+// componets
+@use "./componets/search.scss";
+@use "./componets/button.scss";
 
 // common
 @use "./common/header.scss";
 @use "./common/footer.scss";
-
-// componets
-@use "./componets/button.scss";
