@@ -1,67 +1,68 @@
 .section.latest_posts {
     margin-top: 90px;
-
-    .content__title-blog {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 50px;
-
-        .title.blog {
-            font-family: var(--font-title);
-            font-weight: 600;
-            font-size: 28px;
-            line-height: 46px;
-            letter-spacing: 10%;
-            color: var(--color-black);
-        }
-
-        .text {
-            color: var(--color-data-tag);
-        }
-    }
-
-    .content__posts {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-
-        .post {
-
-            .img {
-                max-width: 370px;
-                max-height: auto;
-                margin-bottom: 25px;
-            }
-
-            .tag-data__content {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                .data-post {
-                    font-family: var(--font-text);
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 19.92px;
-                    letter-spacing: 10%;
-                    color: var(--color-data-tag);
-                    margin-bottom: 26px;
-                }
-
-            }
-
-            .title {
-                font-size: 22px;
-                margin-bottom: 20px;
-            }
-
-
-        }
-    }
-
 }
+
+.content__title-blog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .title.blog {
+        font-family: var(--font-title);
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 46px;
+        letter-spacing: 10%;
+        color: var(--color-black);
+    }
+
+    .text {
+        color: var(--color-data-tag);
+    }
+}
+
+.content__posts {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    .post {
+
+        .img {
+            max-width: 370px;
+            max-height: auto;
+            margin-bottom: 25px;
+        }
+
+        .tag-data__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .data-post {
+                font-family: var(--font-text);
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 19.92px;
+                letter-spacing: 10%;
+                color: var(--color-data-tag);
+                margin-bottom: 26px;
+            }
+
+        }
+
+        .title {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+
+    }
+}
+
+
 
 .text.content__posts:nth-child(1) {
     margin-bottom: 59px;

@@ -1,0 +1,21 @@
+.button__load-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    .btn_load-more {
+        width: 180px;
+        height: 46px;
+
+        font-family: var(--font-text);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 27px;
+        letter-spacing: 10%;
+
+        background-color: #565656;
+        color: white;
+
+    }
+}

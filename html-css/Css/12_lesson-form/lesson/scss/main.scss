@@ -1,0 +1,15 @@
+@use "./variables/color";
+
+@use "./component/button.scss";
+@use "./component/input.scss";
+@use "./component/form.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif, serif;
+}
