@@ -1,10 +1,20 @@
 //variable
-@use "./global/main.scss";
+@use "./_variables/color";
+@use "./_variables/font";
+@use "./_variables/media" as *;
+
+
 
 //global
-@use "./_variables/font-color-variable";
-@use "./_variables/media" as *;
-@use "./global/header.scss";
+@use "./global/resets.scss";
+@use "./global/global.scss";
 @use "./global/search.scss";
-@use "./global/First-Screen.scss";
 @use "./global/article.scss";
+@use "./global/First-Screen.scss";
+
+// common
+@use "./common/header.scss";
+@use "./common/footer.scss";
+
+// componets
+@use "./componets/button.scss";
