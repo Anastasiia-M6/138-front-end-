@@ -359,7 +359,7 @@
   background-color: #565656;
 }
 .footer .icons__footer .icon__footer .icon:hover path {
-  fiil: #FFFFFF;
+  fill: #FFFFFF;
 }
 .footer .end {
   display: flex;
