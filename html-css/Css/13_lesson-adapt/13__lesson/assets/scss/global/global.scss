@@ -1,10 +1,20 @@
-.container {
-    margin: auto;
-    padding: auto 1200px;
+body {
+    font-family: sans-serif;
 }
 
-.nav-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.logo {
+    @media (max-width: 991px) {
+        width: 133px;
+    }
 }
