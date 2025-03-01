@@ -1,0 +1,15 @@
+//variable
+@use "./_variables/color";
+@use "./_variables/media" as *;
+
+//global
+@use "./global/global.scss";
+
+@use "./global/resets.scss";
+
+// componets
+@use "./componets/button.scss";
+@use "./componets/nav-menu.scss";
+
+// common
+@use "./common/header.scss";

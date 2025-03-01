@@ -24,3 +24,18 @@
     font-size: 23px;
     color: var(--color-data-tag);
 }
+
+.hover-link-animation {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+
+    @media (max-width:tablet) {
+        transition: none;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+}

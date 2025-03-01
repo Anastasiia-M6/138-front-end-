@@ -39,6 +39,20 @@
   color: var(--color-data-tag);
 }
 
+.hover-link-animation {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+}
+@media (max-width: tablet) {
+  .hover-link-animation {
+    transition: none;
+  }
+  .hover-link-animation:hover {
+    transform: scale(1.1);
+  }
+}
+
 /* container First--Screen START */
 .container.first__screen {
   background: url(/assets/img/bg-image.svg), center center/cover;
@@ -314,6 +328,48 @@
   color: var(--color-black);
 }
 
+FLF .menu-toggle {
+  display: none;
+}
+
+/* Стили для кнопки-гамбургера */
+.hamburger {
+  display: none;
+  font-size: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    /* Показываем кнопку */
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .nav {
+    text-decoration: none;
+    color: black;
+  }
+  /* Показываем меню, когда чекбокс активирован */
+  .menu-toggle:checked ~ .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
 .footer {
   margin-top: 90px;
   background-color: #F4F4F4;
