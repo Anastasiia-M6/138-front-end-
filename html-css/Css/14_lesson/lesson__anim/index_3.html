@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .box {
+
+            position: relative;
+            width: 1000px;
+            height: 1000px;
+
+            /* чрез 2 секунді анимация начнется 
+            
+            infinite значит бескончно крутить( зациклить*/
+            animation: box-radius 50s infinite;
+            background-image: url(./img/planet.png);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+
+
+        @keyframes box-radius {
+            0% {
+                transform: rotate(0deg);
+                top: 0;
+            }
+
+            50% {
+                transform: rotate(20deg);
+                top: 50px;
+
+            }
+
+            100% {
+                transform: rotate(0);
+                top: 0;
+
+            }
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

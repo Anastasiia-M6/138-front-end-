@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: box-radius 0.5s infinite;
+        }
+
+        .box:hover {
+            border-radius: 100%;
+        }
+
+        @keyframes box-radius {
+            0% {
+                border-radius: 0;
+            }
+
+            50% {
+                border-radius: 100%;
+            }
+
+            100% {
+                border-radius: 0;
+            }
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* чрез 2 секунді анимация начнется 
+            animation: box-radius 5s 2s infinite;*/
+            background-image: utl();
+            background-position: center;
+            background-size: cover;
+
+        }
+
+
+
+        @keyframes box-radius {
+            0% {
+                transform: rotate(0deg);
+                left: 0;
+            }
+
+            50% {
+                transform: rotate(360deg);
+                left: 200px;
+
+            }
+
+            100% {
+                transform: rotate(0);
+                left: 0;
+            }
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
