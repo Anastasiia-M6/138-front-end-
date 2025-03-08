@@ -1,0 +1,39 @@
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    font-family: var(--font-text);
+
+    display: flex;
+    gap: 25px;
+
+}
+
+.header {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    box-shadow: 0px 0px 20px 0px #00000026;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-right: 25px;
+}
+
+.img-main {
+    max-width: 1220px;
+    backdrop-filter: blur(10px);
+    margin-top: 68px;
+    margin-bottom: 178px;
+}
+
+.main__content {}
+
+.navigation {
+
+    min-width: 164px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+}

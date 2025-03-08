@@ -3,6 +3,11 @@
 @import "./_variables/fonts";
 //global
 @import "./global/reset.scss";
-
-// common
+@import "./global/main.scss";
+//common
 @import "./common/isade.scss";
+@import "./common/header.scss";
+// components
+@import "./components/line.scss";
+@import "./components/logo.scss";
+@import "./components/arrow.scss";
