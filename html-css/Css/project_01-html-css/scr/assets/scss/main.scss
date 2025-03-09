@@ -1,13 +1,15 @@
 // Variables
-@import "./_variables/fonts";
-@import "./_variables/color";
-@import "./_variables/media";
+@use "./_variables/colors";
+@use "./_variables/fonts";
+@use "./_variables/media" as *;
 
 //global
-@import "./global/reset.scss";
-
-// common
-@import "./common/header.scss";
-@import "./common/footer.scss";
+@use "./global/reset.scss";
 
 // componets
+
+// common
+@use "./common/header.scss";
+@use "./common/footer.scss";
+
+// pages
