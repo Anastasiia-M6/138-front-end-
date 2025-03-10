@@ -5,10 +5,13 @@
 
 //global
 @use "./global/reset.scss";
+@use "./global/global.scss";
 
 // componets
+@use "./components/popup.scss";
 
 // common
+@use "./common/menu.scss";
 @use "./common/header.scss";
 @use "./common/footer.scss";
 

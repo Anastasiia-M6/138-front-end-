@@ -1,0 +1,46 @@
+.menu {
+
+    &__container {
+        padding: 10px 30px 40px 30px;
+
+    }
+
+    &__content {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 222px;
+        background-color: var(--color-white);
+        border-radius: 160px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 130px;
+
+        .logo__name {
+            font-family: var(--font-text);
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 90%;
+            color: var(--color-red);
+            // vertical-align: middle;
+            // text-transform: uppercase;
+            // text-decoration: none;
+
+        }
+
+
+    }
+
+
+
+
+}
+
+.nav-menu {
+    text-decoration: none;
+}
