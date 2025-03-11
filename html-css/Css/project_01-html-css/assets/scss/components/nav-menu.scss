@@ -1,0 +1,37 @@
+.nav-menu {
+    display: flex;
+    gap: 30px;
+
+
+    & a {
+
+        font-family: var(--font-nav);
+        color: var(--color-black);
+        text-decoration: none;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+
+        // border-bottom: 2px solid transparent;
+        // transition: border-color 0.3s;
+
+
+
+    }
+
+    // section:has(:target)~nav a[href*="#about"] {
+    //     border-bottom: 2px solid var(--color-red);
+    // }
+
+    // section:target+nav a[href*="#about"],
+    // section:target+nav a[href*="#services"] { margin-top: 24px;
+    // border-bottom: 2px solid var(--color-red); // }
+
+
+    & a:hover {
+
+        color: var(--color-red);
+
+    }
+}

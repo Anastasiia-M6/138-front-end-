@@ -8,7 +8,12 @@
 @use "./global/global.scss";
 
 // componets
-@use "./components/popup.scss";
+@use "./components/logo.scss";
+@use "./components/nav-menu.scss";
+@use "./components/button.scss";
+
+// @use "./components/popup.scss";
+
 
 // common
 @use "./common/menu.scss";
