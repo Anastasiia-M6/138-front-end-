@@ -1,4 +1,4 @@
-.section {
+.wrapper {
     max-width: 1440px;
     margin: auto;
 }
@@ -13,4 +13,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+}
+
+.header {
+    margin-bottom: 180px;
 }
