@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="Короткий опис вашої сторінки, який буде відображатися у пошукових системах.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <a class="logo" href="/'"><img src="./img/logo.svg" alt="logo" width="180" height="39"></a>
+                    <h1 class="title hero__title">Вища освіта</h1>
+                    <p class="sub-title--m hero__sub-title">Бакалаврські програми</p>
+                    <div class="hero__text-wrap">
+                        <p class="sub-text hero__text">Економіка і великі дані</p>
+                        <p class="sub-text hero__text">ІТ і бізнес-аналіз</p>
+                    </div>
+
+                    <p class="sub-text hero__text-grup">
+                        <span>4 роки навчання</span>
+                        <span>Викладання англійською</span>
+                    </p>
+                    <div class="hero__button-row">
+                        <button class="button" id="btn1">
+                            Інвестувати в майбутнє
+                        </button>
+                        <p class="sub-text">
+                            Дедлайн подачі: <br>
+                            <b>22 липня</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="hero__images">
+                    <img class="hero__kv" src="./img/main-kv.png" alt="main img">
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container about__container">
+                <p>Вища освіта в Київській школі економіки — це дві англомовні чотирирічні програми
+                    «Економіка і великі
+                    дані» та «ІТ і бізнес-аналіз». Обидві відповідають міжнародним стандартам освіти і поєднують сучасну
+                    теорію з практичними кейсами. Навчання англійською мовою та широка мережа партнерів відкривають
+                    студентам шлях до кар'єри в усьому світі.</p>
+                <p>
+                    Ми розкриваємо та збагачуємо таланти, за якими потім полюють потужні українські та міжнародні
+                    компанії. Викладачі із закордонною освітою та бізнеспрактики, ретельно підібрані складові навчання
+                    та індивідуальний підхід до кожного студента дають змогу використати час у школі максимально
+                    ефективно.
+                </p>
+            </div>
+        </section>
+        <section class="program">
+            <div class="container program__container">
+                <h2 class="sub-title program__title">Коротко про програму</h2>
+                <div class="program__list">
+                    <div class="program__item">
+                        <div class="program__item-content">
+                            <h3 class="program__item-title">4 роки навчання</h3>
+                            <p>3 семестри на рік</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+
+                        <div class="program__item-content">
+                            <h3 class="program__item-title">4 роки навчання</h3>
+                            <p>3 семестри на рік</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+
+                        <div class="program__item-content">
+                            <h3 class="program__item-title">4 роки навчання</h3>
+                            <p>3 семестри на рік</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+
+                        <div class="program__item-content">
+                            <h3 class="program__item-title">4 роки навчання</h3>
+                            <p>3 семестри на рік</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+
+                        <div class="program__item-content">
+                            <h3 class="program__item-title">4 роки навчання</h3>
+                            <p>3 семестри на рік</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+    <!-- Modal PopUp -->
+    <div class="popup">
+        <div class="form">
+            <div class="form__close">
+                X
+            </div>
+            <h2>Regestration</h2>
+            <div class="form__item">
+                <label for="">Name</label>
+                <input class="form__input" type="text">
+            </div>
+            <div class="form__item">
+                <label for="">Email</label>
+                <input class="form__input" type="text">
+            </div>
+            <div class="form__item">
+                <label for="">Phone</label>
+                <input class="form__input" type="text">
+            </div>
+            <button class="button">Submit</button>
+        </div>
+    </div>
+
+
+    <script>
+        let btn1 = document.querySelector('#btn1')
+        let popup = document.querySelector('.popup')
+        let close = document.querySelector('.form__close')
+
+        btn1.onclick = () => {
+            popup.classList.add('popup--active')
+        }
+        close.onclick = () => {
+            popup.classList.remove('popup--active')
+        }
+    </script>
+</body>
+
+</html>
