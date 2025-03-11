@@ -1,13 +1,31 @@
 /* 📌 Кнопка в хедере */
+.button__popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 186px;
+    min-height: 48px;
+    background-color: var(--color-red);
+    border-radius: 100px;
+
+}
+
 .header-btn {
-    padding: 10px 20px;
-    background-color: white;
-    color: #d40000;
+
+
+
+    color: var(--color-white);
     border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    font-family: var(--font-nav);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+
 }
 
 .header-btn:hover {
