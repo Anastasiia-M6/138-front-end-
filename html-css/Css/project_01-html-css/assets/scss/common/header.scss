@@ -1,0 +1,26 @@
+.header {}
+
+.image-dirtybarn-gradient_1 {
+    max-width: 324px;
+    height: 560px;
+    border-radius: 160px;
+}
+
+.main-screen__content {
+    background: url(/assets/images/dirtybarn-gradient_16_2.png) center center /cover;
+    flex-grow: initial;
+    max-width: 1440px;
+    width: 100%;
+    height: 560px;
+    border-top-left-radius: 160px;
+    border-bottom-left-radius: 160px;
+
+
+}
+
+.main-screen__text {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 30px;
+    margin: 120px 674px 66px 172px;
+}
