@@ -1,18 +1,21 @@
-.nav-menu {
+.menu {
 
-    & ul {
+    &__nav {}
+
+
+    &__nav-list {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         gap: 30px;
-
-
     }
 
-    & li {
-        text-decoration: none;
 
+    &__nav-item {
+        list-style-type: none;
     }
 
-    & a {
+    &__nav-link {
 
         font-family: var(--font-nav);
         color: var(--color-black);
@@ -21,32 +24,10 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
-
-        // text-decoration: none;
-        // border-bottom: 2px solid transparent;
-
-
     }
 
-    & a:hover {
+    &__nav-link:hover {
         color: var(--color-red);
 
     }
-
 }
-
-// .nav-menu:after {
-//     content: " ";
-//     display: block;
-//     height: 0;
-//     font: 0 / 0 serif;
-//     clear: both;
-//     visibility: hidden;
-//     overflow: hidden;
-// }
-
-// .header:has(:target)~nav a[href*="#main"] {
-//     border-bottom: 2px solid red;
-//     margin-bottom: 4px;
-//     z-index: 4;
-// }
