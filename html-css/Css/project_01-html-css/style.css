@@ -4,6 +4,7 @@
   --color-red: #CE091E;
   --color-white: #FFFFFF;
   --color-black: #121212;
+  --color-gray: #12121280;
 }
 
 :root {
@@ -134,6 +135,60 @@
     transform: rotate(0deg);
   }
 }
+.row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.img__card {
+  max-width: 440px;
+  max-height: 440px;
+  border-radius: 160px;
+  margin-bottom: 32px;
+}
+
+.course-name {
+  display: grid;
+  grid-template-rows: repeat(1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.course-name .text-course {
+  text-align: center;
+  font-family: var(--font-nav);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-gray);
+}
+.course-name .text-course-name {
+  text-align: center;
+  font-family: var(--font-nav);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  vertical-align: middle;
+  color: var(--colot-black);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+.buttons .program-courses__menu-button {
+  background-color: var(--color-white);
+  border: 1px solid #CE091E;
+}
+.buttons .program-courses__menu-button .button {
+  background-color: var(--color-white);
+  color: var(--color-red);
+}
+
 .menu__container {
   position: fixed;
   top: 0;
@@ -264,6 +319,69 @@
     font-size: 12px;
     line-height: 16px;
   }
+}
+.program-courses__content {
+  display: grid;
+  grid-template-rows: repeat(1fr, 1fr);
+  gap: 30px;
+}
+
+.horizintal-border {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+}
+.horizintal-border .text-page {
+  font-family: var(--font-nav);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: middle;
+  color: var(--color-red);
+}
+
+.block {
+  display: grid;
+  grid-template-rows: repeat(1fr, 1fr);
+  gap: 60px;
+}
+.block .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 480px;
+}
+.block .info .title {
+  font-family: var(--font-logo);
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: var(--colot-black);
+}
+.block .info .icon-offline {
+  position: relative;
+  top: 27px;
+  left: -645px;
+  z-index: 2;
+}
+.block .text {
+  font-family: var(--font-nav);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--colot-black);
+  max-width: 440px;
+  max-height: 180px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
