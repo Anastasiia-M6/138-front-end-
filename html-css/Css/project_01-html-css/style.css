@@ -520,27 +520,17 @@
   font-size: 32px;
 }
 
-.block-about-us__cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 28px;
-}
-.block-about-us__cards .block-about-us__card {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 2fr);
-  gap: 20px;
-}
-.block-about-us__cards .block-about-us__card .block-about-us-img_1 {
-  background: url(/assets/images/photo_1.png) center/cover;
+.block-about-us-img_1 {
+  background: url(/images/photo_1.png);
   grid-column: span 2;
 }
-.block-about-us__cards .block-about-us__card .block-about-us-img_2 {
+
+.block-about-us-img_2 {
   background: url(/assets/images/photo_2.png) center center/cover;
 }
-.block-about-us__cards .block-about-us__card .block-about-us-img_3 {
-  background: url(/assets/images/photo_2.1.png) center center/cover;
+
+.block-about-us-img_3 {
+  background: url(/assets/images/photo_2.1.png), center center/cover;
 }
 
 /*# sourceMappingURL=style.css.map */
