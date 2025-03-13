@@ -199,7 +199,7 @@
   justify-content: space-between;
   width: 1380px;
   border-radius: 160px;
-  background-color: aquamarine;
+  background-color: var(--color-white);
   margin: 10px 30px 42px 30px;
   padding: 10px 17px 10px 17px;
 }
@@ -366,7 +366,6 @@
   position: relative;
   top: 27px;
   left: -645px;
-  z-index: 2;
 }
 .block .text {
   font-family: var(--font-nav);
@@ -382,6 +381,113 @@
   order: 1;
   flex-grow: 0;
   z-index: 1;
+}
+
+.special-offer__containet {
+  padding-left: 0;
+}
+.special-offer__content {
+  background: url(/assets/images/backgr-popup.png) center/cover no-repeat;
+  border-top-right-radius: 160px;
+  border-bottom-right-radius: 160px;
+  padding: 115px 115px 101px 120px;
+  flex-grow: initial;
+}
+.special-offer__content .special-offer__main {
+  color: var(--color-white);
+}
+.special-offer__content .special-offer__main .sub-title {
+  font-family: var(--font-nav);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: lowercase;
+}
+.special-offer__content .special-offer__main .title {
+  font-family: var(--font-logo);
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-bottom: 184px;
+}
+.special-offer__content .special-offer__main .countdown {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: var(--font-nav);
+  font-weight: 400;
+  line-height: 100%;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.special-offer__frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.special-offer__frame .from {
+  display: grid;
+  gap: 30px;
+  max-width: 324px;
+  max-height: 452px;
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 45px;
+}
+.special-offer__frame .from .text-special-offer {
+  font-family: var(--font-nav);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.text-special {
+  font-family: var(--font-nav);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-black);
+  text-transform: lowercase;
+  border-radius: 100px;
+}
+.text-special b {
+  font-size: 38px;
+  line-height: 100%;
+}
+.text-special s {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.special-offer {
+  clip-path: inset(0 0 100% 0);
+  animation: slideIn 1.1s ease-out forwards;
+}
+@keyframes slideIn {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.benefit-cards {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

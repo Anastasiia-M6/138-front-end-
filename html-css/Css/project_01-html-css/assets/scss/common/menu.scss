@@ -9,20 +9,18 @@
         left: 0;
         z-index: 1;
 
-        // 
+
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 1380px;
-        // gap: 301px;
+
         border-radius: 160px;
 
-        background-color: aquamarine;
-        // background-color: var(--color-white);
+        background-color: var(--color-white);
 
         margin: 10px 30px 42px 30px;
         padding: 10px 17px 10px 17px;
-
 
     }
 }
