@@ -343,7 +343,6 @@
 
 .block {
   display: grid;
-  grid-template-rows: repeat(1fr, 1fr);
   gap: 60px;
 }
 .block .info {
@@ -480,14 +479,68 @@
 .benefit-cards {
   display: grid;
   gap: 30px;
+  font-family: var(--font-nav);
+  color: var(--color-black);
+}
+.benefit-cards .benefits__menu-button {
+  display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .benefit-card {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  gap: 115px;
+  z-index: 0;
+  align-content: var(--align-content);
+}
+.benefit-card .benefit-card-content {
+  display: flex;
+  align-self: start;
   justify-content: space-between;
+  gap: 135px;
+}
+.benefit-card .text-page {
+  font-weight: 600;
+  color: var(--color-red);
+}
+.benefit-card .img-benefit-cards {
+  max-width: 210px;
+  max-height: 210px;
+}
+.benefit-card .benefits__benefit-card-content {
+  max-width: 900px;
+  width: 100%;
+}
+.benefit-card .benefits__benefit-card-content .text-course-name {
+  font-weight: 400;
+  vertical-align: middle;
+  font-size: 32px;
+}
+
+.block-about-us__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+.block-about-us__cards .block-about-us__card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 2fr);
   gap: 20px;
+}
+.block-about-us__cards .block-about-us__card .block-about-us-img_1 {
+  background: url(/assets/images/photo_1.png) center/cover;
+  grid-column: span 2;
+}
+.block-about-us__cards .block-about-us__card .block-about-us-img_2 {
+  background: url(/assets/images/photo_2.png) center center/cover;
+}
+.block-about-us__cards .block-about-us__card .block-about-us-img_3 {
+  background: url(/assets/images/photo_2.1.png) center center/cover;
 }
 
 /*# sourceMappingURL=style.css.map */

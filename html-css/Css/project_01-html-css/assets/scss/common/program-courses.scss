@@ -23,9 +23,7 @@
 
 .block {
     display: grid;
-    grid-template-rows: repeat(1fr, 1fr);
     gap: 60px;
-
 
     .info {
         display: flex;

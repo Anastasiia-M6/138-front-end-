@@ -1,13 +1,56 @@
 .benefit-cards {
     display: grid;
     gap: 30px;
-    align-items: center;
+    font-family: var(--font-nav);
+    color: var(--color-black);
+
+
+    .benefits__menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 }
 
 .benefit-card {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 115px;
+    z-index: 0;
+    align-content: var(--align-content);
+
+
+    .benefit-card-content {
+        display: flex;
+        align-self: start;
+        justify-content: space-between;
+        gap: 135px;
+
+    }
+
+    .text-page {
+        font-weight: 600;
+        color: var(--color-red);
+    }
+
+    .img-benefit-cards {
+        max-width: 210px;
+        max-height: 210px;
+
+    }
+
+    .benefits__benefit-card-content {
+        max-width: 900px;
+        width: 100%;
+
+        .text-course-name {
+            font-weight: 400;
+            vertical-align: middle;
+            font-size: 32px;
+
+        }
+    }
+
 
 }
