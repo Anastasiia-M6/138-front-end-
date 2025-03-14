@@ -1,34 +1,26 @@
-// .block-about-us__block {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
+.block-about-us {
+    color: var(--color-white);
 
-//     gap: 28px;
-// }
+    .block-about-us__image {
+        max-width: 670px;
+        max-height: 560px;
+    }
 
-// display: grid;
-// grid-template-columns: repeat(1, 1fr);
-// grid-template-rows: repeat(2, 1fr);
-// gap: 28px;
+    .title {
+        font-family: var(--font-logo);
+        font-weight: 500;
+        font-size: 56px;
+        line-height: 56px;
+        vertical-align: middle;
+        text-transform: uppercase;
 
+    }
 
-// .block-about-us__card {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-template-rows: repeat(2, 2fr);
-//     gap: 20px;
-// }
+    .text {
+        font-family: var(--font-nav);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
 
-
-.block-about-us-img_1 {
-    background: url(/images/photo_1.png);
-    grid-column: span 2;
-}
-
-.block-about-us-img_2 {
-    background: url(/assets/images/photo_2.png) center center / cover;
-}
-
-.block-about-us-img_3 {
-    background: url(/assets/images/photo_2.1.png), center center / cover;
+    }
 }
