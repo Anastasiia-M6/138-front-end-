@@ -211,7 +211,6 @@
 
 .footer__form-inputs {
   display: grid;
-  max-width: 439px;
   border: initial;
   color: var(--color-white);
 }
@@ -228,6 +227,8 @@
 }
 .footer__form-inputs .footer__form-checkbox {
   font-size: 12px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .footer__privacy {
