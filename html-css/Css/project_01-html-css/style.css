@@ -208,32 +208,28 @@
   display: grid;
   gap: 20px;
 }
-
-.footer__form-inputs {
-  display: grid;
+.footer__form .footer__form-inputs {
   border: initial;
-  color: var(--color-white);
 }
-.footer__form-inputs .input {
+.footer__form .footer__form-inputs .footer__input {
   padding: 18px 8px 18px 16px;
-  border-bottom: 1px solid #FFFFFF;
   border: none;
+  background: transparent;
   border-bottom: 1px solid var(--color-white);
-  background-color: transparent;
   font-size: 16px;
+  border-radius: 0;
 }
-.footer__form-inputs .input::placeholder {
-  color: var(--color-white);
-}
-.footer__form-inputs .footer__form-checkbox {
-  font-size: 12px;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.footer__privacy {
+.footer__form .footer__privacy {
   text-decoration: underline;
   color: var(--color-white);
+}
+
+.footer__input::placeholder {
+  color: var(--color-white);
+}
+
+.footer__form-checkbox {
+  font-size: 12px;
 }
 
 .footer__nav-list {

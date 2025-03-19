@@ -611,24 +611,26 @@
                 <div class="footer__contacts">
                     <form class="footer__form">
                         <div class="footer__form-inputs">
-                            <label class="label" for="name"></label>
-                            <input class="input" type="text" id="name" name="name" placeholder="Ім`я" required
+                            <label class="footer__label" for="name"></label>
+                            <input class="footer__input" type="text" id="name" name="name" placeholder="Ім`я" required
                                 autocomplete="given-name">
 
-                            <label class="label" for="email"></label>
-                            <input class="input forms__3" type="email" id="email" name="email"
+                            <label class="footer__label" for="email"></label>
+                            <input class="footer__input" type="email" id="email" name="email"
                                 placeholder="example@email.com" required autocomplete="email">
 
-                            <label class="label" for="phone"></label>
-                            <input class="input" type="tel" id="phone" name="phone" placeholder="+1234567890"
+                            <label class="footer__label" for="phone"></label>
+                            <input class="footer__input" type="tel" id="phone" name="phone" placeholder="+1234567890"
                                 pattern="^\+?\d{10,15}$" required title="Enter a valid phone number">
                         </div>
-
-                        <label class="footer__form-checkbox">
-                            <input type="checkbox" required> Я погоджуюсь з<a href="./pages/privacy-policy.html">
+                        <div class="footer__form-checkbox">
+                            <label class="footer__flabel-checkbox"> </label><br>
+                            <input class="footer__input" type="checkbox" required> Я погоджуюсь з<a
+                                href="./pages/privacy-policy.html">
                                 <span class="footer__privacy">політикою
                                     конфіденційності</a></span>
-                        </label><br>
+                        </div>
+
                         <div class="menu__button">
                             <button type="submit" class="button header__button" id="btn1">Записатись</button>
                         </div>
