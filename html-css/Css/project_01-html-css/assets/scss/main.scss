@@ -12,8 +12,13 @@
 @use "./components/nav-menu.scss";
 @use "./components/button.scss";
 @use "./components/card.scss";
-
-// @use "./components/popup.scss";
+@use "./components/footer-logo.scss";
+@use "./components/footer-form.scss";
+@use "./components/footer-nav.scss";
+@use "./components/footer-info.scss";
+@use "./components/sotial.scss";
+@use "./components/scrolltop.scss";
+@use "./components/pop-up.scss";
 
 
 // common
@@ -27,7 +32,5 @@
 @use "./common/block-reviews.scss";
 @use "./common/special-faq.scss";
 @use "./common/footer.scss";
-
-
 
 // pages

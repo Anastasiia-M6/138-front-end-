@@ -4,7 +4,6 @@
     margin-top: 180px;
 
 
-
     &__image {
         max-width: 324px;
         max-height: 560px;
@@ -93,7 +92,11 @@
             clip-path: inset(0 0 0 0);
         }
     }
+
+
 }
+
+
 
 // media start
 @media (max-width: 767px) {
