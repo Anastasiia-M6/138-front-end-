@@ -23,19 +23,19 @@
             let userName = prompt("Як тебе звати?");
 
             // Виводимо привітання
-            alert("Привіт, " + userName);
+            alert("Привіт, " + userName + "!");
 
             // Запитуємо рік народження користувача
-            let birthYear = prompt("Якого Ви року народження?");
+            let birthYear = prompt("Якого Ви року народження?" + " " + userName);
 
             // Обчислюємо вік користувача
             let age = currentYear - birthYear;
 
             // Виводимо вік
-            alert("Ух ти, Вам " + age + " років.");
+            alert("Ух ти, Вам" + " " + userName + " " + age + " " + "років.");
 
             // Запитуємо довжину сторони квадрату
-            let sideLength = prompt("Яка довжину сторони квадрата?:");
+            let sideLength = prompt("Назвіть довжину сторони квадрата" + " " + userName + "," + "щоб дізнатись периметр цього квадрата:");
 
             // Обчислюємо периметр квадрату
             let perimeter = 4 * sideLength;
