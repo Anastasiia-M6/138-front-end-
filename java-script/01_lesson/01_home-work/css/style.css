@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: auto;
+    padding: 15px;
+
+
+}
+
+.title {
+    text-align: center;
+    color: rgb(51, 6, 6);
+    font-size: xx-large;
+    background-color: rgb(233, 204, 244);
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+
+    span {
+        display: none;
+        font-size: 18px;
+        color: rgb(54, 45, 79);
+    }
+
+}
+
+.task {
+    font-size: 22px;
+    margin: 15px 0 15px 0;
+}
+
+h4 {
+    color: rgb(24, 2, 2);
+    text-align: center;
+    font-size: 23px;
+    margin: 15px;
+}
