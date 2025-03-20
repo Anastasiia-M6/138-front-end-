@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнє завданя:Основи JavaScript(розділ:Норма)</title>
+    <style>
+        .wrapper {
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <script>
+            // Константа для поточного року
+            const currentYear = 2025;
+
+            // Запитуємо ім'я користувача
+            let userName = prompt("Як тебе звати?");
+
+            // Виводимо привітання
+            alert("Привіт, " + userName);
+
+            // Запитуємо рік народження користувача
+            let birthYear = prompt("Якого Ви року народження?");
+
+            // Обчислюємо вік користувача
+            let age = currentYear - birthYear;
+
+            // Виводимо вік
+            alert("Ух ти, Вам " + age + " років.");
+
+            // Запитуємо довжину сторони квадрату
+            let sideLength = prompt("Яка довжину сторони квадрата?:");
+
+            // Обчислюємо периметр квадрату
+            let perimeter = 4 * sideLength;
+
+            // Виводимо периметр
+            alert("Периметр квадрата: " + perimeter);</script>
+    </div>
+</body>
+
+</html>

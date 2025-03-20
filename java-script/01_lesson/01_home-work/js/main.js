@@ -8,7 +8,9 @@ function setupSection(showButtonId, span1Id, showButton2Id, span2Id, showButton3
             document.getElementById(span2Id).style.display = "inline";
         } else if (step === 2) {
             document.getElementById(span3Id).style.display = "inline";
-        } else if (showButton4Id && span4Id && step === 3) {
+        } else if (step === 3) {
+            document.getElementById(span4Id).style.display = "inline";
+        } else if (showButton1Id && span1Id && step === 4) {
             document.getElementById(span4Id).style.display = "inline";
             this.disabled = true;
         }
@@ -38,7 +40,9 @@ function setupSection(showButtonId, span1Id, showButton2Id, span2Id, showButton3
 setupSection("showButton_1", "span_1_1", "showButton_2_1", "span_2_1", "showButton_3_1", "span_3_1");
 setupSection("showButton_2", "span_1_2", "showButton_2_2", "span_2_2", "showButton_3_2", "span_3_2");
 setupSection("showButton_3", "span_1_3", "showButton_2_3", "span_2_3", "showButton_3_3", "span_3_3", "showButton_4_4", "span_4_4");
-;
+setupSection("showButton_4", "span_1_4", "showButton_2_4", "span_2_4");
+
+//черновик
 
 //     document.getElementById("showButton_1").addEventListener("click", function () {
 //         if (step === 0) {
