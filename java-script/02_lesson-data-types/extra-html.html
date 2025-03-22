@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <input class="age" type="number" id="age">
+        <button class="btn">Check</button>
+        <div class="out"></div>
+
+        <script>
+            let ageInput = document.querySelector('.age');
+            let btn = document.querySelector('.btn');
+            let out = document.querySelector('.out');
+
+            btn.onclick = () => {
+                let age = Number(ageInput.value); // Convert input value to number
+
+                if (age >= 18 && age <= 25) {
+                    alert("Придатна на строкову службу");
+                } else if (age > 25 && age <= 60) {
+                    alert("Придатна на контрактну службу");
+                } else {
+                    alert("Не придатний");
+                }
+            };
+
+            //Используйте .value для получения входного значения – Раньше вы сравнивали сам элемент ввода, а не его значение.
+            //Преобразовать в число – Входные значения по умолчанию обрабатываются как строки.
+            // Преобразование гарантирует, что числовые сравнения будут работать правильно.
+        </script>
+    </div>
+</body>
+
+</html>
