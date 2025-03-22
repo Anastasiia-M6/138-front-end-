@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JS lesson</h2>
+
+    <script>
+        // Примітивні
+        //console. log(typeof 42);  // "number"
+        // console. log (typeof "hello");// "string"
+        // console. log (typeof true);//"boolean"
+
+        //console. log (typeof undefined);// "undefined"
+        //console. log (typeof null);// "object" (історична помилка
+        // console. log (typeof Symbol()); // "symbol"
+
+
+        //  //не римітивна
+
+
+        //примітивні данні:
+        //1.number
+        const num = 2.3333;
+        console.log(num);
+        console.log(Math.round(num));//Math.round() - округление
+
+        //2.string все що в середині буде строкою
+        const str = 'Sasha "Hello"!';
+        const str2 = "Sasha";
+        const str3 = ` Sasha "Hello" 'dddd'`;
+
+
+        console.log(sttr3.toLowerCase()); //робить з маленької велику
+
+        console.log(str3.trim());//убирает отступі
+
+        //3.Бульовий boolean
+        //false  (0 и все что меньше н нуля дают фолсы -1 -2 -3 єто тру)
+        //null
+        //Nan
+        //undefined
+        let bool = true;
+        //console.log(Boolean(0));  проверка
+        //console.log("пуста строка:" + Boolean(''));
+
+
+        // в чем разница между
+        //  undefined - це коли є мінна але в ній ничого не иснує'
+        // null - коли зминной навить не иснує
+        //  console.log(typeof sasha);
+        //console.dir(document);
+
+        //не примітивні 
+        let Apple = { //обєкт - це якись параметри
+            brand: 'Apple',
+            prise: 2000
+        }
+        console.log(Apple);
+
+        let arr = ['Apple', 'Lenovo', 'Android']  //масив- це колекція (с цифрами  в начале ак перечень)
+        console.log(arr);
+        // console.dir(document.title); переписіваем данніе
+        // document.title = "Test title";
+
+        //function() в середине предавать параметри и использовать
+        // function.log(par) {
+        //     console.log("Ви побачили" + par)
+        // }
+
+
+    </script>
+</body>
+
+</html>

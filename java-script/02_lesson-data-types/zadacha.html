@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  Підказка
+
+        // true && true умовна "І"
+        // || умовна "Или"
+        // > більше
+        // >= більше і дорівнює
+        // < меньше
+        // == Порівняння начень
+        // === Порівняня Значення і типу данних
+
+        // if(){}
+        // else if() {}
+        // else {}
+
+        let setUser = prompt('Login')
+        let setPassword = prompt('Password')
+
+        let login = 'admin'
+        let password = '123'
+
+        if (setUser === login && setPassword === password) {
+            alert(`Привіт: ${setUser}`);
+        } else if (setUser !== login && setPassword !== password) {
+            alert("Не вірний ЛОгін і пароль");
+        } else if (setUser !== login) {
+            alert("Не вірний Login");
+        } else {
+            alert("Не вірний Password");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="test"></h1>
+
+    <script>
+        // оператор
+        //true && true  умовна "и"
+        // ||   умовна " или"
+        // > больше;
+        // < менше 
+        // => или =< больше либо равно и меньше либо равно
+        // =  присвоение
+        // == порывняння значенния
+        // === порывняння значенния и типу данних
+
+        console.log("2" == 2); // пишет тру
+        console.log("2" === 2); //true и false пишет в консоле
+
+
+        //якщо тут true 
+        if ("2" === 2) { } else {
+            // потрапляэмо сюди
+            console.log(" я тут");
+        } else if ("2" === 2) {
+            console.log("я тут : else if");
+        }
+        else {
+            console.log("помилка");
+        }
+        // - то есть if  переврдиться как "якщо"// может существовать сам по себе без ничего
+
+        //приклад
+
+        // let name = "Sasha"
+        // let age = 28
+        // if (age >= 18) {
+        //     console.log("вам доступни фильмы 18+");
+        // }
+
+        // if (age < 4) else {
+        //     console.log("есл меньше 4 то : то вам немаэ доступуп");
+        // }
+
+        // if (age >= 4 && age <= 16) {
+        //     console.log("вам доступны фильми 4 -16 рокив");
+        // } else if (age > 16 && age < 18) {
+        //     console.log("вам доусиупни фильмы 16 рокив");
+        // } else {
+        //     console.log(немаэ фыльмов);
+        // }
+
+        // проверяем когда что то есть или нет
+        if (document.querySelector('.test')) {
+            document.querySelector('.test').innerHTML += "SASHA"
+        }
+    </script>
+</body>
+
+</html>
