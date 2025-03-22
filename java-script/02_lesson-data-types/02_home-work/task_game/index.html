@@ -1,32 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Гра камінь ножиці бумага</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3e7f0;
+            padding: 20px;
+        }
+
+        .wrapper {
+            background: rgb(229, 199, 216);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        h4 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .choice {
+            width: 100px;
+            height: 100px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .choice:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .stone {
+            background: #f3757f;
+
+        }
+
+        .scissors {
+            background: #75b4f3;
+
+        }
+
+        .paper {
+            background: #79e9a8;
+
+        }
+
+        .out {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .out.animation {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-    <h2>Гра камінь нож бумага</h2>
-
-
+    <div class="wrapper">
+        <h1>Гра "Камінь, Ножиці, Бумага"</h1>
+        <h4>Умови:</h4>
+        <p>Визначення переможця залежить від того, який жест показали гравці:<br> Камінь б'є ножиці: камінь ламає
+            ножиці.<br>
+            Ножиці б'ють папір: ножиці ріжуть папір.<br>Папір б'є камінь: папір загортає камінь.<br><br>Якщо обидва
+            гравці
+            показали однаковий жест, це нічия, і раунд повторюється.</p>
+        <div class="choices">
+            <button class="choice stone" data-choice="1">🤜</button>
+            <button class="choice scissors" data-choice="2">✌️</button>
+            <button class="choice paper" data-choice="3">🫳</button>
+        </div>
+        <div class="out"></div>
+    </div>
+    <!-- умови 
+         1: 'Камінь' vs 'ножниці'=Виграв 
+         2: 'Камінь' vs 'бумага'=Програв 
+         3: 'Камінь' vs 'Камінь'=Нічія
+         4: 'Невірно обраний обєкт' Зробити через Html + UI -->
     <script>
-        let randomNumber = Math.floor(Math.random() * 3) + 1;
+        let buttons = document.querySelectorAll('.choice');
+        let out = document.querySelector('.out');
 
-        let user = 'камінь'
+        buttons.forEach(button => {
+            button.onclick = () => {
+                let userChoice = Number(button.getAttribute("data-choice"));
+                let randomNumber = Math.floor(Math.random() * 3) + 1;
 
-        // 1: 'Камінь' vs 'ножниці' =  Виграв
-        // 2: 'Камінь' vs 'бумага' =  Програв
-        // 3: 'Камінь' vs 'Камінь' =  Нічія
-        // 4: 'Невірно обраний обєкт'
+                let choices = {
+                    1: 'Камінь 🤜',
+                    2: 'Ножиці ✌️',
+                    3: 'Бумага 🫳'
+                };
 
+                let userPick = choices[userChoice];
+                let computerPick = choices[randomNumber];
 
-        // Экстар
-        // Зробити через Html + UI
+                let result;
+                if (userChoice === randomNumber) {
+                    result = "Нічия!";
+                } else if (
+                    (userChoice === 1 && randomNumber === 2) ||
+                    (userChoice === 2 && randomNumber === 3) ||
+                    (userChoice === 3 && randomNumber === 1)
+                ) {
+                    result = "Ви виграли! 🎉";
+                } else {
+                    result = "Ви програли! 😢";
+                }
 
+                out.textContent = `Ви обрали: ${userPick}, Комп'ютер обрав: ${computerPick}. ${result}`;
+                out.classList.add("animation"); // Анімація
+            };
+        });
 
-        console.log(randomNumber);
     </script>
 </body>
 
