@@ -39,6 +39,11 @@
             align-items: center;
             justify-content: center;
         }
+
+        input {
+            max-width: 250px;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -141,45 +146,159 @@
         </section>
 
         <section class="section">
+            <h4>Норма:</h4>
             <div class="container">
-                <h4>Норма:</h4>
-                <h2>Задача 1:</h2>
-                <p>Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок
-                    може купити користувач і скільки здачі у нього залишиться.</p>
 
-                <input class="flash-size" type="number" placeholder="Введіть обсяг флешки (ГБ)">
-                <button class="btn-4 button">Check</button><br>
-                <div class="out-4"></div>
+                <h2>Задача 1:</h2>
+                <p>Користувач вводить суму грошей у гаманці та ціну однієї шоколадки. Програма виводить, скільки
+                    шоколадок може купити користувач і скільки здачі у нього залишиться.</p>
+
+                <input class="money" type="number" placeholder="Введіть суму грошей (грн)">
+                <input class="chocolatePrice" type="number" placeholder="Введіть ціну шоколадки (грн)">
+                <button class="btnСalculation">Check</button><br>
+                <div class="outResultat"></div>
 
                 <script>
-                    let btn4 = document.querySelector('.btn-4');
-                    let out4 = document.querySelector('.out-4');
 
-                    btn3.onclick = () => {
-                        // Отримуємо введений обсяг флешки в ГБ
-                        let flashSizeGB = parseFloat(document.querySelector('.flash-size').value);
+                    let btnСalculation = document.querySelector('.btnСalculation');
+                    let outResultat = document.querySelector('.outResultat');
 
-                        if (isNaN(flashSizeGB) || flashSizeGB <= 0) {
-                            out3.textContent = "Будь ласка, введіть коректний розмір флешки!";
+                    btnСalculation.onclick = () => {
+                        // Отримуємо введені значенняparse
+                        // //Float() - это встроенная функция JavaScript, которая принимает строку в качестве аргумента
+                        //  и пытается преобразовать ее в число с плавающей точкой (float)
+                        //document.querySelector присвоение и берет данные с инпут
+                        let money = parseFloat(document.querySelector('.money').value);
+                        let chocolatePrice = parseFloat(document.querySelector('.chocolatePrice').value);
+
+                        // Перевіряємо, чи введені коректні числа
+                        if (isNaN(money) || isNaN(chocolatePrice) || money <= 0 || chocolatePrice <= 0) {
+                            outResultat.textContent = "Будь ласка, введіть коректні дані!";
                             return;
                         }
 
-                        // Конвертуємо ГБ у МБ (1 ГБ = 1024 МБ)
-                        let flashSizeMB = flashSizeGB * 1024;
-
-                        // Розмір одного файлу в МБ
-                        let fileSizeMB = 820;
-
-                        // Обчислюємо кількість файлів
-                        let fileCount = Math.floor(flashSizeMB / fileSizeMB);
+                        // Обчислюємо кількість шоколадок і здачу
+                        let chocolateCount = Math.floor(money / chocolatePrice);
+                        let change = (money % chocolatePrice).toFixed(2);//округление до двух цифр после запятой
 
                         // Виводимо результат
-                        out3.textContent = `Кількість файлів по 820 МБ, що помістяться: ${fileCount}`;
-                        alert(`На флешку поміститься ${fileCount} файлів по 820 МБ.`);
+                        outResultat.textContent = `Ви можете купити ${chocolateCount} шоколадок. Здача: ${change} грн.`;
+                        alert(`Ви можете купити ${chocolateCount} шоколадок. Здача: ${change} грн.`);
+                    };
+                </script>
+            </div>
+            <div class="container">
+                <h2>Задача 2:</h2>
+                <p> Запитайте у користувача тризначне число і виведіть його задом наперед. Для вирішення завдання вам
+                    знадобиться оператор % (залишок від ділення).</p>
+
+                <input class="number" type="number" placeholder="Введіть тризначне число (наприклад, 123)">
+                <button class="btnNumber">Check</button><br>
+                <div class="outNumber"></div>
+
+                <script>
+                    let btnNumber = document.querySelector('.btnNumber');
+                    let outNumber = document.querySelector('.outNumber');
+
+                    btnNumber.onclick = () => {
+                        //parseInt() разбирает строковый аргумент и возвращает целое число.
+                        let number = parseInt(document.querySelector('.number').value);
+
+                        //Number.isNaN() - это встроенный метод JavaScript, который используется для определения, является ли переданное значение NaN (Not a Number).
+                        if (!isNaN(number) && number >= 100 && number <= 999) {
+                            let digit1 = number % 10; // Остання цифра
+                            //Объект Math содержит набор методов, который используется для округления чисел:
+                            // round() — округление по обычным правилам;
+                            // floor() — округление вниз;
+                            // ceil() — округление вверх;
+                            // trunc() — отбрасывание дробной части, не обращая внимания на знак аргумента.
+
+                            let digit2 = Math.floor((number % 100) / 10); // Середня цифра
+                            let digit3 = Math.floor(number / 100); // Перша цифра
+
+                            let reversedNumber = `${digit1}${digit2}${digit3}`;
+
+                            outNumber.textContent = `Число задом наперед: ${reversedNumber}`;
+                            alert(`Число задом наперед: ${reversedNumber}`);
+                        } else {
+                            outNumber.textContent = "Будь ласка, введіть правильне тризначне число!";
+                            alert("Будь ласка, введіть правильне тризначне число!");
+                        }
+                    };
+                </script>
+            </div>
+        </section>
+
+        <section class="section">
+            <h4>Екстра:</h4>
+            <div class="container">
+
+                <h2>Задача 1:</h2>
+                <p>Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести
+                    суму нарахованих відсотків.</p>
+
+                <input class="deposit" type="number" placeholder="Введіть суму вкладу (грн):">
+                <button class="btnDeposit">Check</button><br>
+                <div class="outDeposit"></div>
+
+                <script>
+                    document.querySelector('.btnDeposit').onclick = () => {
+                        let deposit = parseFloat(document.querySelector('.deposit').value);
+                        let annualRate = 5; // 5% річних
+                        let months = 2; // Вклад на 2 місяці
+
+                        // Перевіряємо, чи введено коректне число
+                        if (isNaN(deposit) || deposit <= 0) {
+                            alert("Будь ласка, введіть коректну суму вкладу.");
+                            return;
+                        }
+
+                        let interest = (deposit * (annualRate / 100) * (months / 12)).toFixed(2);
+
+                        // Виводимо результат
+                        document.querySelector('.outDeposit').textContent = `Нараховані відсотки: ${interest} грн`;
+                        alert(`Нараховані відсотки: ${interest} грн`);
                     };
                 </script>
             </div>
 
+            <div class="container">
+                <h2>Задача 2:</h2>
+                <p>Що повернуть вирази:<br>
+                    2 && 0 && 3<br>
+                    2 || 0 || 3<br>
+                    2 && 0 || 3<br>
+                </p>
+
+                <div class="expressions">
+                    <button class="expressionFirst">2 && 0 && 3</button>
+                    <button class="expressionSecond"> 2 || 0 || 3</button>
+                    <button class="expressionThird">2 && 0 || 3</button>
+                </div>
+                <div class="outExpression"></div>
+
+                <script>
+                    let expressionFirst = document.querySelector('.expressionFirst');
+                    let expressionSecond = document.querySelector('.expressionSecond');
+                    let expressionThird = document.querySelector('.expressionThird');
+                    let outExpression = document.querySelector('.outExpression');
+
+                    expressionFirst.onclick = () => {
+                        let result = 2 && 0 && 3;
+                        outExpression.textContent = `Результат: ${result}`;
+                    };
+
+                    expressionSecond.onclick = () => {
+                        let result = 2 || 0 || 3;
+                        outExpression.textContent = `Результат: ${result}`;
+                    };
+
+                    expressionThird.onclick = () => {
+                        let result = 2 && 0 || 3 || 3;
+                        outExpression.textContent = ` Результат: ${result}`;
+                    };
+                </script>
+            </div>
         </section>
     </div>
 
