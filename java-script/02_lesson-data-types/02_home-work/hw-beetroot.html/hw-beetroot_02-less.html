@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types Jss</title>
+    <style>
+        .wrapper {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .section {
+            background: rgb(231, 181, 209);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .button {
+
+            font-size: 16px;
+            border-radius: 1%;
+            cursor: pointer;
+            background-color: rgb(184, 155, 170);
+        }
+
+        .button:hover {
+            color: rgb(209, 170, 193);
+            background-color: rgb(186, 48, 119);
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="section">
+            <h1>Домашнє завдання уроку: Типи даних та оператори</h1>
+            <!-- Задача_1 старт -->
+            <div class="container">
+                <h4>Мінімум:</h4>
+                <h2>Задача 1:</h2>
+                <p>Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.</p>
+
+                <button class="btn-1 button">Check</button><br>
+                <div class="out-1"></div>
+
+                <script>
+                    let btn = document.querySelector('.btn-1');
+                    let out = document.querySelector('.out-1');
+
+                    btn.onclick = () => {
+                        let a = 0.1;
+                        let b = 0.2;
+
+                        // Правильне додавання з виправленням помилки округлення
+                        let result = (a * 10 + b * 10) / 10;
+
+                        out.textContent = `Результат: ${result}`;
+                    }
+                </script>
+            </div>
+            <!-- Задача_1 конец -->
+            <!-- Задача_2 старт -->
+            <div class="container">
+                <h2>Задача 2:</h2>
+                <p>Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично
+                    правильної відповіді.</p>
+
+                <button class="btn-2 button">Check</button><br>
+                <div class="out-2"></div>
+
+                <script>
+
+                    let btn2 = document.querySelector('.btn-2');
+                    let out2 = document.querySelector('.out-2');
+
+                    btn2.onclick = () => {
+                        // Оголошення змінних
+                        let strNum = "1"; // Рядок
+                        let num = 2;      // Число
+
+                        // Перетворення рядка в число та додавання
+                        let result = Number(strNum) + num;
+
+                        // Вивід результату
+                        out2.textContent = `Результат: "1" + 2 = ${result}`;
+                    }
+                </script>
+            </div>
+            <!-- Задача_2 конец -->
+            <!-- Задача_3 старт -->
+            <div class="container">
+                <h2>Задача 3:</h2>
+                <p>Користувач вказує обсяг флешки в Гб. Програма повинна порахувати, скільки файлів розміром 820 Мб
+                    поміщається на флешку.</p>
+
+                <input class="flash-size" type="number" placeholder="Введіть обсяг флешки (ГБ)">
+                <button class="btn-3 button">Check</button><br>
+                <div class="out-3"></div>
+
+                <script>
+                    let btn3 = document.querySelector('.btn-3');
+                    let out3 = document.querySelector('.out-3');
+
+                    btn3.onclick = () => {
+                        // Отримуємо введений обсяг флешки в ГБ
+                        let flashSizeGB = parseFloat(document.querySelector('.flash-size').value);
+
+                        if (isNaN(flashSizeGB) || flashSizeGB <= 0) {
+                            out3.textContent = "Будь ласка, введіть коректний розмір флешки!";
+                            return;
+                        }
+
+                        // Конвертуємо ГБ у МБ (1 ГБ = 1024 МБ)
+                        let flashSizeMB = flashSizeGB * 1024;
+
+                        // Розмір одного файлу в МБ
+                        let fileSizeMB = 820;
+
+                        // Обчислюємо кількість файлів
+                        let fileCount = Math.floor(flashSizeMB / fileSizeMB);
+
+                        // Виводимо результат
+                        out3.textContent = `Кількість файлів по 820 МБ, що помістяться: ${fileCount}`;
+                        alert(`На флешку поміститься ${fileCount} файлів по 820 МБ.`);
+                    };
+                </script>
+            </div>
+            <!-- Задача_3 конец -->
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h4>Норма:</h4>
+                <h2>Задача 1:</h2>
+                <p>Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок
+                    може купити користувач і скільки здачі у нього залишиться.</p>
+
+                <input class="flash-size" type="number" placeholder="Введіть обсяг флешки (ГБ)">
+                <button class="btn-4 button">Check</button><br>
+                <div class="out-4"></div>
+
+                <script>
+                    let btn4 = document.querySelector('.btn-4');
+                    let out4 = document.querySelector('.out-4');
+
+                    btn3.onclick = () => {
+                        // Отримуємо введений обсяг флешки в ГБ
+                        let flashSizeGB = parseFloat(document.querySelector('.flash-size').value);
+
+                        if (isNaN(flashSizeGB) || flashSizeGB <= 0) {
+                            out3.textContent = "Будь ласка, введіть коректний розмір флешки!";
+                            return;
+                        }
+
+                        // Конвертуємо ГБ у МБ (1 ГБ = 1024 МБ)
+                        let flashSizeMB = flashSizeGB * 1024;
+
+                        // Розмір одного файлу в МБ
+                        let fileSizeMB = 820;
+
+                        // Обчислюємо кількість файлів
+                        let fileCount = Math.floor(flashSizeMB / fileSizeMB);
+
+                        // Виводимо результат
+                        out3.textContent = `Кількість файлів по 820 МБ, що помістяться: ${fileCount}`;
+                        alert(`На флешку поміститься ${fileCount} файлів по 820 МБ.`);
+                    };
+                </script>
+            </div>
+
+        </section>
+    </div>
+
+</body>
+
+</html>
