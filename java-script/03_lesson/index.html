@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=.e, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div class="wrapper">
+    <div class="our"></div>
+    <ul></ul>
+    <script>
+        //цикл мы хотим что то длать несколько раз
+        //стандартный цикл на всех языках программрования
+        //1-10
+        //1. начальная цифра откуда начинается отчет - СТАРТ
+        //2.нужно написать условие сколько нужно отчета -СТОА
+        //3.пишем сам шат -  по одному шагу 
+        //старт . стоп . крок
+
+        //i++ это одно и то же что i=i+1
+        // через два это i=i+2 шаг
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+
+            for (let i = 1; i <= 10; i++)
+                if (i == 5) {
+                    document.querySelector('ul').innerHTML += `
+            <li>
+                привет: Настя ${i}
+            </li>`}
+
+            document.querySelector('ul').innerHTML += `
+            <li>
+                привет: Настя ${i}
+            </li>`
+        }
+        //инкремент i++
+        //декремент i--
+        // инкремент ++i
+        //декремент --i
+        // for (let i = 1; i <= 10; i++) {
+        //     if (i == 4) {
+        //         console.log('Знайшли' + i);
+        //         break
+        //     }
+        // }
+
+        // нужно задать цикл for  начало и конец цикла  через promt
+        // let start = +prompt("start"); // обязат плюс потому что число
+        // let stop = +prompt("stop");
+        // for (let i = start; i <= stop; i++) {
+        //     console.log(i);
+        // }
+        //
+        let start = 5
+        let stop = 10
+        for (let i = start; i <= stop; i++) {
+            console.log(i);
+        }
+        // если пользователь  перепутает 
+        // если старт больше стоп их нужно поменять местами
+        // старт записываем в стоп// стоп в старт сделать ифами
+
+
+        //если continue отсортировать масив. после того как нашли пропускаем
+
+        // for (let i = 1; i <= 10; i++) {
+        //     if (i == 3) {
+        //         console.log("знайшли:" + i)
+        //         continue
+        //     }
+        // }
+
+        //если брейк - нашли и остановились . после того как нашли останвливаемся
+        // for (let i = 1; i <= 10; i++) {
+        //     if (i == 3) {
+        //         console.log("знайшли:" + i)
+        //         break
+        //     }
+        // }
+
+        //если четніе и нечетніе
+        // for (let i = 1; i <= 10; i++) {
+        //  if (i % 2) {
+        //     console.log("непарні" + i);
+        //  } else {
+        //      console.log("парні" + i);
+        // }
+        // }
+
+        // зворотній відглік
+        // for (let i = 10; i > 1; i--) {
+        //     console.log(i);
+        // }
+    </script>
+</div>
+
+<body>
+
+</body>
+
+</html>

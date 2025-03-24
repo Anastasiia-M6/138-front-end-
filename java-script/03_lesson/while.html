@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">start</button>
+    <button class="btn">end</button>
+    <button class="btn">rest</button>
+    <button class="btn">rest</button>
+    <button class="btn">rest</button>
+    <button class="btn">rest</button>
+    <button class="btn">rest</button>
+    <button class="btn">rest</button>
+    <button class="btn">rest</button>
+
+    <script>
+
+        let btn = document.querySelectorAll('.btn')
+        // console.log(btn[1]);
+        // console.log(btn[2]);
+        // console.log(btn[3]); //или записать так:
+        for (let i = 0; i < 3; i++) {
+            btn[i].innerHTML += i //Находить
+        }
+        //когда нужно спрсить до тех пор пока человек не ответит
+        let i = 0;
+        while (i < 10) {
+            console.log(i);
+            i++
+        }
+
+        let name = ''
+        while (name !== 'Настя') {
+            name = prompt('Вкажіть імя')
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="out">
+        <p><b>hello</b></p>
+    </div>
+    <script>
+        let user = ['sasha', 'olga', 'kolya']
+        let out = document.querySelector('.out')
+        // console.log(user)
+
+        let user2 = ['sasha', 'olga', 'kolya']
+        for (let i = 0; i < user.length; i++) {
+            console.log(user[i]);
+            out.innerHTML += `  <p><b>hello</b></p> ${user[i]}`;
+        }
+    </script>
+</body>
+
+</html>
