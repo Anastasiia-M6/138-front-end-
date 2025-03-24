@@ -83,7 +83,7 @@ document.querySelector('.out-15').innerHTML = z1 / z2;
 // Создайте две переменные x1='Hello', x2 = 5.  В div.out-16 выведите сумму x1 + x2. Изучите результат операции.
 let x1 = 'Hello';
 let x2 = 5;
-document.querySelector('.out-16').innerHTML = "x1" + x2;
+document.querySelector('.out-16').innerHTML = x1 + x2;
 
 // Task 17.
 // Получите div.out-17 в переменную out17. Выведите эту переменную в консоль. Изучите вывод.
