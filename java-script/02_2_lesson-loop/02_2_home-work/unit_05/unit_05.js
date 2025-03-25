@@ -23,7 +23,9 @@ document.querySelector('.b-1').onclick = t1;
 function t2() {
     let out = "";
     for (let i = 12; i <= 38; i++) {
-        out += i + "_"
+        if (i % 2 == 0) {
+            out += i + "_";
+        }
     }
     document.querySelector('.out-2').innerHTML = out;
 }
