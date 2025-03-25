@@ -31,16 +31,6 @@ function t2() {
 }
 
 document.querySelector('.b-2').onclick = t2;
-
-//если четніе и нечетніе
-// for (let i = 1; i <= 10; i++) {
-//  if (i % 2) {
-//     console.log("непарні" + i);
-//  } else {
-//      console.log("парні" + i);
-// }
-// }
-
 // зворотній відглік
 // for (let i = 10; i > 1; i--) {
 //     console.log(i);
@@ -51,7 +41,10 @@ document.querySelector('.b-2').onclick = t2;
 // Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t3() {
-
+    let out = ""
+    for (let i = 25; i > 7; i++) {
+        out += i + "_"
+    }
 }
 
 document.querySelector('.b-3').onclick = t3;
