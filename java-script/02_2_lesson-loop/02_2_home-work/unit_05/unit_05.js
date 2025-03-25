@@ -20,15 +20,15 @@ document.querySelector('.b-1').onclick = t1;
 // 12_14_16_18_20_22_24_26_28_30_32_34_36_38_
 //Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
-// function t2() {
-//     let out = "i";
-//     for (let i = 12; i <= 38; i % 2) {
-//         out += i + "_"
-//     }
-//     document.querySelector('.out-2').innerHTML = out;
-// }
+function t2() {
+    let out = "";
+    for (let i = 12; i <= 38; i++) {
+        out += i + "_"
+    }
+    document.querySelector('.out-2').innerHTML = out;
+}
 
-// document.querySelector('.b-2').onclick = t2;
+document.querySelector('.b-2').onclick = t2;
 
 //если четніе и нечетніе
 // for (let i = 1; i <= 10; i++) {
