@@ -20,13 +20,29 @@ document.querySelector('.b-1').onclick = t1;
 // 12_14_16_18_20_22_24_26_28_30_32_34_36_38_
 //Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
-function t2() {
+// function t2() {
+//     let out = "i";
+//     for (let i = 12; i <= 38; i % 2) {
+//         out += i + "_"
+//     }
+//     document.querySelector('.out-2').innerHTML = out;
+// }
 
-}
+// document.querySelector('.b-2').onclick = t2;
 
-document.querySelector('.b-2').onclick = t2;
+//если четніе и нечетніе
+// for (let i = 1; i <= 10; i++) {
+//  if (i % 2) {
+//     console.log("непарні" + i);
+//  } else {
+//      console.log("парні" + i);
+// }
+// }
 
-
+// зворотній відглік
+// for (let i = 10; i > 1; i--) {
+//     console.log(i);
+// }
 //  Task 3
 // Кнопка .b-3 запускает функцию t3. Функция должна выводить в .out-3 строку вида:
 //  25_24_23_22_21_20_19_18_17_16_15_14_13_12_11_10_9_8_7_
