@@ -6,11 +6,17 @@
 // <p>где звездочкa рисуются с помощью внутреннего цикла от 0 до 3, а _ с помощью внешнего.</p>
 
 function t1() {
-
+    let out = '';
+    for (let i = 0; i < 3; i++) { // Внешний цикл - количество групп
+        for (let j = 0; j < 3; j++) { // Внутренний цикл - звездочки
+            out += '*';
+        }
+        out += '_'; // Добавляем нижнее подчеркивание после звездочек
+    }
+    document.querySelector('.out-1').textContent = out;
 }
 
 document.querySelector('.b-1').onclick = t1;
-
 //  Task 2
 // <p>С помощью вложенных циклов, нарисуйте строку:</p>
 // 1
@@ -19,9 +25,21 @@ document.querySelector('.b-1').onclick = t1;
 // *_*_*_
 // 3
 // *_*_*_
-// <p>Решить задачу с помощью вложенных циклов. Внешний цикл выводит цифру и перенос строки br, внутренний - *_, и после этого внешний - знак переноса.</p>
+// <p>Решить задачу с помощью вложенных циклов. 
+// Внешний цикл выводит цифру и перенос строки br, 
+// внутренний - *_, и после этого внешний - знак переноса.</p>
 function t2() {
+    let out = '';
+    for (let i = 1; i <= 3; i++) { // Внешний цикл - количество групп
+        out += i + '<br>'; // Вывод числа и перенос строки
 
+        for (let j = 1; j <= 3; j++) {//Внутренний цикл - звездочки
+            out += '*_';
+        }
+        out += '<br>'; // Перенос строки после звездоче
+    }
+
+    document.querySelector('.out-2').innerHTML = out;
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -34,9 +52,18 @@ document.querySelector('.b-2').onclick = t2;
 // *_*_*_
 // *_*_*_
 
-// <p>Решить задачу с помощью вложенных циклов. Внутренний цикл выводит *_,  внешний цикл выводит перенос строки br.</p>
+// <p>Решить задачу с помощью вложенных циклов.
+//  Внутренний цикл выводит *_,  внешний цикл выводит перенос строки br.</p>
 function t3() {
+    let out = '';
+    for (let i = 1; i <= 4; i++) { // Внешний цикл - количество групп
+        for (let j = 1; j <= 3; j++) {//Внутренний цикл - звездочки
+            out += '*_';
+        }
+        out += '<br>'; // Перенос строки после звездоч
+    }
 
+    document.querySelector('.out-3').innerHTML = out;
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -46,8 +73,18 @@ document.querySelector('.b-3').onclick = t3;
 // 1_1*2*3*4*5*2_1*2*3*4*5*3_1*2*3*4*5*
 // Внешний цикл выводит цифру и _, а внутренний выводит от 1 до 5 с *
 function t4() {
+    let out = '';
+    for (let i = 1; i <= 3; i++) { // Внешний цикл - количество групп
+        out += i + '_'; // Вывод числа и черточка
+        for (let j = 1; j <= 5; j++) {//Внутренний цикл 
+            out += j + '*';
+        }
 
+    }
+
+    document.querySelector('.out-4').innerHTML = out;
 }
+
 
 document.querySelector('.b-4').onclick = t4;
 
@@ -59,9 +96,17 @@ document.querySelector('.b-4').onclick = t4;
 // 101010
 // 101010
 
-// <p>Вложенный цикл в зависимости от четного или нет k (счетчика цикла) рисует или 0 или 1. Внешний цикл - br.</p>
+// <p>Вложенный цикл в зависимости от четного или нет k (счетчика цикла) рисует или 0 или 1. 
+// Внешний цикл - br.</p>
 function t5() {
-
+    let out = '';
+    for (let i = 1; i <= 3; i++) { // Внешний цикл - количество строк
+        for (let cd = 0; cd < 6; cd++) { // Внутренний цикл - рисуем 6 символов
+            out += cd % 2 === 0 ? '1' : '0'; // Чередуем 1 и 0
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-5').innerHTML = out;
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -76,7 +121,14 @@ document.querySelector('.b-5').onclick = t5;
 
 
 function t6() {
-
+    let out = '';
+    for (let i = 1; i <= 3; i++) { // Внешний цикл - количество строк
+        for (let cd = 0; cd < 2; cd++) { // Внутренний цикл
+            out += cd % 2 === 0 ? '10x' : '01x'; // Чередуем 
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-6').innerHTML = out;
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -91,7 +143,14 @@ document.querySelector('.b-6').onclick = t6;
 // ****
 
 function t7() {
-
+    let out = '';
+    for (let i = 1; i <= 4; i++) {
+        for (let j = 0; j < i; j++) {
+            out += '*';
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-7').innerHTML = out;
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -108,7 +167,14 @@ document.querySelector('.b-7').onclick = t7;
 // *
 
 function t8() {
-
+    let out = '';
+    for (let i = 0; i <= 5; i++) {
+        for (let j = 5; j > i; i--) {
+            out += '*';
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-8').innerHTML = out;
 }
 
 document.querySelector('.b-8').onclick = t8;
