@@ -168,15 +168,14 @@ document.querySelector('.b-7').onclick = t7;
 
 function t8() {
     let out = '';
-    for (let i = 0; i <= 5; i++) {
-        for (let j = 5; j > i; i--) {
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 0; j < i; j++) {
             out += '*';
         }
         out += '<br>';
+        document.querySelector('.out-8').innerHTML = out;
     }
-    document.querySelector('.out-8').innerHTML = out;
 }
-
 document.querySelector('.b-8').onclick = t8;
 
 
@@ -190,11 +189,19 @@ document.querySelector('.b-8').onclick = t8;
 // 1_2_3_4_5_
 
 function t9() {
+    let out = '';
+    for (let i = 1; i <= 5; i++) {
+
+        for (let j = 1; j <= i; j++) {
+            out += j + '_';
+        }
+        out += '<br>';
+        document.querySelector('.out-9').innerHTML = out;
+    }
 
 }
 
 document.querySelector('.b-9').onclick = t9;
-
 
 //  Task 10
 // <p>С помощью вложенных циклов, нарисуйте строку:</p>
@@ -207,7 +214,16 @@ document.querySelector('.b-9').onclick = t9;
 
 
 function t10() {
-
+    let out = '';
+    let num = 1; // начальное число
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 10; j++) { // Внутренний цикл - количество чисел в строке
+            out += num.toString().padStart(2, '0') + '_'; // Форматируем число
+            num++;
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-10').innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = t10;

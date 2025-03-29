@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //fuction declaretion 
+        // мі ее можем візваь где угодно в коде. ее видно глобальо
+
+        function test() {
+            console.log('test');
+        }
+        //function expression 
+        // через переменную она будет только там где у нас конст то есть там где мі ее обьявляем
+        const test2 = function () {
+            console.log('test');
+        }
+        test2()
+
+        //function Arrow
+        //  нужно тогда когда мі хотим функцию візвать бістро
+        const testArrow = () => {
+            console.log('test 3');
+        }
+        testArrow()
+    </script>
+</body>
+
+</html>

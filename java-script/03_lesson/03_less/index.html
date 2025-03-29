@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>function</h2>
+    <button class="btn">Start</button>
+    <section></section>
+    <button class="link">all</button>
+    <div class="box">
+        <img src="" alt="">
+        <h2>test</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, exercitationem fugit suscipit atque
+            delectus ut nulla. Alias eaque fugit iusto, omnis cum esse amet a facilis in aut eligendi illum.</p>
+    </div>
+    <script>
+        let link = document.querySelector('link');
+        let btn = document.querySelector('btn');
+        btn.onclick = addBox;
+        link.onclick = () => {
+            document.querySelector('section').innertHTML = ` <div class="box">
+        <img src="" alt="">
+        <h2>test</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, exercitationem fugit suscipit atque
+            delectus ut nulla. Alias eaque fugit iusto, omnis cum esse amet a facilis in aut eligendi illum.</p>
+    </div>`
+        }
+    </script>
+</body>
+
+</html>
