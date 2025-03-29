@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="calc">
+        <input class="inp1" type="number">
+        <select class="select">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            </option>
+        </select>
+        <button class="btn">show</button>
+    </div>
+    <ul class="out"></ul>
+
+    <script>
+        //обрати число и нажать кнопку  и вівести то число что вводим
+        // функция что применяет имя и количество 
+
+
+        //дубликат повнна приймати имя  
+        //викликаемо 5 раз
+        // function test(name) {
+        //     for (let i = 1; i <= 5; i++) {
+        //         console.log(`${i}. ${name}`);
+        //     }
+        // }
+        // test("Nast");
+
+        //обрати число и нажать кнопку  и вівести то число что вводим
+        // функция что применяет имя и количество 
+
+        let out = document.querySelector('.out');
+        let btn = document.querySelector('.btn');
+        let select = document.querySelector('.select');
+        // ---------  0         1       3         4
+        let users = ['sasha', 'olha', 'sveta', 'kolya', 'sasha', 'olha', 'sveta', 'kolya']
+
+        function test(name) {
+            return `<li>${name}</li>`;
+        }
+
+
+        btn.onclick = () => {
+            out.innerHTML = ""
+            for (let i = 0; i < +select.value; i++) {
+                out.innerHTML += test(users[i])
+
+            }
+        }
+    </script>
+</body>
+
+</html>

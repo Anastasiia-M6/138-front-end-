@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="calc">
+        <input class="inp1" type="number">
+        <select class="select">
+            <option value="*">множити</option>
+            <option value="-">відняти</option>
+            <option value="+">додати</option>
+            </option>
+        </select>
+        <input class="inp2" type="number">
+        <button class="btn">res</button>
+    </div>
+    <h4 class="out">0</h4>
+    <script>
+        //____________________
+        let inp1 = document.querySelector('.inp1');
+        let inp2 = document.querySelector('.inp2');
+        let select = document.querySelector('.select');
+        let btn = document.querySelector('.btn');
+        let out = document.querySelector('.out');
+
+
+        btn.onclick = () => {
+
+            console.log(select.value);
+            if (select.value === "+") {
+                plus(inp1.value, inp2.value);
+            }
+            else if (select.value === "-") {
+                minus(inp1.value, inp2.value);
+            }
+            else if (select.value === "*") {
+                multi(inp1.value, inp2.value);
+            }
+            else {
+                console.log("eror");
+            }
+        }
+
+        function plus(num, num2) {
+            out.innerHTML = +num + +num2;
+        }
+
+        function minus(num, num2) {
+            out.innerHTML = +num - +num2;
+        }
+
+        function multi(num, num2) {
+            out.innerHTML = +num * +num2;
+        }
+        // // Функція приймає 2 числа та виводить їхній добуток
+        // function calcMultiply(num1, num2) {
+        //     console.log(num1 * num2);
+        // }
+        // // Виклик функції з 2 аргументами
+        // calcMultiply(5, 2);
+
+        // //завдання 2
+        // // 4 xbckf ..  crjkmrj vyt ktn b djpdhfoftn xthtp htnthy
+        // //створити функцию
+        // // функция приймає 4 числа
+        // // виводить  имя та питає вік
+        // //функция приймає рік народження та віводить рік народження віk младше 18 років немае вхожу чи старше 18 може зайти за допомогою ретерн
+        // function Createtest(num1, num2, num3, num4) {
+        //     let name = prompt("Введіть ваше ім'я:");
+        //     let birthYear = parseInt(prompt("Введіть ваш рік народження:"));
+
+        //     let currentYear = new Date().getFullYear();
+        //     let age = currentYear - birthYear;
+
+        //     console.log(`Ім'я: ${name}`);
+        //     console.log(`Рік народження: ${birthYear}`);
+
+        //     if (age < 18) {
+        //         console.log("Доступ заборонено");
+        //         return false;
+        //     } else {
+        //         console.log("Доступ дозволено");
+        //         return true;
+        //     }
+        // }
+
+        // // Виклик функції з чотирма числами
+        // Createtest(1, 2, 3, 4);
+
+        // function testAge(age) {
+        //     let checkAge = 2025 - age;
+        //     if (checkAge > 18) {
+        //         return 'ok'
+        //     }
+        //     return 'no'
+        // }
+        // console.log(testAge(1999))
+        // console.log(testAge(2020))
+        // function userInfo(name, age) {
+        //     return `hello ${name}  вам ${testAge(age)}`
+        // }
+        // console.log(userInfo('sasha', 2020))
+        // console.log(userInfo('anna', 1995))
+        //____________________
+
+        // function calc(num) {
+        //     return 2025 - num
+        // }
+        // console.log("age " + calc(1996));
+        //____________________
+        // function calc(num) {
+        //     let age = 2025 - num
+        //     let name = "sasha"
+        //     console.log(name + "" + age);
+        // }
+        // calc(1996)
+
+    </script>
+</body>
+
+</html>
