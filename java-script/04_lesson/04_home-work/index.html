@@ -57,13 +57,13 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(48, 42, 42, 0.1);
             text-align: center;
-            width: 150px;
+            width: 250px;
         }
 
         .out img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
             object-fit: cover;
         }
 
@@ -88,7 +88,7 @@
         <select class="sel">
             <option value="5">5</option>
             <option value="10">10</option>
-            <option value="15">15</option>
+            <option value="16">16</option>
         </select>
         <button class="btn">Show</button>
         <button class="res">Reset</button>
@@ -120,7 +120,7 @@
         let searchBtn = document.querySelector('.serch');
         let input = document.querySelector('.inp2');
         // ---------- 0        1        2       3       4
-        let users = ['Sasha', "Olga", 'Sveta', 'Vika', 'Kolya', 'Nastуa', 'Natasha', 'Masha', 'Tanya', 'Kostya']
+        let users = ['Sasha', "Olha", 'Sveta', 'Vika', 'Kolya', 'Nastya', 'Natasha', 'Masha', 'Tanya', 'Kostya', 'Ira', 'Polina', 'Jenya', 'Maksym', 'Jenya', 'Maksym']
 
         function test(name) {
             return `<li>
@@ -139,7 +139,7 @@
         btn.onclick = () => {
             out.innerHTML = "";
             for (let i = 0; i < +select.value; i++) {
-                out.innerHTML += generateListItem(users[i]);
+                out.innerHTML += test(users[i]);
             }
         };
 
@@ -155,7 +155,7 @@
 
             users.forEach(user => {
                 if (user.toLowerCase() === searchValue) {
-                    out.innerHTML += generateListItem(user);
+                    out.innerHTML += test(user);
                     found = true;
                 }
             });
@@ -164,7 +164,6 @@
                 out.innerHTML = "<li>Гравця не знайдено</li>";
             }
         };
-
 
     </script>
 
