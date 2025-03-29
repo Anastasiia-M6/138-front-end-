@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-work-lesson_04</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ede3e3;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .test {
+            background: rgb(198, 180, 180);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(84, 68, 68, 0.1);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        select,
+        button,
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ca7777;
+        }
+
+        button {
+            background-color: #e366c2;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #b30089;
+        }
+
+        .out {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .out li {
+            background: rgb(210, 199, 199);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(48, 42, 42, 0.1);
+            text-align: center;
+            width: 150px;
+        }
+
+        .out img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        span,
+        div {
+            color: rgb(48, 30, 30);
+        }
+
+        input,
+        select {
+            background-color: #f0ddea;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="test">
+        Вивід Гравців
+        <select class="sel">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+        <button class="btn">Show</button>
+        <button class="res">Reset</button>
+
+        <span>Пошук: </span>
+        <input class="inp2" type="text" placeholder="Name">
+        <button class="serch">Search</button>
+    </div>
+
+
+    <ul class="out">
+    </ul>
+
+
+    <script>
+
+        // Завдання
+        // 1: Кнопка Resset очищуемо .out
+        // 2: Реалызувати пошук if(inp.value ===)
+
+        // "Екстра"
+        // Варыант 2 Sasha.png Sveta.png <li> test(users[i])
+
+
+        let out = document.querySelector('.out')
+        let btn = document.querySelector('.btn')
+        let select = document.querySelector('.sel')
+        let resetBtn = document.querySelector('.res');
+        let searchBtn = document.querySelector('.serch');
+        let input = document.querySelector('.inp2');
+        // ---------- 0        1        2       3       4
+        let users = ['Sasha', "Olga", 'Sveta', 'Vika', 'Kolya', 'Nastуa', 'Natasha', 'Masha', 'Tanya', 'Kostya']
+
+        function test(name) {
+            return `<li>
+                     <img src="./img/${name}.jpg" alt="${name}">
+                     ${name}
+                </li>`;
+        }
+
+        btn.onclick = () => {
+            out.innerHTML = ""
+            for (let i = 0; i < +select.value; i++) {
+                out.innerHTML += test(users[i]);
+            }
+        }
+
+        btn.onclick = () => {
+            out.innerHTML = "";
+            for (let i = 0; i < +select.value; i++) {
+                out.innerHTML += generateListItem(users[i]);
+            }
+        };
+
+        resetBtn.onclick = () => {
+            out.innerHTML = "";
+            input.value = "";
+        };
+
+        searchBtn.onclick = () => {
+            let searchValue = input.value.trim().toLowerCase();
+            out.innerHTML = "";
+            let found = false;
+
+            users.forEach(user => {
+                if (user.toLowerCase() === searchValue) {
+                    out.innerHTML += generateListItem(user);
+                    found = true;
+                }
+            });
+
+            if (!found) {
+                out.innerHTML = "<li>Гравця не знайдено</li>";
+            }
+        };
+
+
+    </script>
+
+</body>
+
+</html>
