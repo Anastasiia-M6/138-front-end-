@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Shop</h2>
+        <div class="out">
+            <!-- <div class="item">
+                <h3>Huawai</h3>
+                <p>900 USD</p>
+            </div> -->
+        </div>
+    </div>
+    <script>
+        // let device = [
+        //     {
+        //         brend: 'Apple',
+        //         price: 1300
+        //     },
+        //     {
+        //         brend: 'Samsung',
+        //         price: 1000
+        //     },
+        //     {
+        //         brend: 'Huawai',
+        //         price: 900
+        //     },
+        // ]
+        // device.forEach(item => {
+        //     console.log(`${item.brend} Ціна: ${item.price} usd`);
+        // });
+        // или
+        // device.map((item) => {
+        //     console.log(item.brend + item.price)
+        // })
+        // Завдання 
+        // Вивести в Консоль каждого бренда в таком формате:Huawai Ціна: 900 usd
+        // вывести в консоль  имя - бренд - цена и добавляеи usd
+
+        // вівести в innerHTML
+        let out = document.querySelector('.out')
+        let device2 = [
+            {
+                img: 'https://content2.rozetka.com.ua/goods/images/big_tile/417144147.jpg',
+                brend: 'Apple',
+                price: 1300
+            },
+            {
+                img: 'https://content.rozetka.com.ua/goods/images/big_tile/405186085.jpg',
+                brend: 'Samsung',
+                price: 1000
+            },
+            {
+                img: 'https://content2.rozetka.com.ua/goods/images/big_tile/501173237.jpg',
+                brend: 'Huawai',
+                price: 900
+            },
+        ]
+        device2.map(item => {
+            out.innerHTML += ` 
+            <div class="item">
+    <img src="${item.img}" alt="">
+   <h3>${item.brend}Huawai</h3>
+    <p>${item.price}USD</p>
+    <button>buy</button>
+  </div>`
+        })
+
+
+    </script>
+</body>
+
+</html>
