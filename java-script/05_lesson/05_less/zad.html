@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="out"></div>
+    <div class="item">
+        <img src="./img/${images[index]}" alt="${images[index]}">
+        <h3></h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, recusandae quidem fugiat nostrum sint quos
+            veniam aperiam cumque sapiente. Quam cumque corporis provident blanditiis, reiciendis consectetur autem
+            eaque! Tenetur, obcaecati.</p>
+    </div>
+    <script>
+        // есть массив с помощью метода массива нужно найти всех sasha
+        // и вывести в кнсоль
+        let array2 = ['Apple', 'Sasha', 'Phone', 'Apple', 'Sasha', 'Phone', 'Apple', 'Sasha', 'Phone']
+        // array2.filter(item => item === 'Sasha').forEach(item => console.log(item));
+        array2.map((item, i) => {
+
+            if (item === 'Sasha') {
+                console.log('Sasha' + i)
+            }
+        })
+        //екстра так же вывести индекс Саша типо 01 саша 02 саша 
+        let images = ['Apple', 'Sasha', 'Phone', 'Apple', 'Sasha', 'Phone', 'Apple', 'Sasha', 'Phone']
+        let names = ['Apple', 'Sasha', 'Phone', 'Apple', 'Sasha', 'Phone', 'Apple', 'Sasha', 'Phone']
+        names.map((item, index) => {
+            // console.log(item + "" + images[index]);
+            out.innerHTML += `
+            <div class="item">
+        <img src="./img/${images[index]}" alt="${images[index]}">
+        <h3></h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, recusandae quidem fugiat nostrum sint quos
+            veniam aperiam cumque sapiente. Quam cumque corporis provident blanditiis, reiciendis consectetur autem
+            eaque! Tenetur, obcaecati.</p>
+    </div>`
+        })
+    </script>
+</body>
+
+</html>

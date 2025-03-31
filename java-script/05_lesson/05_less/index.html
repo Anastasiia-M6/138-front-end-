@@ -8,27 +8,112 @@
 </head>
 
 <body>
+    <input class="inp1" type="text">
+    <button class="btn1">add</button>
+    <ul class="out"></ul>
+    <button class="del1">delete</button>
     <script>
-        //массив - перлик ( список чего угодно) мы туда можем записывать цифры имена и тд  
-        let arr = [];
+        // //массив - перлик ( список чего угодно) мы туда можем записывать цифры имена и тд  
+        // let arr = [];
         /// первый елемент массива будт 0, второй 1 это важно
         // к первому елементу обращаться нужно 
 
-        console.log(users[0]);
+        // console.log(users[0]);
         // последнего еслт не знаем сколько их 
-        console.log(users);// просто массив выводим
-        console.log(users[users.length - 1]);//находим последнего
+        // console.log(users);// просто массив выводим
+        // console.log(users[users.length - 1]);//находим последнего
         // принцип что юсер добавил то будет в конце
 
-        // .push() - добавить в конце
-        //например
-        users.push('New User')
-        console.log(users);
 
-        // .unshift() - добавить в начало
+
+        // .push() - добавить в конце ( используется постоянно)
         //например
-        users.unshift('Sveta one')
-        console.log(users);
+        // users.push('New User')
+        // console.log(users);
+
+        // .pop() - удаляет елемент последний в массиве( используется постоянно для кнопки удаения)
+        //например
+        // users.pop()
+        // console.log(users);
+
+        // .unshift() - добавить в начало ( это нужно знать) 
+        //например
+        // users.unshift('Sveta one')
+        // console.log(users);
+
+        // .shift() - добавить в начало ( это нужно знать) 
+        //например
+        // users.shift('Sveta one')
+        // console.log(users);
+
+        //baza
+        // два метода массивов которые используются оч часто / это мметоды которые делают фор 
+        //методы массивов
+        // 1 .map() - он в конце делает пуш он для того чтобы перебирать массивы которые в коде
+        // для массивов в js 
+        //пример
+        // users.map(item => { console.log(item); })
+
+
+        //2 .forEach() - для массивов страницы ]9 то есть если нужно найти елемент на страние
+        //для массивов в доке html
+        // пример 
+        // text.forEach(item => { console.log(item); }) // дл] того что бы найти все елементы
+        // просят сделать туду лист to do всегда на совбесах просят делать и добавить какие елементы простя
+        // типо завтра я хочу сделать то се то есть добавить какие то события
+
+        // пример как все выше перечисленное использется в реальной жизниы
+        let inp1 = document.querySelector('inp1')
+        let btn1 = document.querySelector('btn1')
+        let out = document.querySelector('out')
+        let del1 = document.querySelector('del')
+        // всегда проверять через консоль подключилось ли
+        // делаем клик по кнопке и ввзываем стрелочную ф-ю
+        // и подключать проверку console.log (toDolist)
+        // сперва будет массив пустой
+        let toDolist = []
+        // делаем просто что бы вызвать
+        function addToDoList() {
+            arr.map(item => {
+                out.innerHTML += `<li>${item}</li>`
+            })
+
+        }
+
+        btn1.onclik = () => {
+            out.innerHTML = ''
+            toDolist.push(inp1.value)
+            // console.log(toDolist)
+            addToDoList()
+
+        }
+
+        //кнопа удаления
+        del1.onclik = () => {
+            out.innerHTML = ''
+            toDolist.pop(inp1.value)
+            // console.log(toDolist)
+            addToDoList()
+        }
+
+        //old
+        // for (let i = 0; <array2.length; i++) {
+        //     console.log(array2[i])
+        // }
+
+        //new
+        //ARRAAY
+        let array2 = ['apple', 'sasha', 'apple', 'sasha']
+        // array2.map(item => {
+        //     console.log(item)
+        // })
+
+        // array2.map((item, index, arr) => {
+        //     console.log(item)
+        //     console.log(index)
+        //     console.log(arr)
+        // })
+
     </script>
 </body>
 

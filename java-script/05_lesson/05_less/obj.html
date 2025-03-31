@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = ['sasha', 'sasha', 'sasha', 'sasha', 'sasha']
+        //обэкт - ключ значення 
+        let obj = {
+            name: 'Sasha',
+            age: 25,
+            photo: ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img.jpg', 'img.jpg'],
+            isRegistre: true
+        }
+        // console.dir(document);
+        // console.log("name: " + obj.name);
+        console.log(obj.age); // вывидит возраст
+
+        let users = [
+            {
+                name: 'sasha',
+                age: 19,
+                avatar: 'img01'
+            },
+            {
+                name: 'pasha',
+                age: 29,
+                avatar: 'img012'
+            },
+            {
+                name: 'tasha',
+                age: 18,
+                avatar: 'img03'
+            }
+        ]
+
+        console.log(users);
+
+        users.map(item => {
+            console.log(item);
+        })
+    </script>
+</body>
+
+</html>
