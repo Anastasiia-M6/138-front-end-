@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    Users: <span class="users">0</span>
+    <input class="inp1" type="login" placeholder="login">
+    <!-- <input type="email" placeholder="email"> -->
+    <input class="inp2" type="password" placeholder="password">
+    <button class="btn">registration</button>
+    <br>
+    <span class="error"></span>
+    <script>
+        let inp1 = document.querySelector('.inp1')
+        let inp2 = document.querySelector('.inp2')
+        let btn = document.querySelector('.btn')
+
+        let usersOut = document.querySelector('.users')
+
+        let error = document.querySelector('.error')
+
+        let users = []
+
+        btn.onclick = () => {
+            if (inp1.value && inp2.value) {
+                error.innerHTML = `  <span class="green">Пользователь зарегесьрированн</span>`
+                users.push({
+                    name: "Sasha",
+                    password: 'admin'
+                })
+                usersOut.innerHTML = users.length
+                console.log(users);
+            } else {
+                console.log('заполнить все поля')
+                error.innerHTML = `  <span class="red">заполните все поля</span>`
+            }
+        }
+        // проверку перед тем как добавать нет ли такого саши с таким логином и вывести что он существует
+    </script>
+</body>
+
+</html>

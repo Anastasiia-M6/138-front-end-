@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="name">
+    <input type="number">
+    <button class="btn">aaad</button>
+
+    <script>
+        //дз 
+        let btn = document.querySelector('.btn')
+        let users = []
+        // users.push({
+        //     name: "Sasha",
+        //     age: 22
+        // })
+        btn.onclick = () => {
+            let newUsers = {
+                name: "Sasha",
+                age: 18
+            }
+            users.push(newUsers);
+            console.log(users)
+            // при нажатии на кнопку создать масив через пуш 
+            //либо мі обьекст в середине в1 или сперва созд обект  а потом добавить сам обектʼ
+        }
+    </script>
+</body>
+
+</html>

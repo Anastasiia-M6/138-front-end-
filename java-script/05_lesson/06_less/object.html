@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
     <script>
         // обект это массив данных про что то конкретое 
         // эти данные мы можем сохранять во всех типах данных
@@ -21,15 +22,30 @@
                 },
                 {
                     name: "Sveta"
-                },
+                }
             ],
             isMaried: false,
             actualAge() {
                 return 2025 - this.age;
             }
         }
-        console.log(sasha.actualAge());
+        // console.log(sasha.actualAge());
+        console.log(sasha);
 
+        //мы можем менять обекты и добавлять  как ниже 2 стргки
+        sasha.age = 1990
+        sasha.password = "dasnjnu"
+        delete sasha.password;
+        // //js get years на сайте можем посмотреть что бы актуальную дату включить
+        // const d = new Date();
+        // let year = d.getFullYear();
+        // return year - this.age;
+        // console.log(d);
+
+        let olha = {
+            name: "Olha"
+        }
+        console.log(olha)
     </script>
 </body>
 
