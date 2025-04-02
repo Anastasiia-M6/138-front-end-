@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select class="sel" name="" id="">
+        <option value="User1">us</option>
+        <option value="User2">us</option>
+        <option value="User3">us</option>
+
+
+    </select>
+    <button class="btn">Search</button>
+    <script>
+        // нажимаем serch перебрать масив через мєм и перебрать его через велью
+        let arr = ["User1", "User2", "User3",];
+        let btn = document.querySelector('.btn');
+        let sel = document.querySelector('.sel');
+        // вівести послденего користувача
+
+        console.log(btn)
+        btn.onclick = () => {
+            arr.map(item => {
+                // console.log(item)
+                if (item == sel.value) {
+                    console.log(item)
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
