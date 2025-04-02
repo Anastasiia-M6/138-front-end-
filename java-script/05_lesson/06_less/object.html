@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // обект это массив данных про что то конкретое 
+        // эти данные мы можем сохранять во всех типах данных
+        let sasha = {
+            mame: "Sasha",
+            age: 1984,
+            photo: ['img1', 'img2', 'img3',],
+            patents: [
+                {
+                    name: "Kolya"
+                },
+                {
+                    name: "Sveta"
+                },
+            ],
+            isMaried: false,
+            actualAge() {
+                return 2025 - this.age;
+            }
+        }
+        console.log(sasha.actualAge());
+
+    </script>
+</body>
+
+</html>
