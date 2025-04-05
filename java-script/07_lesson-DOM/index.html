@@ -8,7 +8,55 @@
 </head>
 
 <body>
-    <script></script>
+    <h2>DOM</h2>
+    <button>test</button>
+    <button class="test">test <span></span></button>
+    <button id="test">test</button>
+    <div class="out">
+
+    </div>
+    <script>
+        let btn = document.querySelector('.button')
+        // классі
+        btn.classList.add('active')//добавляет класс
+        btn.classList.remove('active')// удаляет класс
+        btn.classList.toggle('active')// переключает класс
+
+        // дата атрибут 
+        btn.setAttribute('data', 'test')// добавляет атрибут
+        btn.getAttribute('data')// получает атрибут
+
+        //знаходити контент
+        btn.innerHTML = 'test'// добавляет контент
+        console.log(btn.innerHTML)// получаем контент
+
+        //стили
+        console.log(btn.style) // получаем стиль
+        btn.style.border = '1px solid red'
+
+        //создние елементів 
+        let out = document.querySelector('.out')
+        //old
+        out.innerHTML += `
+        <li>test</li>`
+        //new
+        let button = document.createElement('button')// созд кнопку
+        button.innerHTML = "Submit"//доб текст
+        button.classList.add('button')//доб класс
+
+        button.onclick = () => {
+            button.classList.toggle('active')// переключает класс
+        }
+        let buttonSpan = document.createElement('span')
+        buttonSpan.innerHTML = '👌'
+
+        let buttonSpan = document.createElement('span')
+        buttonSpan.innerHTML = 'Go'
+
+        button.append(buttonSpan)//добавляем спан в кнопку
+        out.append(button)//добавляем кнопку
+
+    </script>
 </body>
 
 </html>

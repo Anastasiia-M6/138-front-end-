@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Button</button><br>
+    <div class="out"></div><br>
+
+    <div class="out2"></div><br>
+    <button class="btn2">Button2</button><br>
+
+    <div class="out3"></div><br>
+    <button class="btn3">Button3</button><br>
+    <script>
+        //когда кликаем по кнопке добавляем в аут h2
+        let btn = document.querySelector('.btn');
+        let out = document.querySelector('.out');
+        btn.onclick = () => {
+            let h2 = document.createElement('h2');
+            h2.innerHTML = 'Hello';
+            h2.classList.add('h2');
+            out.append(h2);
+        }
+        // по нормальному
+        let btn2 = document.querySelector('.btn2');
+        let out2 = document.querySelector('.out2');
+        let user = true;
+
+        btn2.onclick = () => {
+            // let h2 = document.createElement('h2');
+            // h2.classList.add('h2');
+            // h2.innerHTML = 'Bye';
+            // out2.append(h2);
+            if (user) {
+                out2.append(creatTtitle('Bye', 'green'));
+            } else {
+                out2.append(creatTtitle('Bye not', 'red'));
+
+            }
+        }
+
+        function creatTtitle(text, className) {
+            let h2 = document.createElement('h2');
+            h2.classList.add('title', className);
+            h2.innerHTML = text;
+
+            return h2;
+
+        }
+
+
+
+
+        //створити h2 винести в функцию та створити массив з которого мі будем брать имя
+
+        let out3 = document.querySelector('.out3');
+        let btn3 = document.querySelector('.btn3');
+        // btn3.onclick = () => {
+        //     for (let i = 0; i < users2.length; i++) {
+        //         let h2 = document.createElement('h2');
+        //         h2.classList.add('title');
+        //         h2.innerHTML = users2[i];
+        //         out3.append(h2);
+        //     }
+        // }
+
+
+        function creatTitle(user) {
+            let h2 = document.createElement('h2');
+            // let active = ''
+
+            // if (isLogin == 'true') {
+            //     active = 'green';
+
+            // } else {
+            //     active = 'red';
+            // }
+            // h2.classList.add('title', active);
+            h2.innerHTML = user.name ? user.name : 'error';
+            h2.classList.add('title', user.isLogin ? 'green' : 'red');
+            return h2;
+
+        }
+        // out2.append(creatTitle('Hello'));
+        let users2 = ['sveta', 'kolya', 'masha', 'dima'];
+        // users2.map((item) => {
+        //     out3.append(creatTitle(item));
+        // })
+
+
+        let users3 = [
+            {
+                name: 'Sveta',
+                isLogin: true
+            },
+            {
+                name: 'Sasha',
+                isLogin: false
+            },
+            {
+                name: 'Olha',
+                isLogin: false
+            },
+            {
+                name: 'Kolya',
+                isLogin: true
+            },
+            {
+                name: 'Alex',
+                isLogin: false
+            }
+        ]
+        users3.map(item => {
+            // console.log(item);
+
+            out3.append(creatTitle(item));
+
+        })
+    </script>
+</body>
+
+</html>
