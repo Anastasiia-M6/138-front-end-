@@ -41,8 +41,8 @@
 
     <header>
         <select>
-            сюди взяти і вивести карегорії з масиву products
-            + прибрати дублікати методом new Set()
+            <!-- сюди взяти і вивести карегорії з масиву products
+            + прибрати дублікати методом new Set() -->
 
         </select>
         <button>select</button>
@@ -52,11 +52,11 @@
 
         Єкстра
         <label for="inp1">
-            в Наявностиі <input id="inp1" type="checkbox">
+            в Наявності <input id="inp1" type="checkbox">
         </label>
 
 
-        <label for="inp2"> Немае <input id="inp1" type="checkbox"></label>
+        <label for="inp2"> Немає<input id="inp2" type="checkbox"></label>
         <button>Sort</button>
     </header>
     <h1>Shop <b>Cart: <span class="cart">0</span></b> <button>Show</button></h1>
@@ -72,7 +72,29 @@
     </div>
 
     <script>
-        let selectCategory = []
+        // 1.вивести категорії в селект. 
+        //  вивести карегорії з масиву products
+        //  прибрати дублікати методом new Set()
+        //2. вивести в селект категорії без дублікатів
+        //3. при виборі категорії в селекті вивести тільки ті пролукти які відповідають категорії
+        //4. при натисканні на кнопку на кнопку search вивести тільки ті продукти які відповідають запиту 
+        // 5. при натисканні на кнопку sort вивести тільки ті продукти які в наявності
+        // 6.при натисканні на кнопку show вивести тільки ті товари які в корзині
+
+        const select = document.querySelector('select');
+        const btnSelect = document.querySelectorAll('button')[0];
+        const btnSearch = document.querySelectorAll('button')[1];
+        const btnSort = document.querySelectorAll('button')[2];
+        const btnShowCart = document.querySelectorAll('button')[3];
+
+        const inputSearch = document.querySelector('input[type="text"]');
+        const checkboxInStock = document.querySelector('#inp1');
+        const checkboxOutStock = document.querySelector('#inp2');
+
+        const out = document.querySelector('.out');
+        const cartOut = document.querySelector('.cart');
+        let cartArr = [];
+
         const products = [
             {
                 id: 1,
@@ -100,69 +122,99 @@
             { id: 10, img: 'https://content2.rozetka.com.ua/goods/images/big_tile/487792100.jpg', name: "Мишка Logitech MX Master 3", price: 2999, category: "Комп’ютерна периферія", inStock: true }
         ];
 
-        let out = document.querySelector('.out')
-        let cartOut = document.querySelector('.cart')
-        let cartArr = []
-
-
         function createCard(data) {
+            let div = document.createElement('div');
+            div.classList.add('item', data.inStock ? "item--green" : 'item--red');
 
-            let div = document.createElement('div')
-            div.classList.add('item', data.inStock ? "item--green" : 'item--red')
+            let category = document.createElement('p');
+            category.innerHTML = `Категорія: ${data.category}`;
 
-            let category = document.createElement('p')
-            category.classList.add('item__category')
-            category.innerHTML = `Категорія: ${data.category}`
+            let img = document.createElement('img');
+            img.src = data.img;
+            img.alt = 'img';
+            img.width = 180;
 
-            let img = document.createElement('img')
-            img.classList.add('item__img')
-            img.alt = 'img'
-            img.src = data.img
-            img.width = '180'
+            let title = document.createElement('h2');
+            title.innerHTML = data.name;
 
-            let title = document.createElement('h2')
-            title.classList.add('item__title')
-            title.innerHTML = data.name
+            let stock = document.createElement('p');
+            stock.classList.add(data.inStock ? "green" : 'red');
+            stock.innerHTML = data.inStock ? "в Наявності" : 'Немає';
 
-            let stock = document.createElement('p')
-            stock.classList.add('item__text', data.inStock ? "green" : 'red')
-            stock.innerHTML = data.inStock ? "в Наявності" : 'Немае'
+            let price = document.createElement('b');
+            price.innerHTML = `${data.price} USD`;
 
-            let price = document.createElement('b')
-            price.classList.add('item__price')
-            price.innerHTML = `${data.price} USD`
+            let buttons = document.createElement('div');
 
-
-            let buttons = document.createElement('div')
-            buttons.classList.add('item__buttons')
-
-
-            let cart = document.createElement('button')
-            cart.classList.add('item__cart')
-            cart.innerHTML = 'В Корзину'
+            let cart = document.createElement('button');
+            cart.innerHTML = 'В Корзину';
             cart.onclick = () => {
-                cartArr.push(data)
-                cartOut.innerHTML = cartArr.length
-            }
+                cartArr.push(data);
+                cartOut.innerHTML = cartArr.length;
+            };
 
-            let buy = document.createElement('button')
-            buy.classList.add('item__buy')
-            buy.innerHTML = 'Придбати'
+            let buy = document.createElement('button');
+            buy.innerHTML = 'Придбати';
 
-            buttons.append(buy, cart)
-            div.append(category, img, title, stock, price, buttons)
-
-
-
-
-            return div
+            buttons.append(buy, cart);
+            div.append(category, img, title, stock, price, buttons);
+            return div;
         }
-        console.log(products);
-        // item.category
 
-        products.map(item => out.append(createCard(item)))
+        function renderProducts(arr) {
+            out.innerHTML = '';
+            arr.forEach(item => out.append(createCard(item)));
+        }
 
+        // Категорії
+        const categories = [...new Set(products.map(p => p.category))];
+        categories.forEach(cat => {
+            const option = document.createElement('option');
+            option.value = cat;
+            option.innerText = cat;
+            select.append(option);
+        });
 
+        renderProducts(products);
+
+        btnSelect.addEventListener('click', () => {
+            const selected = select.value;
+            const filtered = products.filter(p => p.category === selected);
+            renderProducts(filtered);
+        });
+
+        btnSearch.addEventListener('click', () => {
+            const query = inputSearch.value.trim().toLowerCase();
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+            renderProducts(filtered);
+        });
+
+        btnSort.addEventListener('click', () => {
+            const filtered = products.filter(p => p.inStock);
+            renderProducts(filtered);
+        });
+
+        btnShowCart.addEventListener('click', () => {
+            renderProducts(cartArr);
+        });
+
+        //фільтрація за наявністю
+        checkboxInStock.addEventListener('change', handleCheckboxFilter);
+        checkboxOutStock.addEventListener('change', handleCheckboxFilter);
+
+        function handleCheckboxFilter() {
+            const showInStock = checkboxInStock.checked;
+            const showOutStock = checkboxOutStock.checked;
+
+            let filtered = products.filter(p => {
+                if (showInStock && showOutStock) return true; // обидва включені — показуємо всі
+                if (showInStock) return p.inStock;
+                if (showOutStock) return !p.inStock;
+                return true; // якщо обидва вимкнені — показуємо всі
+            });
+
+            renderProducts(filtered);
+        }
 
     </script>
 </body>
