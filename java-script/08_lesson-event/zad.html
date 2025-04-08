@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    ваша стать:
+    <select>
+
+        <option value="v1">--</option>
+        <option value="v2">чоловік</option>
+        <option value="v3">жінка</option>
+    </select>
+    = <span class="out"></span>
+    <script>
+        let sel = document.querySelector('.sel');
+        let out = document.querySelector('.out');
+        out.innerHTML = ""
+        sel.addEventListener('change', () => {
+            //умова
+            if (sel.value === "v1") {
+                out.innerHTML = '__';
+            } else if (sel.value === "v2") {
+                out.innerHTML = `ваша стать:${sel.value}`;
+            } else if (sel.value === "v3") {
+                out.innerHTML = `ваша стать:${sel.value}`;
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
