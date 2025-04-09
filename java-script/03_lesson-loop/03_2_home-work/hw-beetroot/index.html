@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types Jss</title>
+    <style>
+        .wrapper {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .section {
+            background: rgb(231, 181, 209);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .button {
+            font-size: 16px;
+            border-radius: 1%;
+            cursor: pointer;
+            background-color: rgb(184, 155, 170);
+        }
+
+        .button:hover {
+            color: rgb(209, 170, 193);
+            background-color: rgb(186, 48, 119);
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            max-width: 250px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="section">
+            <h1>Домашнє завдання: Цикли й умови</h1>
+            <div class="container">
+                <h4>Мінімум:</h4>
+                <h2>Задача 1:</h2>
+                <p>Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим
+                    (18-59) або пенсіонером (60+), передбач можливість введення невірних даних.</p>
+
+                <button class="btn button">Перевірити</button><br>
+                <div class="out"></div>
+
+                <script>
+                    let btn = document.querySelector('.btn');
+                    let out = document.querySelector('.out');
+
+                    btn.onclick = function () {
+                        let age = prompt('Вкажіть свій вік');
+                        if (age === null) {
+                            out.innerHTML = 'Ви скасували введення.';
+                        } else if (age.trim() === '') {
+                            out.innerHTML = 'Ви не ввели вік.';
+                        } else {
+                            age = parseInt(age);
+                            if (isNaN(age)) {
+                                out.innerHTML = 'Ви ввели не число.';
+                            } else if (age < 0 || age > 120) {
+                                out.innerHTML = 'Вік має бути від 0 до 120.';
+                            } else if (age <= 11) {
+                                out.innerHTML = 'Ви дитина.';
+                            } else if (age <= 17) {
+                                out.innerHTML = 'Ви підліток.';
+                            } else if (age <= 59) {
+                                out.innerHTML = 'Ви дорослий.';
+                            } else {
+                                out.innerHTML = 'Ви пенсіонер.';
+                            }
+                        }
+                    }
+                </script>
+            </div>
+            <!-- задача 1 конец -->
+
+            <div class="container">
+
+                <h2>Задача 2:</h2>
+                <p>Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1
+                    !, 2 @, 3 # і т. д).</p>
+
+                <button class="btn1 button">Перевірити</button><br>
+                <div class="out1"></div>
+
+                <script>
+                    let btn1 = document.querySelector('.btn1');
+                    let out1 = document.querySelector('.out1');
+                    btn1.onclick = function () {
+                        let num = prompt('Введіть число від 0 до 9');
+                        if (num === null) {
+                            out1.innerHTML = 'Ви скасували введення.';
+                        } else if (num.trim() === '') {
+                            out1.innerHTML = 'Ви не ввели число';
+                        } else {
+                            num = parseInt(num);
+                            if (isNaN(num)) {
+                                out1.innerHTML = 'Ви ввели не число';
+                            } else if (num < 0 || num > 9) {
+                                out1.innerHTML = 'Число має бути від 0 до 9';
+                            } else {
+                                let symbols = ['!', '@', '#', '$', '$', '%', '^', '&', '*', '(', ')'];
+                                out1.innerHTML = `спецсимвол для числа ${num} -${symbols[num]}`;
+                            }
+                        }
+
+                    }
+
+                </script>
+            </div>
+            <!-- конец задача 2  -->
+            <div class="container">
+
+                <h2>Задача 3:</h2>
+                <p>Підрахуй суму всіх чисел в заданому користувачем діапазоні.</p>
+
+                <button class="btn2 button">Перевірити</button><br>
+                <div class="out2"></div>
+
+                <script>
+                    let btn2 = document.querySelector('.btn2');
+                    let out2 = document.querySelector('.out2');
+                    btn2.onclick = function () {
+                        let start = prompt('введіть початок діапазону');
+                        let end = prompt('введіть кінець діапазону');
+                        if (start === null || end === null) {
+                            out2.innerHTML = 'Ви скасували введення.';
+                        } else if (start.trim() === '' || end.trim() === '') {
+                            out2.innerHTML = 'Ви не ввели число';
+                        } else {
+                            start = parseInt(start);
+                            end = parseInt(end);
+                            if (isNaN(start) || isNaN(end)) {
+                                out2.innerHTML = 'Ви  ввели не число';
+                            } else if (start > end) {
+                                out2.innerHTML = 'Початок діапазону має бути менше кінця';
+                            } else {
+                                let sum = 0;
+                                for (let i = start; i <= end; i++) {
+                                    sum += i;
+                                }
+                                out2.innerHTML = `Сума чисел від ${start} до ${end} дорівнює ${sum}`;
+                            }
+
+
+                        }
+                    }
+                </script>
+
+            </div>
+            <!-- конец задача 3  -->
+
+            <div class="container">
+
+                <h2>Задача 4:</h2>
+                <p>Запитай у користувача 2 числа і знайди найбільший спільний дільник.</p>
+
+                <button class="btn3 button">Перевірити</button><br>
+                <div class="out3"></div>
+
+                <script>
+                    let btn3 = document.querySelector('.btn3');
+                    let out3 = document.querySelector('.out3');
+                    btn3.onclick = function () {
+                        let num1 = prompt('введіть перше число');
+                        let num2 = prompt('введіть друге число');
+                        if (num1 === null || num2 === null) {
+                            out3.innerHTML = 'Ви скасували введення.';
+                        } else if (num1.trim() === '' || num2.trim() === '') {
+                            out3.innerHTML = 'Ви не ввели число';
+                        } else {
+                            num1 = parseInt(num1);
+                            num2 = parseInt(num2);
+                            if (isNaN(num1) || isNaN(num2)) {
+                                out3.innerHTML = 'Ви  ввели не число';
+                            } else {
+                                let gcd = function (a, b) {
+                                    while (b) {
+                                        let t = b;
+                                        b = a % b;
+                                        a = t;
+                                    }
+                                    return a;
+                                }
+                                out3.innerHTML = `Найбільший спільний дільник ${num1} і  ${num2} дорівнює ${gcd(num1, num2)}`;
+                            }
+                        }
+                    }
+                </script>
+                <!-- конец задача 4  -->
+
+                <div class="container">
+
+                    <h2>Задача 5:</h2>
+                    <p>Запитай у користувача число і виведи всі дільники цього числа.</p>
+
+                    <button class="btn4 button">Перевірити</button><br>
+                    <div class="out4"></div>
+
+                    <script>
+                        let btn4 = document.querySelector('.btn4');
+                        let out4 = document.querySelector('.out4');
+                        btn4.onclick = function () {
+                            let num3 = prompt('введіть число');
+                            if (num3 === null) {
+                                out4.innerHTML = 'Ви скасували введення.';
+                            } else if (num3.trim() === '') {
+                                out4.innerHTML = 'Ви не ввели число';
+                            } else {
+                                num3 = parseInt(num3);
+                                if (isNaN(num3)) {
+                                    out4.innerHTML = 'Ви  ввели не число';
+                                } else {
+                                    let result = 'Дільники числа ' + num3 + ': ';
+                                    let divisors = [];
+
+                                    for (let i = 1; i <= num3; i++) {
+                                        if (num3 % i === 0) {
+                                            divisors.push(i);
+                                        }
+                                    }
+
+                                    result += divisors.join(', ');
+                                    out4.innerHTML = result;
+                                }
+                            }
+                        }
+                    </script>
+                    <!-- конец задача 4  -->
+
+                </div>
+        </section>
+
+        <section class="section">
+            <h1>Домашнє завдання: Цикли й умови</h1>
+            <div class="container">
+                <h4>Норма:</h4>
+                <h2>Задача 1:</h2>
+                <p>Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.</p>
+
+                <button class="btn5 button">Перевірити</button><br>
+                <div class="out5"></div>
+
+                <script>
+                    let btn5 = document.querySelector('.btn5');
+                    let out5 = document.querySelector('.out5');
+
+
+                </script>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
