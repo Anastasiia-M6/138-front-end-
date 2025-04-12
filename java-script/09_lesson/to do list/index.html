@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> to do list</h2>
+    <input class="inp" type="text">
+    <button class="btn">add</button>
+    <b>task:</b> <span class="count-out">0</span>
+    <ol class="out"></ol>
+    <script>
+        const inp = document.querySelector('.inp')
+        const btn = document.querySelector('.btn')
+        const countOut = document.querySelector('.ount-out')
+        const out = document.querySelector('.out')
+
+
+        let count = 0
+        btn.addEventListener('click', () => {
+            if (inp.value) {
+                const li = document.createElement('li')
+                li.innerHTML = inp.value
+
+                const check = document.createElement('input')
+
+                check.type = 'checkbox'
+                check.addEventListener('change', () => {
+
+                    if (check.cheked) {
+                        text.classList.add('red')
+                        countOut.innerHTML = --count;
+                    } else {
+                        text.classList.remove('red')
+                        countOut.innerHTML = ++count;
+                    }
+                })
+                const text = document.createElement('span')
+                text.innerHTML = inp.value
+
+                li.append(check, text)
+                out.append(li)
+                countOut.innerHTML = ++count
+            } else {
+                console.log("Error input")
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn-minus">-</button>
+    <span class="out">0</span>
+    <button class="btn-plus">+</button>
+    <br>
+    <br>
+    <hr>
+    <h2>To Do List</h2>
+    <input class="inp2" type="text">
+    <button class="btn2">Add</button>
+    <ol class="out2">
+
+    </ol>
+    <span>To do: </span> <b class="count">0</b>
+
+    <script>
+        //каунтер
+        // при клике на кнопку + увеличиваем счетчик на1
+        // при клике на кнопку - уменьшаем счетчик на 1
+        let btnPlus = document.querySelector('.btn-plus');
+        let out = document.querySelector('.out');
+        let btnMinus = document.querySelector('.btn-minus');
+        let number = 0;
+        //условие что бы при минус не было меньше нуля
+        btnPlus.onclick = () => {
+            // out.innerHTML = +out.innerHTML + 1;
+            out.innerHTML = number++;
+        }
+        btnMinus.onclick = () => {
+            if (number >= 0) {
+                // out.innerHTML = +out.innerHTML - 1;
+                out.innerHTML = number--;
+            }
+
+        }
+        //to do list 
+        //при клике на кнопку добавляем элемент в список
+        //хочу добавлять задачи Add и когда гажимаем на кнопку добавляется ли
+        //креет документ и елемент лучше делать
+        let btn2 = document.querySelector('.btn2');
+        let inp2 = document.querySelector('.inp2');
+        let out2 = document.querySelector('.out2');
+        let count = document.querySelector('.count');
+
+        // btn2.addEventListener('click', () => {
+        //     let li = document.createElement('li');
+        //     li.innerHTML = inp2.value;
+        //     out2.append(li);
+        //     inp2.value = '';
+        //     count.innerHTML = out2.children.length;
+
+        // })
+        let number2 = 0;
+        btn2.addEventListener('click', () => {
+            out2.innerHTML += `<li> ${inp2.value}</li>`;
+            count.innerHTML = ++number2;
+        })
+
+
+    </script>
+</body>
+
+</html>
