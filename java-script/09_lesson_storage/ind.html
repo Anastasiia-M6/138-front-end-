@@ -9,23 +9,84 @@
 
 <body>
     <input type="text">
-    <button>res</button>
-    <div class="out"></div>
-    <script>
-        let out = document.querySelector('.out')
-        let inp = document.querySelector('input')
-        let btn = document.querySelector('button')
+    <button class="btn">res</button>
+    <button class="btnSave">res</button>
 
-        out.addEventListener('click', () => {
-            out.innerHTML = inp.value
+    <div class="out"></div><br><br>
+
+
+
+    <!-- задача -->
+    <div class="calc">
+        <input width="40" type="text" class="inp1"> + <input type="text" width="40" class="inp2"> = <span
+            class="out2"></span>
+        <br>
+        <button class="btn3">res</button>
+
+        <button class="btn4">reset</button>
+    </div>
+    <script>
+        //створення ключа
+        //localStorage.setItem('theme', 'test')
+        // знаходимо
+        //localStorage.getItem('theme')
+        //видалити всі
+        // localStorage.clear()
+        // видалити по ключу
+        // localStorage.
+
+        let inp1 = document.querySelector('.inp1')
+        let inp2 = document.querySelector('.inp2')
+        let btn3 = document.querySelector('.btn3')
+        let out2 = document.querySelector('.out2')
+        let btn4 = document.querySelector('.btn4')
+
+        inp1.value = localStorage.getItem("inp1")
+        inp2.value = localStorage.getItem("inp2")
+        out2.innerHTML = localStorage.getItem("res")
+        btn3.addEventListener('click', () => {
+
+            let res = +inp1.value + +inp2.value
+            out2.innerHTML = res
+            localStorage.setItem('inp1', inp1.value)
+            localStorage.setItem('inp2', inp2.value)
+            localStorage.setItem('res', res)
         })
 
-        // localStorage.setItem('theme', 'test')
+        //сброс
+        btn4.addEventListener('click', () => {
+
+            localStorage.removeItem('inp1')
+            localStorage.removeItem('inp2')
+            localStorage.removeItem('res')
+            // 1 варинт
+            // inp1.value = ''
+            // inp2.value = ''
+            // out2.innerHTML = ''
+
+            // или так 2 варинт
+            location.reload()
+        })
 
 
-        // console.log(localStorage.getItem('theme'))
+        // let out = document.querySelector('.out')
+        // let inp = document.querySelector('input')
+        // let btn = document.querySelector('.btn')
+        // let btnSave = document.querySelector('.btnSave')
 
-        // out.innerHTML = localStorage.getItem('theme');
+
+        // out.innerHTML = localStorage.getItem('input')
+        // btn.addEventListener('click', () => {
+        //     localStorage.setItem('input', inp.value)
+        //     out.innerHTML = inp.value
+        // })
+
+        // btnSave.addEventListener('click', () => {
+        //     out.innerHTML = localStorage.getItem('input')
+        // })
+
+
+
     </script>
 </body>
 
