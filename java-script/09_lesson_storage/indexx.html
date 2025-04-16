@@ -172,6 +172,28 @@
             item.innerHTML += index
 
         });
+
+        let box = document.querySelector('.box');
+        // вот сюда  в локал сторис передать дарк или лфйдт  с помощью if ш else
+        // при перезагрузке что бі сохранялась тема
+        if (localStorage.getItem('theme') == 'dark') {
+            bogy.classList.add('light')
+        } else {
+            bogy.classList.add('dark')
+        }
+
+        box.addEventListener('click', () => {
+            localStorage.setItem('theme', 'dark')
+            if (localStorage.getItem('theme') == 'dark') {
+                localStorage.setItem('theme', 'light')
+                bogy.classList.add('light')
+                bogy.classList.remove('dark')
+            } else {
+                localStorage.setItem('theme', 'dark')
+                bogy.classList.remove('light')
+                bogy.classList.add('dark')
+            }
+        })
         // let body = document.querySelector('body')
         // body.classList.add('dark')
         // body.classList.remove('dark')
