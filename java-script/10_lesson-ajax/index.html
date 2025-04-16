@@ -8,7 +8,22 @@
 </head>
 
 <body>
+    <script>
+        //віводить сортировать перебирать
+        //1 промисив
+        setTimeout(() => {
+            console.log('test 2')
+        }, 0);
+        console.log('test 1')
+        //первый грузится тест 1
+        // промисы это когда нам что то последовательно ну/но загрузить
 
+        // fetch('https://rickandmortyapi.com/api/character/120').then().then().catch(error => console.log(error))
+
+        fetch('https://rickandmortyapi.com/api/character/?page=2')
+            .then(data => data.json())
+            .then(data => console.log(gata))
+    </script>
 </body>
 
 </html>
