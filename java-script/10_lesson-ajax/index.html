@@ -4,25 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>\
+    <style>
+        .out {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .item {
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="out">
+
+
+    </div>
+    <button class="btn-next">next</button>
     <script>
+
+        let out = document.querySelector('.out')
+        let next = document.querySelector('.btn-next')
+        let pages = 0
         //віводить сортировать перебирать
         //1 промисив
-        setTimeout(() => {
-            console.log('test 2')
-        }, 0);
-        console.log('test 1')
+        // setTimeout(() => {
+        //     console.log('test 2')
+        // }, 0);
+        // console.log('test 1')
         //первый грузится тест 1
         // промисы это когда нам что то последовательно ну/но загрузить
 
         // fetch('https://rickandmortyapi.com/api/character/120').then().then().catch(error => console.log(error))
 
-        fetch('https://rickandmortyapi.com/api/character/?page=2')
-            .then(data => data.json())
-            .then(data => console.log(gata))
+        function useApi(num) {
+            fetch(`'https://rickandmortyapi.com/api/character/?page=${num}`)
+                .then(data => data.json())
+                .then(data => listItem(data))
+                .catch(error => console.log(error))
+        }
+
+        useApi[[3]]
+        // .then(data => {
+
+        //     data.results.map(item => {
+        //         out.innerHTML += item.name
+        //     })
+
+        //     // console.log(data.results.lenth)
+        // })
+
+
+        function listItem(user) {
+            console.log(user)
+            out.innerHTML = ''
+            user.map(item => {
+                out.append(createUser(item))
+
+            })
+        }
+        // натисканням переходим далы по сторынкка ( присвоили клик)
+        // сперва пажес = 0 выше
+        next.addEventListener('click', () => {
+            useApi(pages++)
+        })
+
+        // функция которая делает карточку
+        function createUser(user) {
+            let item = document.createElement('div')
+            item.classList.add('item')
+            let img = document.createElement('img')
+            img.src = user.image
+            img.alt = user.name
+            img.style.width = '200px'
+            let h3 = document.createElement('h3')
+            h3.innerHTML = user.name
+
+            let ul = document.createElement('ul')
+            let species = document.createElement('li')
+            species.innerHTML = user.species
+
+            let status = document.createElement('li')
+            status.innerHTML = user.status
+            //     return `
+            //      <div class="item">
+            //     <img src="user.image" alt="user.name">
+            //     <h3>user.name</h3>
+            //     <ul>
+            //         <li>Paca:user.species</li>
+            //         <li>Cnfy: user.status</li>
+            //     </ul>
+            // </div>
+            //     `
+            ul.append(species, status)
+            item.append(img, h3, ul)
+            return item
+        }
+        //вывести имена без функции
+
     </script>
 </body>
 
