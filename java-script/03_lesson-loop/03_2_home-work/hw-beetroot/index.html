@@ -249,24 +249,135 @@
 
         <section class="section">
             <h1>Домашнє завдання: Цикли й умови</h1>
+            <h4>Норма:</h4>
             <div class="container">
-                <h4>Норма:</h4>
+
                 <h2>Задача 1:</h2>
                 <p>Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.</p>
 
                 <button class="btn5 button">Перевірити</button><br>
                 <div class="out5"></div>
 
+
                 <script>
                     let btn5 = document.querySelector('.btn5');
                     let out5 = document.querySelector('.out5');
+                    btn5.onclick = function () {
+                        let num = prompt("Введи п’ятирозрядне число:");
+                        if (num.length === 5 && num === num.split('').reverse().join('')) {
+                            alert("Це паліндром.");
+                        } else {
+                            alert("Це не паліндром або це не п’ятирозрядне число.");
+                        }
+                        result += divisors.join(', ');
+                        out5.innerHTML = result;
+                    }
+                </script>
 
 
+                <!-- конец задача 1 норма  -->
+
+                <h2>Задача 2:</h2>
+                <p>Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
+                    від 200 до 300 - знижка буде 3%;
+                    від 300 до 500 - 5%;
+                    від 500 і вище - 7%.</p>
+
+                <button class="btn6 button">Перевірити</button><br>
+                <div class="out6"></div>
+
+                <script>
+                    let btn6 = document.querySelector('.btn6');
+                    let out6 = document.querySelector('.out6');
+                    btn6.onclick = function () {
+                        let amount = parseFloat(prompt("Введи суму покупки:"));
+                        let discount = 0;
+
+                        if (amount >= 200 && amount < 300) {
+                            discount = 0.03;
+                        } else if (amount >= 300 && amount < 500) {
+                            discount = 0.05;
+                        } else if (amount >= 500) {
+                            discount = 0.07;
+                        }
+
+                        if (!isNaN(amount)) {
+                            let finalAmount = amount * (1 - discount);
+                            let result = `Сума до оплати зі знижкою: ${finalAmount.toFixed(2)} грн`;
+                            alert(result);
+                            out6.innerHTML = result;
+                        } else {
+                            alert("Будь ласка, введи коректну суму.");
+                            out6.innerHTML = "Некоректне введення.";
+                        }
+                    }
+                </script>
+                <!-- конец задача 2 норма  -->
+                <h2>Задача 3:</h2>
+                <p>Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і нулів. При цьому
+                    також порахуй, скільки з них парних і непарних. Виведи статистику на екран. Враховуй, що достатньо
+                    однієї змінної (не 10) для введення чисел користувачем.</p>
+
+                <button class="btn7 button">Перевірити</button><br>
+                <div class="out7"></div>
+
+                <script>
+                    let btn7 = document.querySelector('.btn7');
+                    let out7 = document.querySelector('.out7');
+                    btn7.onclick = function () {
+                        let positive = 0, negative = 0, zero = 0, even = 0, odd = 0;
+
+                        for (let i = 0; i < 10; i++) {
+                            let number = parseInt(prompt(`Введи число ${i + 1}:`));
+
+                            if (number > 0) positive++;
+                            else if (number < 0) negative++;
+                            else zero++;
+
+                            if (number % 2 === 0) even++;
+                            else odd++;
+                        }
+                        let result = `
+ 
+                        Статистика:
+                        Додатніх: ${positive}
+                        Від’ємних: ${negative}
+                        Нулів: ${zero}
+                        Парних: ${even}
+                        Непарних: ${odd}`;
+
+                        alert(result);
+                        out7.innerHTML = result
+
+                    }
+                </script>
+                <!-- конец задача 3 норма  -->
+
+                <h2>Задача 4:</h2>
+                <p>Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до
+                    тих пір, поки користувач натискає OK.</p>
+
+                <button class="btn8 button">Перевірити</button><br>
+                <div class="out8"></div>
+
+                <script>
+                    let btn8 = document.querySelector('.btn8');
+                    let out8 = document.querySelector('.out8');
+                    btn8.onclick = function () {
+                        let days = ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця", "Субота", "Неділя"];
+                        let index = 0;
+
+                        while (confirm(`${days[index]}. Хочеш побачити наступний день?`)) {
+                            index = (index + 1) % days.length;
+                        }
+                        out8.innerHTML = `Ви закрили цикл на ${days[index]}`;
+                    }
                 </script>
             </div>
         </section>
 
     </div>
+
 </body>
 
 </html>
