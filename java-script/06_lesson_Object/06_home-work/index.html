@@ -85,8 +85,143 @@
         <li>якщо співпадає то ми виводимо юзера як окремого користувача</li>
         <li>Зробити можливість змінити його данні</li>
     </ol>
+    <h2>Login</h2>
+    <input type="text" placeholder="Email або Phone" class="login-id"><br>
+    <input type="password" placeholder="Password" class="login-pass"><br>
+    <button class="login-btn">Login</button>
 
-    <script src="./main.js"></script>
+    <div class="logged-user"></div>
+    <script>
+        const users = [];
+
+        const nameInput = document.querySelector('input[placeholder="name"]');
+        const ageInput = document.querySelector('input[placeholder="age"]');
+        const emailInput = document.querySelector('input[placeholder="E-mail"]');
+        const phoneInput = document.querySelector('input[placeholder="Phone"]');
+        const genderSelect = document.querySelector('select');
+        const pass1 = document.querySelectorAll('input[placeholder="password"]')[0];
+        const pass2 = document.querySelectorAll('input[placeholder="password"]')[1];
+        const registerBtn = document.querySelectorAll('button')[0];
+        const resetBtn = document.querySelectorAll('button')[1];
+        const userOut = document.querySelector('.user-out');
+        const outDiv = document.querySelector('.out');
+
+        function getGenderLabel(value) {
+            if (value === "m") return "Чоловік";
+            if (value === "w") return "Жінка";
+            return "Не вказано";
+        }
+
+        function getAvatar(gender) {
+            if (gender === "m") return "./img/man.png";
+            if (gender === "w") return "./img/woman.png";
+            return "./img/default.png"; // дефолтна аватарка
+        }
+
+        registerBtn.addEventListener('click', () => {
+            if (pass1.value !== pass2.value) {
+                alert("Паролі не співпадають!");
+                return;
+            }
+
+            const user = {
+                name: nameInput.value,
+                age: ageInput.value,
+                email: emailInput.value,
+                phone: phoneInput.value,
+                gender: genderSelect.value,
+                password: pass1.value
+            };
+
+            users.push(user);
+            userOut.textContent = users.length;
+
+            // очистити інпути (не обов'язково)
+            nameInput.value = '';
+            ageInput.value = '';
+            emailInput.value = '';
+            phoneInput.value = '';
+            genderSelect.value = '';
+            pass1.value = '';
+            pass2.value = '';
+        });
+        if (!user.name || !user.age || !user.email || !user.phone || !user.password) {
+            alert("Будь ласка, заповніть усі поля!");
+            return;
+        }
+        // Щоб не створити одного користувача двічі з однаковим email/телефоном:
+        const exists = users.some(u => u.email === user.email || u.phone === user.phone);
+        if (exists) {
+            alert("Користувач з таким Email або телефоном вже існує!");
+            return;
+        }
+        resetBtn.addEventListener('click', () => {
+            outDiv.innerHTML = '';
+            users.forEach(user => {
+                const div = document.createElement('div');
+                div.classList.add('item');
+                div.innerHTML = `
+                <img src="${getAvatar(user.gender)}" alt="Аватар">
+                <h5>Імя: ${user.name}</h5>
+                <ul>
+                    <li>Років: ${user.age}</li>
+                    <li>Email: ${user.email}</li>
+                    <li>Телефон: ${user.phone}</li>
+                    <li>Стать: ${getGenderLabel(user.gender)}</li>
+                </ul>
+            `;
+                outDiv.appendChild(div);
+            });
+        });
+
+        const loginId = document.querySelector('.login-id');
+        const loginPass = document.querySelector('.login-pass');
+        const loginBtn = document.querySelector('.login-btn');
+        const loggedUserDiv = document.querySelector('.logged-user');
+
+        loginBtn.addEventListener('click', () => {
+            const id = loginId.value.trim();
+            const pass = loginPass.value;
+
+            const user = users.find(u =>
+                (u.email === id || u.phone === id) && u.password === pass
+            );
+
+            if (!user) {
+                loggedUserDiv.innerHTML = '<p style="color:red;">Користувача не знайдено або пароль невірний</p>';
+                return;
+            }
+
+            showUserForEdit(user);
+        });
+
+        function showUserForEdit(user) {
+            loggedUserDiv.innerHTML = `
+            <h3>Редагування користувача</h3>
+            <input type="text" value="${user.name}" class="edit-name"><br>
+            <input type="number" value="${user.age}" class="edit-age"><br>
+            <input type="email" value="${user.email}" class="edit-email"><br>
+            <input type="tel" value="${user.phone}" class="edit-phone"><br>
+            <select class="edit-gender">
+                <option value="">--</option>
+                <option value="m" ${user.gender === 'm' ? 'selected' : ''}>Чоловік</option>
+                <option value="w" ${user.gender === 'w' ? 'selected' : ''}>Жінка</option>
+            </select><br>
+            <button class="save-user-btn">Зберегти</button>
+        `;
+
+            document.querySelector('.save-user-btn').addEventListener('click', () => {
+                user.name = document.querySelector('.edit-name').value;
+                user.age = document.querySelector('.edit-age').value;
+                user.email = document.querySelector('.edit-email').value;
+                user.phone = document.querySelector('.edit-phone').value;
+                user.gender = document.querySelector('.edit-gender').value;
+
+                alert("Дані оновлено!");
+                loggedUserDiv.innerHTML = '';
+            });
+        }
+    </script>
 </body>
 
 </html>
