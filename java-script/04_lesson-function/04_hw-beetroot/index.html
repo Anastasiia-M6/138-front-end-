@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        .wrapper {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .section {
+            background: rgb(231, 181, 209);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .button {
+            font-size: 16px;
+            border-radius: 1%;
+            cursor: pointer;
+            background-color: rgb(184, 155, 170);
+        }
+
+        .button:hover {
+            color: rgb(209, 170, 193);
+            background-color: rgb(186, 48, 119);
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            max-width: 250px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="section">
+            <h1>Домашнє завдання: Функції</h1>
+            <div class="container">
+                <h4>Мінімум:</h4>
+                <h2>Задача 1:</h2>
+                <p>Напиши всі можливі варіанти створення функцій.</p>
+
+                <button class="btn button">Перевірити</button><br>
+                <div class="out"></div>
+
+                <script>
+                    let btn = document.querySelector('.btn');
+                    let out = document.querySelector('.out');
+
+                    btn.onclick = function () {
+                        // 1. Оголошення функції (Function Declaration)
+                        function sayHello() {
+                            console.log("Hello - Declaration");
+                        }
+
+                        // 2. Функціональний вираз (Function Expression)
+                        const greet = function () {
+                            console.log("Hi - Expression");
+                        };
+
+                        // 3. Стрілкова функція (Arrow Function)
+                        const greetArrow = () => {
+                            console.log("Hey - Arrow");
+                        };
+
+                        // 4. Анонімна функція
+                        setTimeout(function () {
+                            console.log("Anonymous function (callback)");
+                        }, 1000);
+
+                        // 5. Функція-конструктор
+                        const func = new Function('a', 'b', 'return a + b');
+
+                        out.innerHTML = `Всі варіанти створення функцій:<br>
+                            1. Оголошення функції (Function Declaration)<br>
+                            2. Функціональний вираз (Function Expression)<br>
+                            3. Стрілкова функція (Arrow Function)<br>
+                            4. Анонімна функція (Callback)<br>
+                            5. Функція-конструктор (Function Constructor)<br>
+                            Перевір консоль для викликів функцій.`;
+
+                        // Виклик функцій
+                        sayHello();
+                        greet();
+                        greetArrow();
+                        console.log("Результат функції-конструктора: func(2,3) = " + func(2, 3));
+                    };
+                </script>
+            </div>
+            <!-- задача 1 конец -->
+
+            <div class="container">
+
+                <h2>Задача 2:</h2>
+                <p>Створи функцію, яка буде виводити кількість переданих їй аргументів.</p>
+
+                <button class="btn1 button">Перевірити</button><br>
+                <div class="out1"></div>
+
+                <script>
+                    let btn1 = document.querySelector('.btn1');
+                    let out1 = document.querySelector('.out1');
+
+                    btn1.onclick = function () {
+                        function countArgs() {
+                            let count = arguments.length;
+                            console.log(`Кількість аргументів: ${count}`);
+                            out1.innerHTML = `Кількість переданих аргументів: ${count}`;
+                        }
+
+                        // Можна передати будь-яку кількість аргументів
+                        countArgs(1, 2, 3, 4); // => 4
+                    };
+
+                </script>
+            </div>
+            <!-- конец задача 2  -->
+            <div class="container">
+
+                <h2>Задача 3:</h2>
+                <p>Напиши функцію, яка приймає 2 числа і повертає :<br>
+                    1. -1, якщо перше число менше, ніж друге;<br>
+                    2. 1 - якщо перше число більше, ніж друге;<br>
+                    3. 0 - якщо числа рівні.</p><br>
+
+                <button class="btn2 button">Перевірити</button><br>
+                <div class="out2"></div>
+
+                <script>
+                    let btn2 = document.querySelector('.btn2');
+                    let out2 = document.querySelector('.out2');
+                    btn2.onclick = function () {
+                        function compareNumbers(a, b) {
+                            if (a < b) return -1;
+                            if (a > b) return 1;
+                            return 0;
+                        }
+                        // Очистити попередній результат
+                        out2.innerHTML = "";
+
+                        // Вивід з поясненням
+                        out2.innerHTML += `compareNumbers(5, 10): ${compareNumbers(5, 10)}<br>`;
+                        out2.innerHTML += `compareNumbers(10, 5): ${compareNumbers(10, 5)}<br>`;
+                        out2.innerHTML += `compareNumbers(5, 5): ${compareNumbers(5, 5)}<br>`;
+
+
+
+                    }
+
+                </script>
+
+            </div>
+            <!-- конец задача 3  -->
+
+            <div class="container">
+
+                <h2>Задача 4:</h2>
+                <p>Напиши функцію, яка обчислює факторіал переданого їй числа.</p>
+
+                <button class="btn3 button">Перевірити</button><br>
+                <div class="out3"></div>
+
+                <script>
+                    let btn3 = document.querySelector('.btn3');
+                    let out3 = document.querySelector('.out3');
+                    btn3.onclick = function () {
+                        function factorial(n) {
+                            if (n < 0) return undefined; // захист від від'ємного числа
+                            if (n === 0) return 1;
+                            return n * factorial(n - 1);
+                        }
+                        //щчистити попередній рез-т
+                        out3.innerHTML = "";
+                        //вивід
+
+                        console.log(factorial(5)); // => 120
+                    }
+                </script>
+                <!-- конец задача 4  -->
+
+                <div class="container">
+
+                    <h2>Задача 5:</h2>
+                    <p>Запитай у користувача число і виведи всі дільники цього числа.</p>
+
+                    <button class="btn4 button">Перевірити</button><br>
+                    <div class="out4"></div>
+
+                    <script>
+                        let btn4 = document.querySelector('.btn4');
+                        let out4 = document.querySelector('.out4');
+                        btn4.onclick = function () {
+                            let num3 = prompt('введіть число');
+                            if (num3 === null) {
+                                out4.innerHTML = 'Ви скасували введення.';
+                            } else if (num3.trim() === '') {
+                                out4.innerHTML = 'Ви не ввели число';
+                            } else {
+                                num3 = parseInt(num3);
+                                if (isNaN(num3)) {
+                                    out4.innerHTML = 'Ви  ввели не число';
+                                } else {
+                                    let result = 'Дільники числа ' + num3 + ': ';
+                                    let divisors = [];
+
+                                    for (let i = 1; i <= num3; i++) {
+                                        if (num3 % i === 0) {
+                                            divisors.push(i);
+                                        }
+                                    }
+
+                                    result += divisors.join(', ');
+                                    out4.innerHTML = result;
+                                }
+                            }
+                        }
+                    </script>
+                    <!-- конец задача 4  -->
+
+                </div>
+        </section>
+
+        <section class="section">
+            <h1>Домашнє завдання: Цикли й умови</h1>
+            <h4>Норма:</h4>
+            <div class="container">
+
+                <h2>Задача 1:</h2>
+                <p>Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.</p>
+
+                <button class="btn5 button">Перевірити</button><br>
+                <div class="out5"></div>
+
+
+                <script>
+                    let btn5 = document.querySelector('.btn5');
+                    let out5 = document.querySelector('.out5');
+                    btn5.onclick = function () {
+                        let num = prompt("Введи п’ятирозрядне число:");
+                        if (num.length === 5 && num === num.split('').reverse().join('')) {
+                            alert("Це паліндром.");
+                        } else {
+                            alert("Це не паліндром або це не п’ятирозрядне число.");
+                        }
+                        result += divisors.join(', ');
+                        out5.innerHTML = result;
+                    }
+                </script>
+
+
+                <!-- конец задача 1 норма  -->
+
+                <h2>Задача 2:</h2>
+                <p>Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
+                    від 200 до 300 - знижка буде 3%;
+                    від 300 до 500 - 5%;
+                    від 500 і вище - 7%.</p>
+
+                <button class="btn6 button">Перевірити</button><br>
+                <div class="out6"></div>
+
+                <script>
+                    let btn6 = document.querySelector('.btn6');
+                    let out6 = document.querySelector('.out6');
+                    btn6.onclick = function () {
+                        let amount = parseFloat(prompt("Введи суму покупки:"));
+                        let discount = 0;
+
+                        if (amount >= 200 && amount < 300) {
+                            discount = 0.03;
+                        } else if (amount >= 300 && amount < 500) {
+                            discount = 0.05;
+                        } else if (amount >= 500) {
+                            discount = 0.07;
+                        }
+
+                        if (!isNaN(amount)) {
+                            let finalAmount = amount * (1 - discount);
+                            let result = `Сума до оплати зі знижкою: ${finalAmount.toFixed(2)} грн`;
+                            alert(result);
+                            out6.innerHTML = result;
+                        } else {
+                            alert("Будь ласка, введи коректну суму.");
+                            out6.innerHTML = "Некоректне введення.";
+                        }
+                    }
+                </script>
+                <!-- конец задача 2 норма  -->
+                <h2>Задача 3:</h2>
+                <p>Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і нулів. При цьому
+                    також порахуй, скільки з них парних і непарних. Виведи статистику на екран. Враховуй, що достатньо
+                    однієї змінної (не 10) для введення чисел користувачем.</p>
+
+                <button class="btn7 button">Перевірити</button><br>
+                <div class="out7"></div>
+
+                <script>
+                    let btn7 = document.querySelector('.btn7');
+                    let out7 = document.querySelector('.out7');
+                    btn7.onclick = function () {
+                        let positive = 0, negative = 0, zero = 0, even = 0, odd = 0;
+
+                        for (let i = 0; i < 10; i++) {
+                            let number = parseInt(prompt(`Введи число ${i + 1}: `));
+
+                            if (number > 0) positive++;
+                            else if (number < 0) negative++;
+                            else zero++;
+
+                            if (number % 2 === 0) even++;
+                            else odd++;
+                        }
+                        let result = `
+
+                        Статистика:
+                        Додатніх: ${positive}
+                        Від’ємних: ${negative}
+                        Нулів: ${zero}
+                        Парних: ${even}
+                        Непарних: ${odd}`;
+
+                        alert(result);
+                        out7.innerHTML = result
+
+                    }
+                </script>
+                <!-- конец задача 3 норма  -->
+
+                <h2>Задача 4:</h2>
+                <p>Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до
+                    тих пір, поки користувач натискає OK.</p>
+
+                <button class="btn8 button">Перевірити</button><br>
+                <div class="out8"></div>
+
+                <script>
+                    let btn8 = document.querySelector('.btn8');
+                    let out8 = document.querySelector('.out8');
+                    btn8.onclick = function () {
+                        let days = ["Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця", "Субота", "Неділя"];
+                        let index = 0;
+
+                        while (confirm(`${days[index]}. Хочеш побачити наступний день ? `)) {
+                            index = (index + 1) % days.length;
+                        }
+                        out8.innerHTML = `Ви закрили цикл на ${days[index]}`;
+                    }
+                </script>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
