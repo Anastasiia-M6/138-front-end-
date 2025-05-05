@@ -5,14 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .row {
+            display: flex;
+            gap: 10px;
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="form">
         <input type="text" placeholder="Name" class='inp'>
         <input type="number" placeholder="Age" class='inp2'>
+        <label>
+            <input type="checkbox" class="agree"> Согласен с условиями
+        </label>
         <button class='btn'>Add</button>
-        <span class='out'></span>
+        <div class='out'></div>
     </div>
 </body>
 <script>
@@ -20,72 +30,161 @@
     //нужно сделать клик и функцию которая принимает два аргумениа нейм и єйдж
     // и віводит в аут 
 
+    // let inp = document.querySelector('.inp');
+    // let inp2 = document.querySelector('.inp2');
+    // let out = document.querySelector('.out');
+    // let btn = document.querySelector('.btn');
+    // function listUser() {
+    //     users.push({
+    //         name: inp.value,
+    //         age: +inp2.value
+    //     });
+
+    //     arr.map(item => {
+    //         out.append(createElement(item.name, item.age))
+    //     })
+
+    // }
+    // // out.append(createElement(arr[0]))
+    // function createItem(item) {
+    //     let div = document.createElement('div');
+    //     let name = document.createElement('h5');
+    //     name.innerHTML = item.name
+    //     let age = document.createElement('h5');
+    //     age.innerHTML = item.age
+    //     div.append(name, age)
+    //     return (div);
+    // }
+
+
+
+
+    // Task Number 2
+    // створити Функцію createItem(name, age) в out.append() за допомогою функції listUser()
+
+    // function listUser(data) {
+    //     data.map(item => {
+    //         out.append(createItem(item))
+    //     })
+    // }
+
+    // listUser(arr)
+
+    // function createItem(item) {
+    //     let div = document.createElement('div')
+
+    //     let name = document.createElement('h5')
+    //     name.innerHTML = item.name
+    //     let age = document.createElement('h5')
+    //     age.innerHTML = item.age
+
+    //     div.append(name, age)
+    //     return div
+    // }
+
+    // btn.addEventListener('click', () => {
+    //     out.innerHTML = ''
+
+    //     arr.push({
+    //         name: inp.value,
+    //         age: +inp2.value,
+    //     })
+
+    //     listUser(arr)
+    // })
+
+
+    // добавить чек бокс и батогн 
     let inp = document.querySelector('.inp');
     let inp2 = document.querySelector('.inp2');
     let out = document.querySelector('.out');
     let btn = document.querySelector('.btn');
-    function listUser() {
-        users.push({
-            name: inp.value,
-            age: +inp2.value
-        });
+    let agree = document.querySelector('.agree');
 
-        arr.map(item => {
-            out.append(createElement(item.name, item.age))
-        })
+    let arr = [];
 
-    }
-    // out.append(createElement(arr[0]))
     function createItem(item) {
         let div = document.createElement('div');
+
         let name = document.createElement('h5');
-        name.innerHTML = item.name
+        name.innerHTML = `Имя: ${item.name}`;
         let age = document.createElement('h5');
-        age.innerHTML = item.age
-        div.append(name, age)
-        return (div);
+        age.innerHTML = `Возраст: ${item.age}`;
+
+        div.append(name, age);
+        return div;
     }
 
+    function listUser(data) {
+        data.forEach(item => {
+            out.append(createItem(item));
+        });
+    }
+
+    btn.addEventListener('click', () => {
+        out.innerHTML = '';
+
+        if (!agree.checked) {
+            alert('Вы должны согласиться с условиями!');
+            return;
+        }
+
+        arr.push({
+            name: inp.value,
+            age: +inp2.value,
+        });
+
+        listUser(arr);
+    });
+
+    // Для начальной отрисовки, если arr не пустой
+    listUser(arr);
 
 
+    // вариант учителя с добавлением чек бокса и нопки 
 
-// Task Number 2
-// створити Функцію createItem(name, age) в out.append() за допомогою функції listUser()
+    // function listUser(data) {
+    //     data.map(item => {
+    //         out.append(createItem(item))
+    //     })
+    // }
 
-// function listUser(data) {  
-//   data.map(item => {
-//      out.append(createItem(item))
-//   })
-// }
+    // listUser(arr)
 
-// listUser(arr)
+    // function createItem(item) {
+    //     let div = document.createElement('div')
+    //     div.classList.add('row')
 
-// function createItem(item) {
-//   let div = document.createElement('div')
-   
-//    let name = document.createElement('h5')
-//    name.innerHTML = item.name
-//    let age = document.createElement('h5')
-//    age.innerHTML = item.age
-    
-//    div.append(name, age)
-//    return div
-// }
+    //     let name = document.createElement('h5')
+    //     name.innerHTML = item.name
+    //     let age = document.createElement('h5')
+    //     age.innerHTML = item.age
 
-// btn.addEventListener('click', () => {
-//   out.innerHTML = ''
-  
-//   arr.push({
-//     name: inp.value,
-//     age: +inp2.value,
-//   })
-  
-//   listUser(arr)
-// })
+    //     let inp = document.createElement('input')
+    //     inp.type = "checkbox"
+    //     let btn = document.createElement('button')
+    //     btn.innerHTML = "Add"
 
+    //     div.append(inp, name, age, btn)
+    //     return div
+    // }
 
+    // btn.addEventListener('click', () => {
+    //     out.innerHTML = ''
 
+    //     arr.push({
+    //         name: inp.value,
+    //         age: +inp2.value,
+    //     })
+
+    //     listUser(arr)
+    // })
+
+    // дз доб количесво юсерив
+    //когда нажимаем кнопку адд мі єтого пользоателю дописвваем в массив 
 </script>
+</body>
+
 
 
 </html>
