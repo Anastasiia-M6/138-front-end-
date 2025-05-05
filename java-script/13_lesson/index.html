@@ -8,7 +8,40 @@
 </head>
 
 <body>
+    <div class="form">
+        <input type="text" placeholder="Name" class='inp'>
+        <input type="number" placeholder="Age" class='inp2'>
+        <button class='btn'>Add</button>
+        <span class='out'></span>
+    </div>
+
 
 </body>
+<script>
+
+    //заполняя поля номбер и єйж при нажатии на кнопку батон  делается пуш в масив нового юсера  потом єтот мксив віводитсґ в инерштмл в аут
+
+    let inp = document.querySelector('.inp');
+    let inp2 = document.querySelector('.inp2');
+    let out = document.querySelector('.out');
+    let btn = document.querySelector('.btn');
+
+    let users = []; // массив для хранения пользователей
+
+    btn.addEventListener('click', () => {
+        users.push({
+            name: inp.value,
+            age: +inp2.value
+        });
+
+        inp.value = '';
+        inp2.value = '';
+        out.innerHTML = '';
+        users.forEach((item) => {
+            out.innerHTML += `<div class="item">Name: ${item.name}, Age: ${item.age}</div>`;
+        });
+    });
+
+</script>
 
 </html>
