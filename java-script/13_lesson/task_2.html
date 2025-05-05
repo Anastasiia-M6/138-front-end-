@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form">
+        <input type="text" placeholder="Name" class='inp'>
+        <input type="number" placeholder="Age" class='inp2'>
+        <button class='btn'>Add</button>
+        <span class='out'></span>
+    </div>
+</body>
+<script>
+    //нужно створити функцию  createItem(name, age) и в out.append ()сделать оппенд за допопомгою функции listUser(
+    //нужно сделать клик и функцию которая принимает два аргумениа нейм и єйдж
+    // и віводит в аут 
+
+    let inp = document.querySelector('.inp');
+    let inp2 = document.querySelector('.inp2');
+    let out = document.querySelector('.out');
+    let btn = document.querySelector('.btn');
+    function listUser() {
+        users.push({
+            name: inp.value,
+            age: +inp2.value
+        });
+
+        arr.map(item => {
+            out.append(createElement(item.name, item.age))
+        })
+
+    }
+    // out.append(createElement(arr[0]))
+    function createItem(item) {
+        let div = document.createElement('div');
+        let name = document.createElement('h5');
+        name.innerHTML = item.name
+        let age = document.createElement('h5');
+        age.innerHTML = item.age
+        div.append(name, age)
+        return (div);
+    }
+
+
+
+
+// Task Number 2
+// створити Функцію createItem(name, age) в out.append() за допомогою функції listUser()
+
+// function listUser(data) {  
+//   data.map(item => {
+//      out.append(createItem(item))
+//   })
+// }
+
+// listUser(arr)
+
+// function createItem(item) {
+//   let div = document.createElement('div')
+   
+//    let name = document.createElement('h5')
+//    name.innerHTML = item.name
+//    let age = document.createElement('h5')
+//    age.innerHTML = item.age
+    
+//    div.append(name, age)
+//    return div
+// }
+
+// btn.addEventListener('click', () => {
+//   out.innerHTML = ''
+  
+//   arr.push({
+//     name: inp.value,
+//     age: +inp2.value,
+//   })
+  
+//   listUser(arr)
+// })
+
+
+
+</script>
+
+
+</html>
