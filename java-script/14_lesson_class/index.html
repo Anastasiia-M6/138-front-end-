@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="out">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ad?</p>
+        <!-- <Button> если с большой то єто реакт компонент</Button> -->
+    </div>
+    <script>
+        let out = document.querySelector('.out');
+        function Buttons(text, type) {
+
+
+            // ретерн означает возвращать значение . например кнопку 
+            // return `<button>${text}</button>`
+            return `<button button--${type}>${text}</button>`
+        }
+        out.innerHTML += Buttons("Sasha", 's');
+
+    </script>
+</body>
+
+</html>
