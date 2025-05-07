@@ -4,17 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Users</title>
+    <style>
+        .user-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            max-width: 200px;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-right: 10px;
+            padding: 5px 15px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="out">
-        Hello: Sasha
-        <br>
-        вік: 22
-        <br>
-        гаманець: 120usd
+
+    <div class="buttons">
+        <button onclick="list()">Показать в USD</button>
+        <button onclick="calc()">Показать в гривнах</button>
     </div>
+
+    <div class="out"></div>
+
     <script>
         // есть ф-ии и отдельно пишем события в них 
         // у нас есть юсер и это массив
@@ -22,35 +43,20 @@
         //создать  ф-ю которая конкретно создает карточку юзера
         // создать  ф-ю  которая выводит в аут
         // и добавить  условие у всех юзеров есть сумма в доллраха и ф-я что переводит доллары в гривне по курсу 41 грн
-
         let users = [
-            {
-                name: "sasha",
-                age: 22,
-                price: 1200
-            },
-            {
-                name: "Sveta",
-                age: 33,
-                price: 5000
-            },
-            {
-                name: "Olha",
-                age: 18,
-                price: 200
-            }
-        ]
+            { name: "sasha", age: 22, price: 1200 },
+            { name: "Sveta", age: 33, price: 5000 },
+            { name: "Olha", age: 18, price: 200 }
+        ];
 
         let out = document.querySelector('.out');
-
-        // Функция создания карточки пользователя (в USD)
+        // Функция создания карточки пользователя (в USD)s
         function createUser(user) {
             let div = document.createElement('div');
             div.classList.add('user-card');
             div.innerHTML = `Hello: ${user.name} <br> Вік: ${user.age} <br> Гаманець: ${user.price} USD`;
             return div;
         }
-
         // Функция вывода всех карточек
         function list() {
             out.innerHTML = '';
@@ -59,7 +65,6 @@
                 out.append(userCard);
             }
         }
-
         // Функция пересчета в гривны и вывода карточек
         function calc() {
             out.innerHTML = '';
@@ -72,6 +77,7 @@
             }
         }
     </script>
+
 </body>
 
 </html>
