@@ -39,7 +39,33 @@
         out.append(div(obj[0]));
 
         // через классі делаем тоже самое 
+        class creatUser {
+            constructor(item) {
+                this.name = item.name;
+                this.age = item.age;
 
+            }
+            createElement() {
+                let div = document.createElement('div');
+                div.innerHTML = `Hello ${this.name} age ${this.age}`;
+
+                return div;
+            }
+        }
+
+        console.log(new creatUser(obj[1]))
+
+        let user2 = new creatUser(obj[1])
+        out.append(user2.createElement());
+        //можем делать унследование от основного
+        class NewCreate extends creatUser {
+            constructor(item) {
+                //супер переносить копию родительского класса то есть віше данніе в конструкторе
+                super(item)
+                this.color = item.color;
+            }
+        }
+        console.log(new NewCreate(obj[1]))
     </script>
 </body>
 
