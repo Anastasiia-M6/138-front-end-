@@ -13,15 +13,32 @@
         <!-- <Button> если с большой то єто реакт компонент</Button> -->
     </div>
     <script>
+        //функциональній компонент
         let out = document.querySelector('.out');
         function Buttons(text, type) {
-
 
             // ретерн означает возвращать значение . например кнопку 
             // return `<button>${text}</button>`
             return `<button button--${type}>${text}</button>`
         }
         out.innerHTML += Buttons("Sasha", 's');
+
+
+
+        let obj = [{
+            name: "sasha",
+            age: 23
+        }]
+
+        function div(item) {
+            let div = document.createElement('div');
+            div.innerHTML = `Hello ${item.name} age ${item.age}`;
+
+            return div;
+        }
+        out.append(div(obj[0]));
+
+        // через классі делаем тоже самое 
 
     </script>
 </body>
