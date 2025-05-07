@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="out">
+        Hello: Sasha
+        <br>
+        вік: 22
+        <br>
+        гаманець: 120usd
+    </div>
+    <script>
+        // есть ф-ии и отдельно пишем события в них 
+        // у нас есть юсер и это массив
+        //задание
+        //создать  ф-ю которая конкретно создает карточку юзера
+        // создать  ф-ю  которая выводит в аут
+        // и добавить  условие у всех юзеров есть сумма в доллраха и ф-я что переводит доллары в гривне по курсу 41 грн
+
+        let users = [
+            {
+                name: "sasha",
+                age: 22,
+                price: 1200
+            },
+            {
+                name: "Sveta",
+                age: 33,
+                price: 5000
+            },
+            {
+                name: "Olha",
+                age: 18,
+                price: 200
+            }
+        ]
+
+        let out = document.querySelector('.out');
+
+        // Функция создания карточки пользователя (в USD)
+        function createUser(user) {
+            let div = document.createElement('div');
+            div.classList.add('user-card');
+            div.innerHTML = `Hello: ${user.name} <br> Вік: ${user.age} <br> Гаманець: ${user.price} USD`;
+            return div;
+        }
+
+        // Функция вывода всех карточек
+        function list() {
+            out.innerHTML = '';
+            for (let i = 0; i < users.length; i++) {
+                let userCard = createUser(users[i]);
+                out.append(userCard);
+            }
+        }
+
+        // Функция пересчета в гривны и вывода карточек
+        function calc() {
+            out.innerHTML = '';
+            for (let i = 0; i < users.length; i++) {
+                let div = document.createElement('div');
+                div.classList.add('user-card');
+                let priceUAH = users[i].price * 41;
+                div.innerHTML = `Hello: ${users[i].name} <br> Вік: ${users[i].age} <br> Гаманець: ${priceUAH} грн`;
+                out.append(div);
+            }
+        }
+    </script>
+</body>
+
+</html>
