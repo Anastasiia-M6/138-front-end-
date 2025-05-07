@@ -60,9 +60,13 @@
         //можем делать унследование от основного
         class NewCreate extends creatUser {
             constructor(item) {
-                //супер переносить копию родительского класса то есть віше данніе в конструкторе
+                //супер переносить копию родительского класса то есть віше данніе в
                 super(item)
-                this.color = item.color;
+                // не сработает оптому что у нас нет віше колор 
+                // this.color = item.color;
+            }
+            createElement() {
+                super.createElement()
             }
         }
         console.log(new NewCreate(obj[1]))
