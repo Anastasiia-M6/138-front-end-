@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* класи
+       
+1.global clases:
+        испольщуютс] по всему сайту, на всех страницах а не в одном месте
+        .container
+        .title
+        .button
+        .text
+        
+        класи секций :
+        .header
+        .hero
+        .footer
+        .contact 
+
+        atomic css-для каждого собития свой класс
+        .text-center{}
+        .text-left{} когда под кажую нано событие делаем свой класс . хотя у них глобально общий класс
+        используем в компоненте с global clases
+2. ВЕМ
+
+блок: .hero
+
+елемент: .hero__container; .hero__title;.hero__img-line; .hero__img-line-top
+
+модификатор: .hero--dark; .hero__container--row;
+
+.hero{
+&__container{ внутри код}
+&--row{внутри код}
+}
+глобальные модификаторы:
+.active
+.visible
+
+локальные модификатоы:
+.hero__img-line--active
+        */
+
+        .title {
+            font-size: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header></header>
+
+        <section class="hero">
+            <div class="container">
+                <h2 class="title"></h2>
+                <img src="" alt="">
+                <button class="button">add</button>
+            </div>
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+</body>
+
+</html>
