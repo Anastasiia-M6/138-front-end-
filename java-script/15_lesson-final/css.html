@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .font {
+            font-family: 'segoe UI', sans-serif;
+            /* санс сериф с засечками а сериф без засечекк(это засечки на буквах)
+            санс сериф и сериф дефолтные и если не сработают первый шрифт перед ним то они сработают точно */
+            font-family: 'segoe UI', serif;
+            font-size: 20px;
+            line-height: 1.2;
+            text-align: center;
+            color: brown;
+        }
+
+        .block span {
+            /* делает из строчного блочный */
+            display: block;
+            /* и если сделать строчный то дисплей инлайн */
+            display: inline;
+            /* оттолкнуть елементы или отступы это падинги и маржины */
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            /*мардин внешний отступ и паддинг внутренний */
+
+            /* бокс сайзинг- бордер бокс  делает так что бы ширина и высота не менялись при добавлении бордеров и падинга */
+
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            /*по вертикали */
+            justify-content: space-between;
+
+            flex-direction: row;
+            /*(по дефолту идет по ряду) */
+
+            flex-shrink: 0;
+            /* сжимает елемент если не хватает места в родителе*/
+
+            flex-grow: 0;
+            /* растягивает елемент если много места в родителе*/
+
+            flex-basis: 10px;
+            /* базовая ширина елемента по дефолту 0 и если не хвататет места то он сжимает до 0  */
+            /* размер по основной оси */
+        }
+
+        .grid {
+            display: grid;
+
+        }
+
+        .position {
+            position: relative;
+            position: absolute;
+            position: fixed;
+            position: sticky;
+
+            left: 0;
+            bottom: 0;
+
+            /* по центру к релатив  */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
