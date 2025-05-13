@@ -1,0 +1,59 @@
+.menu__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 186px;
+    height: 48px;
+
+    background-color: var(--color-red);
+    border-radius: 100px;
+    cursor: pointer;
+
+}
+
+.button {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+
+    font-family: var(--font-nav);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu__button:hover {
+    animation: tilt 0.5s ease-in-out infinite;
+
+    button:hover {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(1deg) translateY(-2px);
+    }
+
+    50% {
+        transform: rotate(-1deg) translateY(2px);
+    }
+
+    75% {
+        transform: rotate(-1deg) translateY(-2px);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

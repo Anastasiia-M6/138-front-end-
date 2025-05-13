@@ -1,0 +1,33 @@
+.footer__form {
+    display: grid;
+    gap: 20px;
+
+    .footer__form-inputs {
+        // display: grid;
+        // max-width: 439px;
+        border: initial;
+
+        .footer__input {
+            padding: 18px 8px 18px 16px;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid var(--color-white);
+            font-size: 16px;
+            border-radius: 0;
+        }
+
+    }
+
+    .footer__privacy {
+        text-decoration: underline;
+        color: var(--color-white);
+    }
+}
+
+.footer__input::placeholder {
+    color: var(--color-white);
+}
+
+.footer__form-checkbox {
+    font-size: 12px;
+}

@@ -1,0 +1,33 @@
+.menu {
+
+    &__nav {}
+
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+
+    &__nav-item {
+        list-style-type: none;
+    }
+
+    &__nav-link {
+
+        font-family: var(--font-nav);
+        color: var(--color-black);
+        text-decoration: none;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__nav-link:hover {
+        color: var(--color-red);
+
+    }
+}

@@ -1,0 +1,157 @@
+.header {
+    max-width: 1440px;
+    // width: 100%;
+    margin-top: 180px;
+
+
+    &__image {
+        max-width: 324px;
+        max-height: 560px;
+        border-radius: 160px;
+    }
+
+    &__main {
+        background: url(/assets/images/dirtybarn-gradient_16_2.png) center/cover no-repeat;
+        flex-grow: initial;
+        width: 77%;
+
+        // height: 560px;
+        border-top-left-radius: 160px;
+        border-bottom-left-radius: 160px;
+
+    }
+
+    &__text-with-button {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        gap: 30px;
+        margin: 120px 548px 66px 172px;
+
+        .header__sub-title {
+            font-family: var(--font-nav);
+            color: var(--color-white);
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        .header__title {
+            font-family: var(--font-logo);
+            font-weight: 500;
+            font-size: 96px;
+            line-height: 90%;
+            letter-spacing: -3%;
+            vertical-align: middle;
+            text-transform: uppercase;
+            color: var(--color-white);
+        }
+
+        .header__button {
+            background-color: var(--color-white);
+            color: var(--color-red);
+        }
+
+    }
+
+    &__rectangle {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+
+        .header__img-rectangl {
+            min-width: 574px;
+            height: 126px;
+        }
+
+        .header__location {
+            color: var(--color-white);
+            font-family: var(--font-nav);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+}
+
+// animation
+
+.header__main {
+    clip-path: inset(0 0 100% 0);
+    animation: slideIn 1.2s ease-out forwards;
+
+
+    @keyframes slideIn {
+        from {
+            clip-path: inset(0 0 100% 0);
+
+        }
+
+        to {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+
+}
+
+
+
+// media start
+@media (max-width: 767px) {
+    .header {
+        display: grid;
+        max-width: 344px;
+        margin-top: 72px;
+
+        &__image {
+            max-width: 272px;
+            max-height: 382px;
+            border-radius: 180px;
+        }
+
+        &__main {
+            min-width: 344px;
+            // min-height: 254px;
+
+            border-radius: 40px;
+            flex-grow: initial;
+        }
+
+        &__text-with-button {
+            display: grid;
+            grid-template-columns: repeat(1fr);
+            gap: 4px;
+            margin: 38px 48px 38px 48px;
+
+            .header__sub-title {
+                line-height: 16px;
+                font-size: 12px;
+
+            }
+
+            .header__title {
+                font-size: 48px;
+                letter-spacing: -3%;
+
+            }
+
+            &__rectangle {
+                display: grid;
+                opacity: 0;
+
+                .header__img-rectangl {
+                    display: none;
+
+                }
+
+                .header__location {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+
+        }
+    }
+}

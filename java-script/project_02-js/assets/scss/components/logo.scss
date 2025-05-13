@@ -1,0 +1,19 @@
+ .logo__name {
+     font-family: var(--font-logo);
+     font-weight: 600;
+     font-size: 24px;
+     line-height: 90%;
+     color: var(--color-red);
+     text-decoration: none;
+     vertical-align: middle;
+     text-transform: uppercase;
+
+ }
+
+ .logo__img {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 13px;
+     text-decoration: none;
+ }

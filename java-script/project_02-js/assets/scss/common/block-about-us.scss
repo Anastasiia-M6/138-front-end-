@@ -1,0 +1,26 @@
+.block-about-us {
+    color: var(--color-white);
+
+    .block-about-us__image {
+        max-width: 670px;
+        max-height: 560px;
+    }
+
+    .title {
+        font-family: var(--font-logo);
+        font-weight: 500;
+        font-size: 56px;
+        line-height: 56px;
+        vertical-align: middle;
+        text-transform: uppercase;
+
+    }
+
+    .text {
+        font-family: var(--font-nav);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+
+    }
+}
