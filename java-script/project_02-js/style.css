@@ -1,17 +1,40 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 11 | @use "./components/logo.scss";
- *    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   assets/scss/main.scss 11:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 11 \2502  @use \"./components/logo.scss\";\a    \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   assets/scss/main.scss 11:1  root stylesheet";
+:root {
+  --color-red: #CE091E;
+  --color-white: #FFFFFF;
+  --color-black: #121212;
+  --color-gray: #12121280;
 }
+
+:root {
+  --font-logo: "Cormorant Garamond", serif;
+  --font-nav: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.navigation__nav-item {
+  list-style-type: none;
+}
+.navigation__nav-link {
+  font-family: var(--font-nav);
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.navigation__nav-link:hover {
+  color: var(--color-red);
+}
+
+/*# sourceMappingURL=style.css.map */
