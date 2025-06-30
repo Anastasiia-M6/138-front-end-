@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Routes, Route } from "react-router";
 import Header from "./component/Header/Header";
@@ -7,7 +6,7 @@ import Footer from "./component/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
-import Services from "./Pages/Services/Services"
+import Services from "./Pages/Services/Services";
 import NotFound from "./Pages/404/404";
 
 
